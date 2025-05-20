@@ -1,0 +1,17 @@
+.DeleteAllStudents {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+    background: var(--red-warning) !important;
+    transition: opacity 0.1s ease-in-out !important;
+
+    &:hover {
+        opacity: 0.8;
+        transition: opacity 0.1s ease-in-out !important;
+    }
+}
+
+.btnIcon {
+    width: 1.4rem !important;
+    height: 1.4rem !important;
+}

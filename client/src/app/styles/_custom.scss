@@ -1,0 +1,654 @@
+.bg-light {
+    background-color: #f8f8fb !important;
+}
+
+.simplebar-placeholder {
+    display: none;
+}
+
+.simplebar-content-wrapper::-webkit-scrollbar,
+.simplebar-hide-scrollbar::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    border-color: #e55353 !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 12 12%27 width=%2712%27 height=%2712%27 fill=%27none%27 stroke=%27%23e55353%27%3e%3ccircle cx=%276%27 cy=%276%27 r=%274.5%27/%3e%3cpath stroke-linejoin=%27round%27 d=%27M5.8 3.6h.4L6 6.5z%27/%3e%3ccircle cx=%276%27 cy=%278.2%27 r=%27.6%27 fill=%27%23e55353%27 stroke=%27none%27/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
+}
+
+.was-validated .form-control:invalid.login-input {
+    background-image: none !important;
+}
+
+.was-validated .form-control:invalid:focus,
+.form-control.is-invalid:focus {
+    box-shadow: 0 0 0 0.25rem rgb(229 83 83 / 25%) !important;
+}
+
+html:not([dir="rtl"]) .was-validated .form-control:invalid,
+html:not([dir="rtl"]) .form-control.is-invalid {
+    padding-right: calc(1.5em + 0.75rem) !important;
+    background-position: right calc(0.375em + 0.1875rem) center !important;
+}
+
+.view-student-modal .modal-dialog {
+    max-width: 650px !important;
+}
+
+.header-mobile-logo {
+    font-size: 1.5em;
+}
+
+html:not([dir="rtl"]) .breadcrumb-item.lists-page-breadcrumb + .breadcrumb-item.students-page-breadcrumb::before {
+    content: "|";
+}
+
+html:not([dir="rtl"]) .breadcrumb-item.lists-page-breadcrumb + .breadcrumb-item.students-page-breadcrumb {
+    min-width: fit-content;
+}
+
+.import_students_left_block {
+    & > div {
+        &:last-child,
+        &:nth-last-child(2),
+        &:nth-last-child(3),
+        &:nth-last-child(4),
+        &:nth-last-child(5) {
+            .search_select_list {
+                bottom: 100%;
+                top: auto;
+            }
+        }
+    }
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.nav-link.active {
+    cursor: default;
+}
+
+.accordion-item {
+    background: none;
+    border: none;
+}
+
+.accordion-header {
+    width: 100%;
+}
+
+.accordion-button {
+    color: var(--cui-accordion-btn-color);
+    background: none;
+    box-shadow: none;
+    padding: 0;
+
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg) !important;
+        background-size: 14px;
+        width: 14px;
+        height: 14px;
+    }
+
+    &:focus {
+        border: none;
+        box-shadow: none;
+    }
+
+    &:not(.collapsed) {
+        color: var(--cui-accordion-btn-color);
+        background: none;
+        box-shadow: none;
+
+        &::after {
+            background-image: var(--cui-accordion-btn-icon);
+            transform: translateY(-50%) rotate(0deg) !important;
+        }
+    }
+}
+
+.accordion-collapse {
+    width: 100%;
+}
+
+.accordion-item {
+    &:last-of-type {
+        .accordion-collapse {
+            width: 100%;
+        }
+    }
+}
+
+.react-datepicker-wrapper {
+    position: relative;
+    z-index: 999;
+}
+
+.react-datepicker-popper {
+    z-index: 1000;
+}
+
+li {
+    list-style-type: none;
+}
+
+.page-settings {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-settings-with-export {
+    padding-left: 30px;
+}
+
+.page-table-settings {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+
+    @media (max-width: 1919px) {
+        gap: 0;
+    }
+
+    & > div {
+        flex: 1 1 auto;
+    }
+}
+
+.react-datepicker {
+    font-family: var(--font-family-main);
+    font-size: 11px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+}
+
+.react-datepicker__day {
+    color: var(--datepicker-day-name-color);
+}
+
+.react-datepicker__current-month {
+    display: none;
+}
+
+button.react-datepicker__navigation {
+    display: none;
+}
+
+.react-datepicker__day-name {
+    &:first-child {
+        font-size: 0;
+    }
+}
+
+.react-datepicker__header__dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.react-datepicker__triangle {
+    display: none;
+}
+
+.react-datepicker__week-number {
+    border-radius: 4px;
+    background: var(--text-color);
+    font-weight: var(--font-extralight);
+    width: 24px;
+    line-height: 24px;
+}
+
+.react-datepicker__day-name {
+    color: var(--datepicker-day-name-color);
+
+    &:last-child,
+    &:nth-last-child(2) {
+        color: var(--datepicker-holiday-color);
+    }
+}
+
+.react-datepicker__day--weekend {
+    color: var(--datepicker-holiday-color);
+
+    &.react-datepicker__day--outside-month {
+        color: var(--datepicker-holiday-color-disabled);
+    }
+}
+
+.react-datepicker__day--outside-month {
+    color: var(--datepicker-day-outside-name-color);
+}
+
+.react-datepicker__header {
+    background-color: var(--white);
+    border-bottom: 0;
+    padding: 0;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+    width: 24px;
+    line-height: 24px;
+}
+
+.react-datepicker__day--selected {
+    font-weight: var(--font-regular);
+    color: var(--white);
+    background-color: var(--main-color);
+
+    &:hover {
+        color: var(--white);
+        background-color: var(--light-main-color);
+    }
+}
+
+.react-datepicker__day--keyboard-selected {
+    font-weight: var(--font-regular);
+    background-color: transparent;
+    color: var(--datepicker-day-name-color);
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+.react-datepicker__day--today {
+    font-weight: var(--font-regular);
+}
+
+.react-datepicker__year-dropdown-container,
+.react-datepicker__month-dropdown-container {
+    margin: 0;
+    font: var(--font-xs);
+    font-weight: var(--font-semibold);
+    color: var(--text-color);
+}
+
+.react-datepicker__year-dropdown,
+.react-datepicker__month-dropdown {
+    max-height: 215px;
+    overflow-y: auto;
+}
+
+.react-datepicker__header__dropdown--scroll {
+    padding: 10px 30px 10px 10px;
+}
+
+.react-datepicker__month-dropdown-container {
+    order: 1;
+}
+
+.react-datepicker__year-dropdown,
+.react-datepicker__month-dropdown,
+.react-datepicker__month-year-dropdown {
+    left: auto;
+    top: auto;
+}
+
+.react-datepicker__year-read-view--down-arrow,
+.react-datepicker__month-read-view--down-arrow,
+.react-datepicker__month-year-read-view--down-arrow {
+    scale: 0.8;
+    top: 3px;
+    border-color: var(--main-color);
+    border-radius: 1px;
+}
+
+.react-datepicker__year-read-view:hover .react-datepicker__year-read-view--down-arrow,
+.react-datepicker__year-read-view:hover .react-datepicker__month-read-view--down-arrow,
+.react-datepicker__month-read-view:hover .react-datepicker__year-read-view--down-arrow,
+.react-datepicker__month-read-view:hover .react-datepicker__month-read-view--down-arrow,
+.react-datepicker__month-year-read-view:hover .react-datepicker__year-read-view--down-arrow,
+.react-datepicker__month-year-read-view:hover .react-datepicker__month-read-view--down-arrow {
+    border-color: var(--light-main-color);
+}
+
+.react-datepicker__month-read-view--selected-month {
+    display: inline-block;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.react-datepicker__month-option {
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.react-datepicker__navigation--years-upcoming {
+    background-position: center bottom;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuNzM5NDEgMTEuNDZDNS44MTQ4MSAxMS41MzYxIDUuOTA0MzcgMTEuNTk2NCA2LjAwMjk2IDExLjYzNzZDNi4xMDE1NSAxMS42Nzg4IDYuMjA3MjQgMTEuNyA2LjMxMzk4IDExLjdDNi40MjA3MiAxMS43IDYuNTI2NDEgMTEuNjc4OCA2LjYyNSAxMS42Mzc2QzYuNzIzNTkgMTEuNTk2NCA2LjgxMzE1IDExLjUzNjEgNi44ODg1NSAxMS40NkwxMC4wNTA3IDguMjc2MzJMMTMuMjEyOSAxMS40NkMxMy4zNjUzIDExLjYxMzQgMTMuNTcxOSAxMS42OTk2IDEzLjc4NzQgMTEuNjk5NkMxNC4wMDI5IDExLjY5OTYgMTQuMjA5NiAxMS42MTM0IDE0LjM2MiAxMS40NkMxNC41MTQ0IDExLjMwNjYgMTQuNiAxMS4wOTg1IDE0LjYgMTAuODgxNUMxNC42IDEwLjY2NDUgMTQuNTE0NCAxMC40NTY1IDE0LjM2MiAxMC4zMDNMMTAuNjIxMiA2LjUzNjc5QzEwLjU0NTggNi40NjA3MiAxMC40NTYyIDYuNDAwMzcgMTAuMzU3NyA2LjM1OTJDMTAuMjU5MSA2LjMxODAyIDEwLjE1MzQgNi4yOTY4MyAxMC4wNDY2IDYuMjk2ODNDOS45Mzk5IDYuMjk2ODMgOS44MzQyMSA2LjMxODAyIDkuNzM1NjIgNi4zNTkyQzkuNjM3MDIgNi40MDAzNyA5LjU0NzQ2IDYuNDYwNzIgOS40NzIwNyA2LjUzNjc5TDUuNzMxMjYgMTAuMzAzQzUuNDIxNTcgMTAuNjE0OCA1LjQyMTU3IDExLjE0IDUuNzM5NDEgMTEuNDZaIiBmaWxsPSIjRUI4MjQ3Ii8+Cjwvc3ZnPgo=");
+}
+
+.react-datepicker__navigation--years-previous {
+    background-position: center top;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0LjI2MDYgOC41NDAwMUMxNC4xODUyIDguNDYzOTQgMTQuMDk1NiA4LjQwMzU5IDEzLjk5NyA4LjM2MjQyQzEzLjg5ODQgOC4zMjEyNCAxMy43OTI4IDguMzAwMDUgMTMuNjg2IDguMzAwMDVDMTMuNTc5MyA4LjMwMDA1IDEzLjQ3MzYgOC4zMjEyNCAxMy4zNzUgOC4zNjI0MkMxMy4yNzY0IDguNDAzNTkgMTMuMTg2OCA4LjQ2Mzk0IDEzLjExMTUgOC41NDAwMUw5Ljk0OTI5IDExLjcyMzdMNi43ODcxMyA4LjU0MDAxQzYuNjM0NzQgOC4zODY1OSA2LjQyODA3IDguMzAwNCA2LjIxMjU2IDguMzAwNEM1Ljk5NzA2IDguMzAwNCA1Ljc5MDM4IDguMzg2NTkgNS42Mzc5OSA4LjU0MDAxQzUuNDg1NjEgOC42OTM0MyA1LjQgOC45MDE1MSA1LjQgOS4xMTg0OUM1LjQgOS4zMzU0NiA1LjQ4NTYxIDkuNTQzNTQgNS42Mzc5OSA5LjY5Njk2TDkuMzc4OCAxMy40NjMyQzkuNDU0MTkgMTMuNTM5MyA5LjU0Mzc1IDEzLjU5OTYgOS42NDIzNCAxMy42NDA4QzkuNzQwOTQgMTMuNjgyIDkuODQ2NjMgMTMuNzAzMiA5Ljk1MzM2IDEzLjcwMzJDMTAuMDYwMSAxMy43MDMyIDEwLjE2NTggMTMuNjgyIDEwLjI2NDQgMTMuNjQwOEMxMC4zNjMgMTMuNTk5NiAxMC40NTI1IDEzLjUzOTMgMTAuNTI3OSAxMy40NjMyTDE0LjI2ODcgOS42OTY5NkMxNC41Nzg0IDkuMzg1MTYgMTQuNTc4NCA4Ljg2MDAyIDE0LjI2MDYgOC41NDAwMVoiIGZpbGw9IiNFQjgyNDciLz4KPC9zdmc+Cg==");
+}
+
+.react-datepicker__navigation {
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+
+.react-datepicker__month-option--selected,
+.react-datepicker__year-option--selected {
+    left: auto;
+    right: 15px;
+}
+
+.react-datepicker__year-option,
+.react-datepicker__month-option,
+.react-datepicker__month-year-option {
+    line-height: 30px;
+}
+
+.react-datepicker__year-dropdown,
+.react-datepicker__month-dropdown,
+.react-datepicker__month-year-dropdown {
+    border: 1px solid var(--main-color);
+    background-color: var(--white);
+}
+
+.was-validated .form-control:valid,
+.form-control.is-valid {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.was-validated .form-control:valid:focus,
+.form-control.is-valid:focus {
+    border-color: var(--main-color);
+    box-shadow: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+// Working Curriculum Extract Start -------------
+.workingCurriculumExtractTableHead {
+    .formControlExamCell,
+    .formControlEasyExamCell,
+    .formControlControlWorksCell,
+    .formControlCourseWorksCell,
+    .amountOfStudyTimeCredits,
+    .amountOfStudyTimeHours,
+    .distributionWeek {
+        border-bottom: 0;
+    }
+}
+
+.sortCell,
+.idCell,
+.indexCell {
+    min-width: 75px;
+    max-width: 75px;
+
+    @media (max-width: 1919px) {
+        min-width: 65px;
+        max-width: 65px;
+    }
+
+    & > div {
+        min-width: 200px !important;
+    }
+
+    input {
+        max-width: 73px;
+
+        @media (max-width: 1919px) {
+            max-width: 63px;
+        }
+    }
+}
+
+.formControlCell {
+    display: flex;
+    flex-direction: column;
+}
+
+.disciplinesNameCell,
+.formControlCell {
+    min-width: 340px;
+    max-width: 340px;
+
+    @media (max-width: 1919px) {
+        min-width: 260px;
+        max-width: 260px;
+    }
+}
+
+.formControlExamCell,
+.formControlEasyExamCell,
+.formControlControlWorksCell,
+.formControlCourseWorksCell {
+    min-width: 85px;
+    max-width: 85px;
+
+    @media (max-width: 1919px) {
+        min-width: 65px;
+        max-width: 65px;
+    }
+}
+
+.amountOfStudyTimeCell,
+.formControlCell,
+.distributionCell {
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+
+.amountOfStudyTimeCell {
+    min-width: 580px;
+    max-width: 580px;
+
+    @media (max-width: 1919px) {
+        min-width: 460px;
+        max-width: 460px;
+    }
+}
+
+.amountOfStudyTimeCredits,
+.amountOfStudyTimeHours {
+    min-width: 77px;
+    max-width: 77px;
+
+    @media (max-width: 1919px) {
+        min-width: 65px;
+        max-width: 65px;
+    }
+}
+
+.amountOfStudyTimeTheory,
+.amountOfStudyTimeLabs,
+.amountOfStudyTimeCourseProject,
+.amountOfStudyTimePractice {
+    max-width: 106.5px;
+    min-width: 106.5px;
+
+    @media (max-width: 1919px) {
+        max-width: 82.5px;
+        min-width: 82.5px;
+    }
+}
+
+.distributionCell {
+    flex: 1;
+    min-width: 255px;
+}
+
+.formControlExamCell,
+.formControlEasyExamCell,
+.formControlControlWorksCell,
+.formControlCourseWorksCell,
+.amountOfStudyTimeCredits,
+.amountOfStudyTimeHours,
+.amountOfStudyTimeTheory,
+.amountOfStudyTimeLabs,
+.amountOfStudyTimeCourseProject,
+.amountOfStudyTimePractice {
+    & > div {
+        & > div {
+            @media (max-width: 1919px) {
+                font: var(--font-xxs) !important;
+                font-weight: var(--font-semibold) !important;
+            }
+        }
+    }
+}
+
+.workingCurriculumExtractTableBody {
+    .indexCell,
+    .idCell,
+    .disciplinesNameCell,
+    .sortCell,
+    .formControlExamCell,
+    .formControlEasyExamCell,
+    .formControlControlWorksCell,
+    .formControlCourseWorksCell,
+    .amountOfStudyTimeCredits,
+    .amountOfStudyTimeHours,
+    .amountOfStudyTimeTheory,
+    .amountOfStudyTimeLabs,
+    .amountOfStudyTimeCourseProject,
+    .amountOfStudyTimePractice {
+        & > div {
+            & > div {
+                @media (max-width: 1919px) {
+                    font: var(--font-xxs) !important;
+                    font-weight: var(--font-semibold) !important;
+                }
+            }
+        }
+    }
+}
+
+.distributionCellHours {
+    @media (max-width: 1919px) {
+        font: var(--font-xxs) !important;
+        font-weight: var(--font-semibold) !important;
+    }
+}
+
+.amountOfStudyTimePractice {
+    & > div {
+        & > div {
+            @media (max-width: 1919px) {
+                font-size: 8px !important;
+                line-height: 12px !important;
+            }
+        }
+    }
+}
+
+// Working Curriculum Extract End ---------------
+
+.react-datepicker-wrapper {
+    margin-right: 0;
+}
+
+.was-validated .select-invalid-feedback {
+    display: block;
+}
+
+.was-validated .form-select-invalid {
+    border-color: #e55353 !important;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 12 12%27 width=%2712%27 height=%2712%27 fill=%27none%27 stroke=%27%23e55353%27%3e%3ccircle cx=%276%27 cy=%276%27 r=%274.5%27/%3e%3cpath stroke-linejoin=%27round%27 d=%27M5.8 3.6h.4L6 6.5z%27/%3e%3ccircle cx=%276%27 cy=%278.2%27 r=%27.6%27 fill=%27%23e55353%27 stroke=%27none%27/%3e%3c/svg%3e') !important;
+        background-repeat: no-repeat !important;
+        background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
+        background-position: right 2rem center, center right 2rem;
+    }
+
+    &.focused {
+        border-bottom: 0;
+    }
+}
+
+.accordion-custom {
+    .accordion-button {
+        padding-left: 34px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: 60px;
+
+        &::after {
+            content: "\2b";
+            font: var(--font-awesome-solid);
+            background: none;
+            width: auto;
+            height: auto;
+            transform: translateY(-50%) !important;
+        }
+
+        &:not(.collapsed) {
+            &::after {
+                content: "\f068";
+                background: none;
+                transform: translateY(-50%) !important;
+            }
+        }
+    }
+}
+
+.accordion-custom-subjects-schedule {
+    .accordion-button {
+        justify-content: flex-start;
+        align-items: center;
+        gap: 65px;
+        padding-left: 44px;
+
+        @media (max-width: 1919px) {
+            padding-left: 30px;
+            gap: 50px;
+        }
+
+        &::after {
+            width: 22px;
+            height: 22px;
+            top: 24px;
+            left: 11px;
+            scale: 1.4;
+
+            @media (max-width: 1919px) {
+                scale: 1;
+                left: 0;
+                top: 50%;
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}

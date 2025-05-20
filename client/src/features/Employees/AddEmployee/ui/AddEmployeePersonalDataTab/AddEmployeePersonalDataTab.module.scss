@@ -1,0 +1,29 @@
+.title {
+    margin-bottom: 15px;
+}
+
+.settings {
+    display: flex;
+    grid-gap: 15px;
+    margin-bottom: 15px;
+    align-items: stretch;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.newAddField {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tabBlock {
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

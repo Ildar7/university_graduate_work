@@ -1,0 +1,24 @@
+.AddStudentGroups {
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 30px;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.footerBtn {
+    padding: 10px;
+    justify-content: space-between;
+    min-width: 124px;
+}

@@ -1,0 +1,40 @@
+.content {
+    min-height: calc(100vh - 323px);
+    max-height: calc(100vh - 323px);
+    overflow-y: auto;
+    margin-top: 30px;
+}
+
+.exitBtnIcon {
+    fill: none;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.btn {
+    gap: 40px;
+
+    @media (max-width: 1919px) {
+        padding: 5px 12px;
+        gap: 11px;
+    }
+}
+
+.printBtn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 24px;
+}

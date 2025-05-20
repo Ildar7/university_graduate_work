@@ -1,0 +1,59 @@
+.TextHint {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &:hover {
+        .hintIcon {
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .hintText {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+}
+
+.hintIcon {
+    opacity: 0.75;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.hintText {
+    position: absolute;
+    left: -20px;
+    bottom: 22px;
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 10px;
+    font: var(--font-xs);
+    font-weight: var(--font-semibold);
+    min-width: 350px;
+    color: var(--white);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4px);
+    transition: all 0.2s ease-in-out;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: calc(100% - 2px);
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 7px solid var(--main-color);
+    }
+}

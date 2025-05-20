@@ -1,0 +1,104 @@
+:root {
+    // шрифт
+    --font-family-main:
+        "Montserrat",
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        roboto,
+        "Helvetica Neue",
+        "Noto Sans",
+        "Liberation Sans",
+        arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-awesome-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+    --font-awesome-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+
+    // размеры шрифтов
+    --font-size-xxs: 10px;
+    --font-line-xxs: 12px;
+    --font-xxs: var(--font-size-xxs) / var(--font-line-xxs) var(--font-family-main);
+    --font-size-xs: 13px;
+    --font-line-xs: 16px;
+    --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family-main);
+    --font-size-s: 16px;
+    --font-line-s: 19px;
+    --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+    --font-size-xm: 18px;
+    --font-line-xm: 24px;
+    --font-xm: var(--font-size-xm) / var(--font-line-xm) var(--font-family-main);
+    --font-size-m: 20px;
+    --font-line-m: 28px;
+    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+    --font-size-l: 24px;
+    --font-line-l: 32px;
+    --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+    --font-size-xl: 28px;
+    --font-line-xl: 36px;
+    --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+    --font-size-xxl: 36px;
+    --font-line-xxl: 44px;
+    --font-xxl: var(--font-size-xxl) / var(--font-line-xxl) var(--font-family-main);
+
+    // жирность шрифтов
+    --font-extralight: 200;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+
+    // цвета
+    --black: #000;
+    --white: #fff;
+    --light-white: rgb(255 255 255 / 50%);
+
+    // new colors
+    --main-color: #eb8247;
+    --light-main-color: #fcdebf;
+    --text-color: #44494f;
+    --light-text-color: rgb(68 73 79 / 50%);
+    --secondary-text-color: #a1a4a7;
+    --border-color: #585d63;
+    --light-border-color: #e0e5e8;
+    --table-head-cell-bg: #f5f7f9;
+    --light-table-head-cell-bg: #e7e9ea;
+    --disabled-bg: #999;
+    --green-color: #c5f1d9;
+    --red-color: #fcd9d9;
+    --blue-color: #d7e3fe;
+    --red-warning: #ec7063;
+    --red-border-color: #ff6d6d;
+    --red-danger: #E6B5B5;
+    --light-green: #B6E6B5;
+    --overlay-color: rgb(0 0 0 / 30%);
+    --modal-header-border-color: #d9d9d9;
+    --datepicker-day-name-color: #b3b3b3;
+    --datepicker-day-outside-name-color: #616161;
+    --datepicker-holiday-color: #17a1fa;
+    --datepicker-holiday-color-disabled: #1270b0;
+    --gray-btn-color: #999;
+    --yellow-color: #FFCD4B;
+    --table-cell-border-color: #9E9E9E;
+
+    // old colors
+    --cui-sidebar-bg: #3c4b64;
+    --bg-color: #ebedef;
+    --border-card-color: #d6dbdf;
+    --border-visited-color: #998fed;
+    --red-light: #cf2d2d;
+    --footer-color: #85929e;
+    --secondary-menu-default-text-color: #44546f;
+    --secondary-menu-active-border-color: #3498db;
+
+    // skeleton
+    --skeleton-color: #b9b9b9;
+    --skeleton-shadow: rgba(60 75 100 / 30%);
+
+    // z-index
+    --modal-z-index: 1011;
+}

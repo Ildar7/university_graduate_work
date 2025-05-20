@@ -1,0 +1,24 @@
+.descr {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.settings {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.groups {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.students {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}

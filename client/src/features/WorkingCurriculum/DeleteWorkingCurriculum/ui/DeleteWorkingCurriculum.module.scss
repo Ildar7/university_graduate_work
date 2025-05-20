@@ -1,0 +1,24 @@
+.DeleteWorkingCurriculum {
+    max-width: 350px;
+}
+
+.deleteText {
+    span {
+        font-weight: var(--font-bold);
+    }
+}
+
+.content {
+    padding: 0 30px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.footerBtn {
+    padding: 10px;
+}

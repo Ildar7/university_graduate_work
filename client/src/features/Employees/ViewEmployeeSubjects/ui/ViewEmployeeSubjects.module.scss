@@ -1,0 +1,41 @@
+.ViewEmployeeSubjects {
+    min-width: 400px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 30px;
+}
+
+.subjectItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border: 1px solid var(--light-border-color);
+    padding: 0 10px;
+
+    &:not(:last-child) {
+        border-bottom: 0;
+    }
+}
+
+.subjectText {
+    max-width: 400px;
+}
+
+.buttons {
+    margin-top: 10px;
+    gap: 30px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.footerBtn {
+    padding: 10px;
+    justify-content: space-between;
+    min-width: 124px;
+}

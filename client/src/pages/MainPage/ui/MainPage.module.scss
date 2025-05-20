@@ -1,0 +1,55 @@
+.MainPage {
+    color: var(--black);
+    display: flex;
+    gap: 40px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.list {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+        position: relative;
+
+        strong {
+            color: var(--main-color);
+        }
+
+        &:before {
+            content: '';
+            top: 11.5px;
+            position: absolute;
+            left: -20px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: var(--main-color);
+        }
+    }
+}
+
+
+.img {
+    flex: 1 1 auto;
+    max-width: 60%;
+
+    img {
+        border-radius: 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.descr {
+    margin-top: 30px;
+    padding-bottom: 40px;
+}

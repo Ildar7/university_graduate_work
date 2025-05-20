@@ -1,0 +1,218 @@
+.title {
+    margin-bottom: 15px;
+}
+
+.content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordionHeader {
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9fafc;
+    border-radius: 4px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: stretch;
+    gap: 60px;
+    max-height: 37px;
+}
+
+.accordionBody {
+    padding: 0 0 0 44px;
+}
+
+.btnAdd {
+    min-width: 212px;
+    padding: 10px 20px;
+    transition: background 0.2s ease-in-out;
+}
+
+.accordion,
+.btnAdd,
+.accordionBodyContent {
+    position: relative;
+
+    &::after {
+        content: "";
+        border-left: 1px solid #d9d9d9;
+        position: absolute;
+        height: calc(104% + 11px);
+        top: -11px;
+        left: -26.5px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 15.3px;
+        left: -29px;
+        width: 6px;
+        height: 6px;
+        background: #d9d9d9;
+        border-radius: 50%;
+    }
+
+    &:last-child {
+        &::after {
+            height: 31px;
+        }
+    }
+}
+
+.btnAdd,
+.accordionBodyContent {
+    &::before {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.accordionBodyContent {
+    &:last-child {
+        &::after {
+            height: 21px;
+        }
+    }
+}
+
+.innerBtnAdd {
+    margin-bottom: 10px;
+
+    &::after {
+        left: -27.5px;
+    }
+
+    &::before {
+        left: -30px;
+    }
+}
+
+.btnAddParent {
+    &::after {
+        left: -27px;
+    }
+
+    &::before {
+        left: -31px;
+        width: 8px;
+        height: 8px;
+    }
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &:first-child {
+        min-width: 45%;
+        max-width: 45%;
+
+        & > div {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &:nth-child(2) {
+        min-width: 30px;
+    }
+
+    &:last-child {
+        min-width: 60px;
+    }
+}
+
+.accordionInner {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 19.3px;
+        left: -30px;
+        width: 8px;
+        height: 8px;
+        background: #d9d9d9;
+        border-radius: 50%;
+    }
+
+    .cell {
+        &:first-child {
+            min-width: calc(45% - 22px);
+            max-width: calc(45% - 22px);
+        }
+    }
+}
+
+.accordionInnerSecond {
+    .cell {
+        &:first-child {
+            min-width: calc(45% - 44px);
+            max-width: calc(45% - 44px);
+        }
+    }
+}
+
+.cellBtn {
+    border: none;
+    background: none;
+    transition: opacity 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        opacity: 0.6;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    svg {
+        height: 21px;
+    }
+
+    path {
+        fill: #1e3050;
+    }
+}
+
+.bubbles {
+    justify-content: center;
+    min-width: 275px;
+}
+
+.bubble {
+    border-radius: 4px;
+    padding: 4px;
+    color: var(--white);
+}
+
+.greenBubble {
+    background: #4cc590;
+}
+
+.redBubble {
+    background: #ec7063;
+}
+
+.accordionBodyContent {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.accordionInnerThird,
+.accordionBodyContent {
+    .cell {
+        &:first-child {
+            max-width: calc(45% - 66px);
+            min-width: calc(45% - 66px);
+        }
+    }
+}

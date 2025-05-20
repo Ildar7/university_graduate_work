@@ -1,0 +1,65 @@
+.Checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.inputFake {
+    min-width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--light-border-color);
+        border-radius: 2px;
+    }
+}
+
+.input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    order: 1;
+}
+
+.checkIcon {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.inputFakeActive {
+    background-color: var(--main-color);
+
+    &::before {
+        border: 1px solid var(--main-color);
+    }
+
+    .checkIcon {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.label {
+    order: 0;
+}
+
+.after {
+    order: 2;
+}

@@ -1,0 +1,22 @@
+.TableSettings {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 30px 0;
+
+    @media (max-width: 1919px) {
+        margin: 10px 0;
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    min-width: 110px;
+    justify-content: space-between;
+    padding: 7px 12px;
+
+    @media (max-width: 1919px) {
+        padding: 5px 12px;
+    }
+}

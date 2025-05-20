@@ -1,0 +1,523 @@
+.SubjectsScheduleTableItem {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.cell {
+    flex: 1;
+    min-height: 64px;
+    border: 1px solid var(--light-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 8px;
+
+    @media (max-width: 1599px) {
+        padding: 5px;
+        min-height: 42px;
+    }
+}
+
+.cellBar {
+    min-width: 34px;
+    max-width: 34px;
+
+    @media (max-width: 1599px) {
+        min-width: 23px;
+        max-width: 23px;
+    }
+}
+
+.cellDate {
+    min-width: 48px;
+    max-width: 48px;
+
+    @media (max-width: 1599px) {
+        min-width: 32px;
+        max-width: 32px;
+    }
+}
+
+.cellTime {
+    min-width: 61px;
+    max-width: 61px;
+
+    @media (max-width: 1599px) {
+        min-width: 40px;
+        max-width: 40px;
+    }
+}
+
+.cellContentGroup {
+    justify-content: flex-start;
+    min-width: 240px;
+    max-width: 240px;
+
+    @media (max-width: 1599px) {
+        min-width: 155px;
+        max-width: 155px;
+    }
+
+    & > div {
+        width: 100%;
+    }
+}
+
+.cellContentTime {
+    justify-content: flex-start;
+    gap: 8px;
+
+    @media (max-width: 1599px) {
+        gap: 5px;
+    }
+}
+
+.bubbleCellGroup,
+.bubbleCellTime {
+    height: 107px;
+
+    @media (max-width: 1599px) {
+        height: 69px;
+    }
+}
+
+.bubbleCellTime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--light-border-color);
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+
+    @media (max-width: 1599px) {
+        font-size: 8px;
+        line-height: 12px;
+        border-radius: 5px;
+        border: 1px solid var(--light-border-color);
+    }
+}
+
+.bubbleCellTimeText {
+    rotate: -90deg;
+    text-align: center;
+}
+
+.scaleBar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--modal-header-border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+
+    span {
+        width: 100%;
+        background-color: var(--main-color);
+        border-radius: 8px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.scaleBarText {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    text-align: center;
+    rotate: -90deg;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 1599px) {
+        font-size: 9px;
+        line-height: 13px;
+    }
+}
+
+.cellDateText {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    rotate: -90deg;
+
+    @media (max-width: 1599px) {
+        font-size: 8px;
+        line-height: 12px;
+    }
+}
+
+.bubbleCellGroup {
+    background-color: var(--white);
+    border: 2px solid var(--light-border-color);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    user-select: none;
+    margin-bottom: 8px;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        .itemInfo {
+            opacity: 1;
+            visibility: visible;
+            z-index: 1;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    @media (max-width: 1599px) {
+        padding: 5px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        border: 1px solid var(--light-border-color);
+    }
+}
+
+.bubbleCellSubGroup {
+    height: 53.5px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
+
+    &:first-child {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 1599px) {
+        height: 34.5px;
+    }
+}
+
+.bubbleCellGroupNotFilled {
+    border: 2px dashed var(--light-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1599px) {
+        border: 1px dashed var(--light-border-color);
+    }
+
+    &:hover {
+        border: 2px solid var(--light-text-color);
+
+        .plusIconWrapper {
+            cursor: pointer;
+        }
+
+        .plusIcon {
+            fill: var(--light-text-color);
+            opacity: 1;
+        }
+    }
+}
+
+
+.bubbleCellGroupHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bubbleCellSubGroupHeader {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
+    gap: 2px;
+    rotate: -90deg;
+}
+
+.bubbleCellGroupId {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    opacity: 0.3;
+
+    @media (max-width: 1599px) {
+        font-size: 8px;
+        line-height: 12px;
+    }
+}
+
+.bubbleCellGroupCabinet {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+
+    @media (max-width: 1599px) {
+        font-size: 8px;
+        line-height: 12px;
+    }
+}
+
+.bubbleCellGroupContent {
+    font-size: 10px;
+    line-height: 14px;
+
+    @media (max-width: 1599px) {
+        font-size: 7px;
+        line-height: 11px;
+    }
+}
+
+.bubbleCellSubGroupContent {
+    font-size: 9px;
+    line-height: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    text-align: left;
+
+    @media (max-width: 1599px) {
+        font-size: 6px;
+        line-height: 8px;
+    }
+}
+
+.bubbleCellGroupFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.bubbleCellSubGroupFooter {
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.bubbleCellGroupSubGroup {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 600;
+    opacity: 0.5;
+
+    @media (max-width: 1599px) {
+        font-size: 7px;
+        line-height: 11px;
+    }
+}
+
+.bubbleCellSubGroupSubGroup {
+    font-size: 8px;
+    line-height: 12px;
+
+    @media (max-width: 1599px) {
+        font-size: 6px;
+        line-height: 8px;
+    }
+}
+
+.bubbleCellGroupTeacherName {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+
+    @media (max-width: 1599px) {
+        font-size: 8px;
+        line-height: 12px;
+    }
+}
+
+.bubbleCellSubGroupTeacherName {
+    font-size: 10px;
+    line-height: 14px;
+
+    @media (max-width: 1599px) {
+        font-size: 6px;
+        line-height: 8px;
+    }
+}
+
+.plusIconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.bubbleCellAddGroup {
+    border: 2px dashed var(--light-border-color);
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+
+    @media (max-width: 1599px) {
+        border: 1px dashed var(--light-border-color);
+        padding: 6px;
+    }
+
+    &:hover {
+        border: 2px solid var(--light-text-color);
+
+        .plusIcon {
+            fill: var(--light-text-color);
+            opacity: 1;
+        }
+    }
+}
+
+.plusIcon {
+    fill: var(--light-border-color);
+}
+
+.bubbleCellGroupError {
+    background-color: var(--red-danger);
+}
+
+.itemInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    gap: 9px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+}
+
+.subItemInfo {
+    gap: 2px;
+
+    @media (max-width: 1599px) {
+        gap: 0;
+    }
+}
+
+.editBtns {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 22.5px;
+
+    @media (max-width: 1599px) {
+        gap: 15px;
+    }
+}
+
+.subEditBtns {
+    gap: 15px;
+
+    @media (max-width: 1599px) {
+        gap: 10px;
+    }
+}
+
+.editBtn {
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 1.5;
+
+    @media (max-width: 1599px) {
+        scale: 1;
+    }
+}
+
+.subEditBtn {
+    scale: 1.1;
+
+    @media (max-width: 1599px) {
+        scale: 0.7;
+    }
+}
+
+.infoErrorText {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: var(--font-semibold);
+    background-color: var(--red-danger);
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+
+    @media (max-width: 1599px) {
+        font-size: 8px;
+        line-height: 9px;
+        padding: 3px;
+    }
+}
+
+.subInfoErrorText {
+    padding: 2px;
+    font-size: 8px;
+    line-height: 9px;
+
+    @media (max-width: 1599px) {
+        font-size: 6px;
+        line-height: 7px;
+        padding: 1px;
+        margin-bottom: -4px;
+    }
+}
+
+.bubbleCellSubGroupId,
+.bubbleCellSubGroupCabinet {
+    display: flex;
+    font-size: 10px;
+
+    @media (max-width: 1599px) {
+        font-size: 7px;
+        line-height: 9px;
+    }
+}
+
+.bubbleCellSubGroupCabinet {
+    order: 0;
+    white-space: nowrap;
+
+    span {
+        display: inline-block;
+        margin: 0 auto;
+        width: 32px;
+        max-width: 32px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @media (max-width: 1599px) {
+            width: 20px;
+            max-width: 20px;
+        }
+    }
+}
+
+.bubbleCellSubGroupId {
+    order: 1;
+}

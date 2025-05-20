@@ -1,0 +1,59 @@
+$toggle-width: 70px;
+
+.ToggleSwitcherWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ToggleSwitcher {
+    background-color: var(--main-color);
+    border: 0;
+    border-radius: 40px;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+    width: $toggle-width;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2) inset;
+
+    &:hover {
+        background-color: var(--main-color);
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+
+    &::-moz-focus-inner {
+        border: 0;
+    }
+
+    &.active {
+        .pin {
+            left: calc(($toggle-width / 2) + 1px);
+        }
+    }
+}
+
+.pin {
+    background-color: var(--yellow-color);
+    border-radius: 50%;
+    height: calc(100% - 10px);
+    left: 4px;
+    position: absolute;
+    top: 5px;
+    width: calc(($toggle-width / 2) - 5px);
+    transition: left ease .5s;
+    -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+    max-width: 100px;
+}

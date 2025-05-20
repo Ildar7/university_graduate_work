@@ -1,0 +1,22 @@
+.EditDiscipline {
+    min-width: 450px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.footerBtn {
+    padding: 10px;
+    justify-content: space-between;
+    min-width: 124px;
+}

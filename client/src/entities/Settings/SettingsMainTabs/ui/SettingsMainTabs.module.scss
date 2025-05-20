@@ -1,0 +1,8 @@
+.navLink {
+    color: var(--main-color);
+
+    &:hover {
+        background-color: var(--light-table-head-cell-bg);
+        color: var(--main-color);
+    }
+}

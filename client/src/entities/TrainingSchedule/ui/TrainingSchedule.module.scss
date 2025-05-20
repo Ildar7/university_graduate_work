@@ -1,0 +1,144 @@
+.TableBlock {
+    margin-top: 30px;
+}
+
+.table {
+    max-height: calc(100vh - 250px);
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.tableRow {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+}
+
+.tableCell {
+    min-width: 180px;
+    padding: 15px 15px 15px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    text-align: left;
+
+    @media (max-width: 1919px) {
+        padding: 4px 12px;
+    }
+}
+
+.tableHead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    .tableCell {
+        background-color: var(--table-head-cell-bg);
+        border-radius: 0;
+        border-right: 1px solid var(--light-border-color);
+
+        &:nth-last-child(2) {
+            border-right: none;
+        }
+    }
+
+    button.tableCell {
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            transition: background-color 0.2s ease-in-out;
+            opacity: 1;
+            background-color: var(--light-table-head-cell-bg);
+        }
+    }
+}
+
+.tableBody {
+    margin-top: 10px;
+
+    .tableCell {
+        border: 1px solid var(--light-border-color);
+    }
+
+    .tableCellId {
+        border-left: 1px solid var(--light-border-color) !important;
+    }
+
+    .tableRow {
+        .tableCell {
+            &:not(:first-child) {
+                border-left: 0;
+            }
+        }
+
+        .tableCell {
+            &:nth-last-child(2) {
+                border-right: 0;
+            }
+        }
+
+        &:not(:last-child) {
+            .tableCell {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+.tableCellBtns,
+.tableCellBtnsWrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    min-width: 60px;
+    max-width: 60px;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    right: 0;
+    background-color: var(--white) !important;
+}
+
+.tableCellBtnsWrapper {
+    border-right: 0 !important;
+}
+
+.tableCellBtns {
+    border-left: 1px solid var(--light-border-color) !important;
+    border-right: 1px solid var(--light-border-color) !important;
+}
+
+.editBtn {
+    padding: 0;
+    border-right: 1px solid var(--light-border-color);
+    height: 100%;
+    border-radius: 0;
+    flex: 1;
+
+    svg {
+        @media (max-width: 1919px) {
+            scale: 0.8;
+        }
+    }
+
+    &:last-child {
+        border-right: 0;
+    }
+}
+
+.checkbox {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    background-color: var(--white);
+}
+
+.tableWithCheckboxes {
+    padding-left: 30px;
+}

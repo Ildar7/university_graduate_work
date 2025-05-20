@@ -1,0 +1,44 @@
+.Search {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    font: var(--font-xs);
+    height: 50px;
+}
+
+.searchInput {
+    height: 100%;
+
+    & > div {
+        height: 100%;
+
+        input {
+            height: 100%;
+            padding: 12px 40px 12px 12px !important;
+
+            @media (max-width: 1919px) {
+                padding: 7.2px 40px 7.2px 7.2px !important;
+            }
+        }
+    }
+}
+
+.asideIcon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    z-index: 6;
+    fill: var(--text-color);
+}
+
+.searchCloseBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0;
+    background: none;
+}

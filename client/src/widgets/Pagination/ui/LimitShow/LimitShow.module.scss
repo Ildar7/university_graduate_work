@@ -1,0 +1,32 @@
+.LimitShow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.selectLimit {
+    max-width: 85px;
+}
+
+.limitSelectWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+    @media (max-width: 1919px) {
+        gap: 7px;
+    }
+}
+
+.recordsText,
+.limitSelectWrapper {
+    flex: 1 1 auto;
+}
+
+.textResults {
+    @media (max-width: 1919px) {
+        font: var(--font-xs) !important;
+    }
+}

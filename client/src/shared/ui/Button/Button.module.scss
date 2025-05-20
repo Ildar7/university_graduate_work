@@ -1,0 +1,146 @@
+.Button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: inherit;
+    font: var(--font-xs);
+    padding: 17px;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    &.disabled {
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+
+.partial_bordered {
+    border-radius: 7px 0;
+}
+
+.all_bordered {
+    border-radius: 5px;
+}
+
+.not_bordered {
+    border-radius: 0;
+}
+
+.light {
+    border: none;
+    background-color: var(--light-table-head-cell-bg);
+}
+
+.error {
+    border: none;
+    background-color: var(--red-warning);
+    color: var(--white);
+}
+
+.outline {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.clear {
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+
+    &.disabled {
+        opacity: 0.5;
+
+        svg, path {
+            fill: var(--gray-btn-color);
+        }
+    }
+}
+
+.background {
+    background: var(--main-color);
+    color: var(--white);
+    border: none;
+
+    &.disabled {
+        background: var(--disabled-bg);
+    }
+}
+
+.background_dark {
+    background: var(--text-color);
+    color: var(--white);
+    border: none;
+
+    &.disabled {
+        opacity: 0.7;
+    }
+}
+
+.background_gray {
+    background: var(--gray-btn-color);
+    color: var(--white);
+    border: none;
+
+    &.disabled {
+        opacity: 0.7;
+    }
+}
+
+.size_xxs {
+    padding: 8px;
+}
+
+.size_xs {
+    padding: 10px;
+}
+
+.size_s {
+    padding: 12px;
+}
+
+.size_m {
+    padding: 15px;
+
+    @media (max-width: 1919px) {
+        padding: 10px;
+    }
+}
+
+.size_l {
+    padding: 20px;
+}
+
+.size_xl {
+    padding: 30px;
+}
+
+.square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square.size_m {
+    width: var(--font-line-m);
+    height: var(--font-line-m);
+}
+
+.square.size_l {
+    width: var(--font-line-l);
+    height: var(--font-line-l);
+}
+
+.square.size_xl {
+    width: var(--font-line-xl);
+    height: var(--font-line-xl);
+    padding: 0;
+}

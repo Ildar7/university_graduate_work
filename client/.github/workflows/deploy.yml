@@ -1,0 +1,27 @@
+name: Deploying Application to VPS
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm i
+    - run: npm run build:prod
+    - run: echo ${{ secrets.ILDAR_PASS }} | sudo -S cp -r /home/ildar/git-runners/actions-runner/_work/hectum-lms-frontend/hectum-lms-frontend/build/. /home/hectum-frontend #copies contents of the build folder to the '/home/hectum-frontend' folder where it will be served up

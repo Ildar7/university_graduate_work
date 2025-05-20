@@ -1,0 +1,30 @@
+.students {
+    margin-top: 15px;
+}
+
+.studentsList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.search {
+    max-width: none;
+}
+
+.studentRow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.studentLabel {
+    order: 2;
+
+    & > div {
+        color: var(--text-color);
+        font: var(--font-s) !important;
+        font-weight: var(--font-medium) !important;
+    }
+}

@@ -1,0 +1,17 @@
+.StudentsTableFields {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 30px;
+}
+
+.field {
+    flex: 1;
+}
+
+.fieldsBlock {
+    flex: calc(50% - 30px);
+}
+
+.settings {
+    margin-top: 15px;
+}

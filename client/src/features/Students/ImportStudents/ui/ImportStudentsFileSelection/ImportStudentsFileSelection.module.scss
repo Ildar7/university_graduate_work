@@ -1,0 +1,18 @@
+.ImportStudentsFileSelection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fileInput {
+    display: none;
+}
+
+.fileInputBtn {
+    margin-top: 15px;
+}
+
+.fileInputLabel {
+    cursor: pointer;
+}

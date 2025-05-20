@@ -1,0 +1,161 @@
+.ReferencesList {
+    position: relative;
+    min-width: 200px;
+    z-index: 40;
+}
+
+.partial {
+    .titleWrapper {
+        border-radius: 5px 0;
+    }
+
+    .selectItems {
+        border-radius: 0 0 5px;
+
+        &::before {
+            border-radius: 0 0 5px;
+        }
+    }
+}
+
+.full {
+    .titleWrapper {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .selectItems {
+        border-radius: 0 0 5px 5px;
+
+        &::before {
+            border-radius: 0 0 5px 5px;
+        }
+    }
+}
+
+.selectVisible {
+    &.partial {
+        .titleWrapper {
+            border-radius: 5px 0 0;
+        }
+    }
+}
+
+.secondListVisible {
+    &.partial {
+        .selectItems {
+            border-radius: 0;
+
+            &::before {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+.titleWrapper {
+    padding: 15px;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: 1919px) {
+        padding: 10px;
+    }
+}
+
+.title {
+    color: var(--white);
+    text-align: left;
+}
+
+.selectItems {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--text-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--main-color);
+        z-index: 1;
+    }
+}
+
+.visibleItems {
+    opacity: 1;
+    visibility: visible;
+}
+
+.selectItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 15px !important;
+}
+
+.listWrapper {
+    position: relative;
+}
+
+.secondLevelList {
+    top: 0;
+    right: 0;
+    transform: translateX(calc(100% - 1px));
+    left: auto;
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid var(--main-color);
+    z-index: 3;
+
+    &::before {
+        display: none;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -1px;
+        width: 1px;
+        height: 50px;
+        background-color: var(--text-color);
+    }
+}
+
+.secondLevelListActive {
+    opacity: 1;
+    visibility: visible;
+}
+
+.arrowRight {
+    transform: rotate(-90deg);
+}
+
+.arrowLeft {
+    transform: rotate(90deg);
+}
+
+.arrowUp {
+    transform: rotate(180deg);
+}
+
+.selectItemActive {
+    background-color: var(--main-color);
+}

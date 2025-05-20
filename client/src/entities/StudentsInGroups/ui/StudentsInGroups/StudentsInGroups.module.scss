@@ -1,0 +1,70 @@
+.content {
+    display: flex;
+    align-items: stretch;
+    gap: 50px;
+    height: calc(100vh - 180px);
+
+    @media (max-width: 1919px) {
+        gap: 40px;
+    }
+}
+
+.contentInner {
+    flex: 1;
+    border: 1px solid var(--light-border-color);
+    border-radius: 5px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons {
+    padding: 10px 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.moveBtn {
+    svg {
+        width: 20px;
+    }
+}
+
+.arrowLeftIcon {
+    rotate: 180deg;
+}
+
+.buttonsRightWrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.btn {
+    gap: 40px;
+
+    @media (max-width: 1919px) {
+        padding: 5px 12px;
+        gap: 11px;
+    }
+}
+
+.exitBtnIcon {
+    fill: none;
+}
+
+.editIcon,
+.fileIcon {
+    path {
+        fill: var(--white);
+    }
+}

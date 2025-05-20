@@ -1,0 +1,101 @@
+.items {
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    border-bottom: 2px solid transparent;
+    color: var(--secondary-menu-default-text-color);
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    grid-gap: 5px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        color: var(--secondary-menu-default-text-color);
+
+        &:not(.active) {
+            transition: background-color 0.2s ease-in-out;
+            background-color: rgb(9 30 66 / 14%);
+        }
+    }
+}
+
+.active {
+    border-bottom: 2px solid var(--secondary-menu-active-border-color);
+    border-radius: 0;
+    cursor: default;
+
+    &:hover {
+        color: var(--secondary-menu-default-text-color);
+    }
+}
+
+.subItems {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 30px;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    z-index: 2;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 12px 5px rgb(34 60 80 / 20%);
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.menuIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.withChildrenItems {
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        .subItems {
+            opacity: 1;
+            visibility: visible;
+            height: auto;
+        }
+
+        .menuIcon {
+            transform: rotate(180deg);
+            transition: transform 0.2s ease-in-out;
+        }
+    }
+}
+
+.subItemLink {
+    color: var(--secondary-menu-default-text-color);
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: rgb(9 30 66 / 14%);
+        color: var(--secondary-menu-default-text-color);
+        transition: background-color 0.2s ease-in-out;
+    }
+}
+
+.subItemActive {
+    background: var(--secondary-menu-active-border-color);
+    color: var(--white);
+    cursor: default;
+
+    &:hover {
+        color: var(--white);
+        background: var(--secondary-menu-active-border-color);
+    }
+}

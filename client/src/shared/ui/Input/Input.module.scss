@@ -1,0 +1,92 @@
+.InputWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    margin-bottom: 5px;
+    color: var(--secondary-text-color);
+}
+
+.input {
+    font: var(--font-xs) !important;
+    padding: 12px !important;
+    background: transparent !important;
+    border: 1px solid var(--light-border-color) !important;
+    border-radius: 5px !important;
+    outline: none !important;
+    width: 100% !important;
+    color: var(--light-text-color) !important;
+
+    @media (max-width: 1919px) {
+        padding: 7.2px !important;
+    }
+
+    &::placeholder {
+        transition: color 0.2s ease-in-out !important;
+        color: var(--light-text-color) !important;
+    }
+
+    &:focus,
+    &.inputActive {
+        color: var(--main-color) !important;
+        border: 1px solid var(--main-color) !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        outline: none !important;
+
+        &::placeholder {
+            transition: color 0.2s ease-in-out !important;
+            color: var(--main-color) !important;
+        }
+    }
+}
+
+.readonly {
+    input {
+        cursor: default !important;
+        opacity: 0.5 !important;
+
+        &.inputActive {
+            opacity: 1 !important;
+        }
+
+        &:focus {
+            background: transparent !important;
+            border: 1px solid var(--light-border-color) !important;
+            border-radius: 5px !important;
+            outline: none !important;
+            width: 100% !important;
+            color: var(--light-text-color) !important;
+
+            &::placeholder {
+                transition: color 0.2s ease-in-out !important;
+                color: var(--light-text-color) !important;
+            }
+        }
+    }
+}
+
+.tableCellInput {
+    color: var(--text-color) !important;
+    text-align: center;
+    border-radius: 0 !important;
+    padding: 0 5px !important;
+    height: 100% !important;
+    width: 100% !important;
+    flex: 1;
+    cursor: pointer;
+    font-weight: var(--font-semibold) !important;
+    border: 1px solid transparent !important;
+
+    @media (max-width: 1919px) {
+        font: var(--font-xxs) !important;
+        font-weight: var(--font-semibold) !important;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

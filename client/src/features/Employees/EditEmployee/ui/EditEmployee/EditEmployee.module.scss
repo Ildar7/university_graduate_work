@@ -1,0 +1,46 @@
+.tabBtn {
+    width: 100%;
+}
+
+.tabsButtonsBlock {
+    display: flex;
+    grid-gap: 15px;
+}
+
+.tab {
+    margin-top: 25px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.footerBtn {
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.greenBtn {
+    color: var(--white) !important;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between !important;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    color: var(--red-warning);
+}
+
+.messageIcon {
+    margin-right: 10px;
+    width: 25px;
+}

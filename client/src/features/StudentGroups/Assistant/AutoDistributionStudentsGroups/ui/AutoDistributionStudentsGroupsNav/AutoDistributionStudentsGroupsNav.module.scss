@@ -1,0 +1,24 @@
+.AutoDistributionStudentsGroupsNav {
+    grid-gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tabLink {
+    cursor: default;
+    border: 2px solid var(--light-main-color) !important;
+    color: var(--main-color);
+
+    &:hover {
+        color: var(--main-color);
+    }
+
+    &.activeLink {
+        color: var(--white);
+        background-color: var(--main-color) !important;
+        border: 2px solid transparent !important;
+
+        &:hover {
+            color: var(--white);
+        }
+    }
+}
