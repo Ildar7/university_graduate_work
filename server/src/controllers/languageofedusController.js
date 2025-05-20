@@ -3,14 +3,14 @@ import {
     getLanguageofeduById as getLanguageofeduByIdModel,
     createLanguageofedu as createLanguageofeduModel,
     deleteLanguageofedu as deleteLanguageofeduModel,
-    updateLanguageofedu as updateLanguageofeduModel
+    updateLanguageofedu as updateLanguageofeduModel,
+    getNextLanguageofeduId as getNextLanguageofeduIdModel
 } from '../models/Languageofedus.js';
 
 export const getLanguageofedus = async (req, res) => {
     try {
         const { page = 1, limit = 50, sort = 'id_languageofedu', order = 'asc' } = req.query;
 
-        // Валидация параметров
         const validSortFields = ['id_languageofedu', 'languageofedu'];
         const validOrderValues = ['asc', 'desc'];
 
@@ -77,11 +77,12 @@ export const createLanguageofedu = async (req, res) => {
             return res.status(400).json({ message: 'Поле name обязательно и должно быть непустой строкой' });
         }
         const trimmedName = name.trim();
-        const language = await createLanguageofeduModel(trimmedName);
+        const nextId = await getNextLanguageofeduIdModel();
+        const language = await createLanguageofeduModel(nextId, trimmedName);
         res.status(201).json(language);
     } catch (error) {
-        console.log(error)
-        if (error.code === '23505') { // Уникальное нарушение (duplicate key)
+        console.log(error);
+        if (error.code === '23505') {
             return res.status(409).json({ message: `Язык обучения '${req.body.name}' уже существует` });
         }
         console.error('Ошибка при создании языка обучения:', error);
@@ -107,6 +108,7 @@ export const updateLanguageofedu = async (req, res) => {
         }
         res.json(language);
     } catch (error) {
+        console.log(error);
         if (error.code === '23505') {
             return res.status(409).json({ message: `Язык обучения '${req.body.name}' уже существует` });
         }
@@ -128,8 +130,11 @@ export const deleteLanguageofedu = async (req, res) => {
         }
         res.status(204).send();
     } catch (error) {
-        if (error.code === '23503') { // Нарушение внешнего ключа
-            return res.status(409).json({ message: `Нельзя удалить язык обучения с ID ${req.params.id}, так как он используется в других таблицах` });
+        console.log(error);
+        if (error.code === '23503') {
+            return res.status(409).json({
+                message: `Нельзя удалить язык обучения с ID ${req.params.id}, так как он используется в других таблицах`
+            });
         }
         console.error('Ошибка при удалении языка обучения:', error);
         res.status(500).json({ message: 'Ошибка сервера' });

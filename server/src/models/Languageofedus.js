@@ -28,9 +28,16 @@ export const getLanguageofeduById = async (id) => {
     return result.rows[0] || null;
 };
 
-export const createLanguageofedu = async (name) => {
-    const query = 'INSERT INTO languageofedu (languageofedu) VALUES ($1) RETURNING *';
-    const result = await pool.query(query, [name]);
+export const getNextLanguageofeduId = async () => {
+    const query = 'SELECT COALESCE(MAX(id_languageofedu) + 1, 1) AS next_id FROM languageofedu';
+    const result = await pool.query(query);
+    return parseInt(result.rows[0].next_id, 10);
+};
+
+export const createLanguageofedu = async (id, name) => {
+    const query = 'INSERT INTO languageofedu (id_languageofedu, languageofedu) VALUES ($1, $2) RETURNING *';
+    const result = await pool.query(query, [id, name]);
+    await pool.query("SELECT setval(pg_get_serial_sequence('languageofedu', 'id_languageofedu'), (SELECT MAX(id_languageofedu) FROM languageofedu))");
     return result.rows[0];
 };
 

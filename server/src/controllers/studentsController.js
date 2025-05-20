@@ -1,4 +1,3 @@
-// server/src/controllers/studentsController.js
 import pool from '../config/db.js';
 
 export const getStudents = async (req, res) => {

@@ -25,18 +25,4 @@ export const educationPageBreadcrumbs: BreadcrumbList[] = [
         items: null,
         active: window.location.pathname === getRouteEduForms(),
     },
-    {
-        id: 4,
-        name: 'Виды практики',
-        pathname: getRoutePracticeTypes(),
-        items: null,
-        active: window.location.pathname === getRoutePracticeTypes(),
-    },
-    {
-        id: 5,
-        name: 'Категории успеваемости',
-        pathname: getRoutePerformanceTypes(),
-        items: null,
-        active: window.location.pathname === getRoutePerformanceTypes(),
-    },
 ];

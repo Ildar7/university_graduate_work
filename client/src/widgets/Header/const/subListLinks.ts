@@ -47,14 +47,6 @@ export const subListLinks = {
             name: 'Формы обучения',
             link: getRouteEduForms(),
         },
-        {
-            name: 'Виды практики',
-            link: getRoutePracticeTypes(),
-        },
-        {
-            name: 'Категории успеваемости',
-            link: getRoutePerformanceTypes(),
-        },
     ],
     learningProcess: [
         {

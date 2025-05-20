@@ -53,12 +53,12 @@ export const getGroups = async (req, res) => {
             short_name: row.short_name,
             serial_number: row.serial_number,
             code: row.code,
-            qualifications: row.qualifications.filter(q => q.id_qual !== null), // Убираем NULL квалификации
+            qualifications: row.qualifications.filter(q => q.id_qual !== null),
             language: {
                 id_languageofedu: row.id_languageofedu,
                 language: row.languageofedu,
                 languageofedu: row.languageofedu,
-                id_languages: row.id_languageofedu, // Совпадает с id_languageofedu
+                id_languages: row.id_languageofedu,
                 symbol_code: row.languageofedu === 'Русский' ? 'RU' : 'KZ',
                 name: row.languageofedu
             },
@@ -74,7 +74,7 @@ export const getGroups = async (req, res) => {
                 original_name: row.eb_original_name,
                 short_name: row.eb_short_name
             },
-            studentsCount: 0 // Пока хардкод, так как нет данных students
+            studentsCount: 0
         }));
 
         res.json({ data: formattedData, pagination: null });

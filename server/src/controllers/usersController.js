@@ -36,7 +36,7 @@ export const createUser = async (req, res) => {
 
 export const updateUser = async (req, res) => {
     const { id } = req.params;
-    const { email, first_name, last_name, patronymic } = req.body; // Убрали login и password
+    const { email, first_name, last_name, patronymic } = req.body;
     try {
         const result = await pool.query(
             'UPDATE users SET email = COALESCE($1, email), first_name = COALESCE($2, first_name), last_name = COALESCE($3, last_name), patronymic = COALESCE($4, patronymic) WHERE user_id = $5 RETURNING *',

@@ -3,11 +3,11 @@ import pool from './config/db';
 
 const seedUser = async () => {
     const login = 'admin';
-    const password = 'somepa$$wd'; // Пароль в открытом виде
+    const password = 'somepa$$wd';
     const first_name = 'Иван';
     const last_name = 'Иванов';
 
-    const hashedPassword = await bcrypt.hash(password, 10); // Хешируем пароль
+    const hashedPassword = await bcrypt.hash(password, 10);
 
     await pool.query(
         'INSERT INTO users (login, password, first_name, last_name) VALUES ($1, $2, $3, $4)',

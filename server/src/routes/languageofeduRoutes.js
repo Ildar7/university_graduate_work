@@ -1,6 +1,6 @@
 import {Router} from 'express';
 import {authenticateJWT} from '../middleware/auth.js';
-import {getLanguageofeduById, getLanguageofedus, createLanguageofedu, deleteLanguageofedu, updateLanguageofedu} from "../controllers/languageofedusController.js";
+import {getLanguageofeduById, getLanguageofedus, createLanguageofedu, deleteLanguageofedu, updateLanguageofedu } from "../controllers/languageofedusController.js";
 
 const router = Router();
 
