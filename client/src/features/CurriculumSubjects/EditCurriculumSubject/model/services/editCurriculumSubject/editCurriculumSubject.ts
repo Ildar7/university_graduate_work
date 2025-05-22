@@ -18,7 +18,6 @@ export const editCurriculumSubject = createAsyncThunk<void, string, ThunkConfig<
 
         const data = {
             name: curriculumSubjectNewData?.name,
-            sort: curriculumSubjectNewData?.sort ? curriculumSubjectNewData?.sort : 100,
             module_id: curriculumSubjectNewData?.module_id,
             unit_id: curriculumSubjectNewData?.unit_id,
         };

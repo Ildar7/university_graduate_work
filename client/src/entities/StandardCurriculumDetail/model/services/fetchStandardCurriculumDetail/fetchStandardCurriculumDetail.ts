@@ -14,7 +14,7 @@ export const fetchStandardCurriculumDetail = createAsyncThunk<StandardCurriculum
         try {
             const response = await extra.api.get<StandardCurriculumDetailType>(
                 `/curriculum/standard-curricula/${id}/detailed`,
-            );
+            ) as any;
 
             dispatch(editStandardCurriculumActions.setSpecialityId([
                 'data', response.data.speciality_id,
@@ -26,13 +26,17 @@ export const fetchStandardCurriculumDetail = createAsyncThunk<StandardCurriculum
                 'data', response.data.date_of_order,
             ]));
 
-            dispatch(editStandardCurriculumActions.addModuleToGeneralModulesFromServer(
-                response.data.modules as EditStandardCurriculumModule[],
-            ));
+            if (response.data.modules && response.data.modules.length) {
+                dispatch(editStandardCurriculumActions.addModuleToGeneralModulesFromServer(
+                    response.data.modules as EditStandardCurriculumModule[],
+                ));
+            }
 
-            dispatch(editStandardCurriculumActions.addQualificationToStructureFromServer(
-                response.data.qualifications as EditStandardCurriculumQualification[],
-            ));
+            if (response.data.qualifications && response.data.qualifications.length) {
+                dispatch(editStandardCurriculumActions.addQualificationToStructureFromServer(
+                    response.data.qualifications as EditStandardCurriculumQualification[],
+                ));
+            }
 
             dispatch(editStandardCurriculumActions.setDataToChange());
 

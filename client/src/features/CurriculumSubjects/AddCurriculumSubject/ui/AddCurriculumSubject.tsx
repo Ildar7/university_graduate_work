@@ -1,14 +1,6 @@
 import { classNames } from 'shared/lib/helpers/classNames/classNames';
 import {
-    CButton,
-    CForm,
-    CFormSelect,
-    CModal,
-    CModalBody,
-    CModalFooter,
-    CModalHeader,
-    CModalTitle,
-    CToaster,
+    CForm, CModal, CModalBody, CModalFooter, CModalHeader, CModalTitle, CToaster,
 } from '@coreui/react';
 import CIcon from '@coreui/icons-react';
 import { cilPlus, cilWarning } from '@coreui/icons';
@@ -20,25 +12,24 @@ import { CFormInputWithMask } from 'shared/ui/InputMask/InputMask';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Toast } from 'shared/ui/Toast/Toast';
-import { detectInvalidInput } from 'shared/lib/errors/detectInvalidInput/detectInvalidInput';
-import { setInvalidInputMessage } from 'shared/lib/errors/setInvalidInputMessage/setInvalidInputMessage';
-import { getCurriculumSubjectsData } from 'entities/CurriculumSubjects';
 import { SearchSelect } from 'shared/ui/SearchSelect/SearchSelect';
 import {
     getEduModulesData,
     getEduModulesError,
     getEduModulesIsLoading,
-    getEduUnitsData, getEduUnitsError, getEduUnitsIsLoading,
+    getEduUnitsData,
+    getEduUnitsError,
+    getEduUnitsIsLoading,
 } from 'entities/EducationalModules';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import cls from './AddCurriculumSubject.module.scss';
-import { getAddCurriculumSubjectError } from '../model/selectors/getAddCurriculumSubjectError/getAddCurriculumSubjectError';
+import {
+    getAddCurriculumSubjectError,
+} from '../model/selectors/getAddCurriculumSubjectError/getAddCurriculumSubjectError';
 import { addCurriculumSubjectActions } from '../model/slice/addCurriculumSubjectSlice';
 import { addCurriculumSubject } from '../model/services/addCurriculumSubject/addCurriculumSubject';
-import {
-    getAddCurriculumSubjectData,
-} from '../model/selectors/getAddCurriculumSubjectData/getAddCurriculumSubjectData';
+import { getAddCurriculumSubjectData } from '../model/selectors/getAddCurriculumSubjectData/getAddCurriculumSubjectData';
 
 interface AddCurriculumSubjectProps {
     className?: string;
@@ -82,10 +73,6 @@ export const AddCurriculumSubject = (props: AddCurriculumSubjectProps) => {
         dispatch(addCurriculumSubjectActions.setName(event.target.value));
     };
 
-    const onChangeSort = (event: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(addCurriculumSubjectActions.setSort(event.target.value));
-    };
-
     const onChangeSelectModuleId = (value: string, columnName: string) => {
         const filteredModule = eduModules!.filter((module) => module.name === value)[0];
 
@@ -115,7 +102,6 @@ export const AddCurriculumSubject = (props: AddCurriculumSubjectProps) => {
         if (form.checkValidity()) {
             if (addCurriculumSubjectData?.name
                 && addCurriculumSubjectData.module_id
-                && addCurriculumSubjectData.sort
             ) {
                 const result = await dispatch(addCurriculumSubject(addCurriculumSubjectData));
 
@@ -162,24 +148,6 @@ export const AddCurriculumSubject = (props: AddCurriculumSubjectProps) => {
                                 feedbackInvalid="Введите корректные данные!"
                                 value={addCurriculumSubjectData?.name || ''}
                                 onChange={onChangeName}
-                                required
-                            />
-                        </div>
-                    </div>
-                    <div className={cls.settings}>
-                        <div className={cls.newAddField}>
-                            <h6 className={cls.newAddFieldTitle}>Сортировка*</h6>
-                            <CFormInputWithMask
-                                type="number"
-                                placeholder="100"
-                                min={100}
-                                step={100}
-                                // @ts-ignore
-                                feedbackValid={addCurriculumSubjectValidationErrors ? '' : 'Здорово!'}
-                                invalid={!!addCurriculumSubjectValidationErrors}
-                                feedbackInvalid="Введите корректные данные!"
-                                value={String(addCurriculumSubjectData?.sort) || ''}
-                                onChange={onChangeSort}
                                 required
                             />
                         </div>

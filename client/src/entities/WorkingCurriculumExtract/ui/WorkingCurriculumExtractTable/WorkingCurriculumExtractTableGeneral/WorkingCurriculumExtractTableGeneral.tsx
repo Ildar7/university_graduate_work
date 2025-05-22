@@ -62,7 +62,7 @@ export const WorkingCurriculumExtractTableGeneral = memo((props: WorkingCurricul
     const { pathname } = useLocation();
 
     const extractData = useSelector(getWorkingCurriculumExtractData);
-    const creditsPerHour = Number(useSelector(getSettingsMainCollegeData)!.hectum_curriculum.options
+    const creditsPerHour = Number(useSelector(getSettingsMainCollegeData)!.knrtu_kai.options
         .filter((option) => option.name === 'credit_in_hours')[0].value);
 
     const tableReadOnly = useSelector(getWorkingCurriculumExtractReadOnly);

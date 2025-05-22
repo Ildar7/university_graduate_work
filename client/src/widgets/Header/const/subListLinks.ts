@@ -28,11 +28,6 @@ export const subListLinks = {
             name: 'Группы',
             link: getRouteStudentGroups(),
         },
-        {
-            name: 'Сотрудники',
-            link: getRouteEmployees(),
-            icon: EmployeeIcons,
-        },
     ],
     education: [
         {

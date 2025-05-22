@@ -10,6 +10,10 @@ export interface CurriculumSubjectsType {
     unit_id: number;
 }
 
+export interface CurriculumSubjectsTypeData {
+    data: CurriculumSubjectsType[];
+}
+
 export interface CurriculumSubjectsPagination {
     total_records: number;
     current_page: number;

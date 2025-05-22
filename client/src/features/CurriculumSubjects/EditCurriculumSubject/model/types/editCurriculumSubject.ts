@@ -1,13 +1,11 @@
 export interface EditCurriculumSubjectType {
     name: string;
-    sort: number;
     module_id: number;
     unit_id: number;
 }
 
 export interface NewFieldsType {
     name?: string | null;
-    sort?: number | null;
     module_id?: number | null;
     unit_id?: number | null;
 }

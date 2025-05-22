@@ -40,9 +40,6 @@ import {
     WorkingCurriculumExtractUnits,
 } from '../../../../model/types/workingCurriculumExtractQualifications';
 import {
-    fetchWorkingCurriculumExtract,
-} from '../../../../model/services/fetchWorkingCurriculumExtract/fetchWorkingCurriculumExtract';
-import {
     getWorkingCurriculumExtractDataParsed,
     getWorkingCurriculumExtractDataToWork,
 } from '../../../../model/selectors/getWorkingCurriculumExtract/getWorkingCurriculumExtract';
@@ -87,7 +84,6 @@ export const AddDiscipline = memo((
     const onCancelHandler = useCallback(() => {
         onClose();
         dispatch(addCurriculumSubjectActions.setName(null));
-        dispatch(addCurriculumSubjectActions.setSort('100'));
     }, [dispatch, onClose]);
 
     const onChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -151,10 +147,6 @@ export const AddDiscipline = memo((
     useEffect(() => {
         setWorkingCurriculumId(pathname.split('/')[pathname.split('/').length - 1]);
     }, [pathname]);
-
-    useEffect(() => {
-        dispatch(addCurriculumSubjectActions.setSort('100'));
-    }, [dispatch]);
 
     useEffect(() => {
         if (moduleDetail) {

@@ -215,9 +215,9 @@ export const AddStandardCurriculumQualificationModal = (props: AddStandardCurric
 
     useEffect(() => {
         if (coreOptionsData) {
-            const minValue = coreOptionsData.hectum_curriculum.options
+            const minValue = coreOptionsData.knrtu_kai.options
                 .filter((option) => option.name === 'credits_per_academic_year')[0].value;
-            const maxValue = Number(coreOptionsData.hectum_curriculum.options
+            const maxValue = Number(coreOptionsData.knrtu_kai.options
                 .filter((option) => option.name === 'max_academic_years')[0].value) * Number(minValue);
 
             setMinCreditsValue(Number(minValue));

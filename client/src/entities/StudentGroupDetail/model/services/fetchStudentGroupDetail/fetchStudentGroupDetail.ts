@@ -13,11 +13,9 @@ export const fetchStudentGroupDetail = createAsyncThunk<StudentGroupDetailType, 
 
             const editData = {
                 name: response.data.name,
-                id_language: response.data.id_language,
                 enrollment_year: response.data.enrollment_year,
                 id_specialty: response.data.id_specialty,
-                qualifications: response.data.qualifications.map((qualification) => qualification.id_qual),
-                id_education_base: response.data.education_basis.id_education_bases,
+                qualifications: response.data.qualifications.map((qualification: any) => qualification.id_qual),
                 course: response.data.course,
                 study_duration: response.data.study_duration,
                 is_full_time: response.data.is_full_time,

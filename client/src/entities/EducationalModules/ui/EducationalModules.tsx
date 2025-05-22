@@ -30,15 +30,11 @@ import { educationalModulesActions } from '../model/slice/educationalModulesSlic
 interface EducationalModulesProps {
     className?: string;
     data: EducationalModulesData[];
-    addingModalText: string;
-    setVisibleAddEduModule: (value: boolean) => void;
 }
 export const EducationalModules = (props: EducationalModulesProps) => {
     const {
         className,
         data,
-        addingModalText,
-        setVisibleAddEduModule,
     } = props;
     const dispatch = useAppDispatch();
 
@@ -68,15 +64,6 @@ export const EducationalModules = (props: EducationalModulesProps) => {
         }
         // eslint-disable-next-line
     }, [dispatch, modulesError, modulesIsLoading, unitsError, unitsIsLoading, units]);
-
-    const onShowAddEduModule = useCallback(() => {
-        setVisibleAddEduModule(true);
-    }, [setVisibleAddEduModule]);
-
-    const onShowEditEduModuleModal = (id: string) => {
-        setVisibleEditEduModule(true);
-        setEduModuleDetailId(id);
-    };
 
     const onShowDeleteEduModuleModal = useCallback((eduModule: EducationalModulesData) => {
         setVisibleDeleteEduModule(true);
@@ -134,9 +121,7 @@ export const EducationalModules = (props: EducationalModulesProps) => {
                             <div className={classNames(cls.column, {}, [cls.fourthColumn])}>
                                 Сортировка
                             </div>
-                            <div className={classNames(cls.column, {}, [cls.fifthColumn])}>
-                                Кредитов на модуль
-                            </div>
+                            <div className={classNames(cls.column, {}, [cls.fifthColumn])} />
                             <div className={classNames(cls.column, {}, [cls.sixthColumn])} />
                         </div>
                         {
@@ -159,33 +144,8 @@ export const EducationalModules = (props: EducationalModulesProps) => {
                                         <div className={classNames(cls.column, {}, [cls.fourthColumn])}>
                                             {module.sort}
                                         </div>
-                                        <div className={classNames(cls.column, {}, [cls.fifthColumn])}>
-                                            {module.study_time_in_credits ? module.study_time_in_credits : 'Нет'}
-                                        </div>
-                                        <div className={classNames(cls.column, {}, [cls.sixthColumn])}>
-                                            <Button
-                                                theme={ButtonTheme.OUTLINE}
-                                                title="Редактировать"
-                                                className={cls.editBtn}
-                                                onClick={() => { onShowEditEduModuleModal(module.module_id.toString()); }}
-                                            >
-                                                <CIcon
-                                                    icon={cilPencil}
-                                                    customClassName={cls.btnIcon}
-                                                />
-                                            </Button>
-                                            <Button
-                                                theme={ButtonTheme.OUTLINE}
-                                                title="Удалить"
-                                                className={cls.editBtn}
-                                                onClick={() => { onShowDeleteEduModuleModal(module); }}
-                                            >
-                                                <CIcon
-                                                    icon={cilTrash}
-                                                    customClassName={cls.btnIcon}
-                                                />
-                                            </Button>
-                                        </div>
+                                        <div className={classNames(cls.column, {}, [cls.fifthColumn])} />
+                                        <div className={classNames(cls.column, {}, [cls.sixthColumn])} />
                                     </CAccordionHeader>
                                     <CAccordionBody className={cls.rowBody}>
                                         {module.units && module.units.length ? (
@@ -286,20 +246,6 @@ export const EducationalModules = (props: EducationalModulesProps) => {
     return (
         <div className={classNames(cls.EducationalModules, {}, [className])}>
             <CAccordion alwaysOpen className={cls.table}>
-                <Button
-                    className={classNames(cls.btn, {}, [cls.btnGreen])}
-                    onClick={onShowAddEduModule}
-                    disabled={!!modulesError || !!unitsError || modulesIsLoading || unitsIsLoading}
-                >
-                    <Text
-                        size={TextSize.XS}
-                        weight={TextWeight.SEMIBOLD}
-                    >
-                        {addingModalText}
-                    </Text>
-                    <CIcon icon={cilPlus} className={classNames(cls.btnIcon, {}, [cls.addUserIcon])} />
-                </Button>
-
                 {content}
             </CAccordion>
 

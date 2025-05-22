@@ -34,9 +34,6 @@ const editStudentGroupsSlice = createSlice({
                 };
             }
         },
-        changeEducationBaseId: (state, action: PayloadAction<number | null>) => {
-            state.newFields!.id_education_base = action.payload;
-        },
         changeFullTimeEducation: (state, action: PayloadAction<boolean>) => {
             state.newFields!.is_full_time = action.payload;
         },
@@ -49,12 +46,12 @@ const editStudentGroupsSlice = createSlice({
         changeSerialNumber: (state, action: PayloadAction<number | null>) => {
             state.newFields!.serial_number = action.payload;
         },
-        changeLanguage: (state, action: PayloadAction<number | null>) => {
-            state.newFields!.id_language = action.payload;
-        },
         clearNewFields: (state) => {
             state.newFields = state.data;
             state.errors = undefined;
+        },
+        changeCode: (state, action: PayloadAction<string | null>) => {
+            state.newFields!.code = action.payload;
         },
     },
     extraReducers: (builder) => {

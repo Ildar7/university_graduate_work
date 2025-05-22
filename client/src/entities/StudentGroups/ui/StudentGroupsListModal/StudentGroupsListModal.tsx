@@ -44,10 +44,16 @@ export const StudentGroupsListModal = memo((props: StudentGroupsListModalProps) 
             id_group: Number(groupId),
         };
 
-        const filter = encodeURIComponent(JSON.stringify(groupIdFilter));
+        const filter = groupId ? encodeURIComponent(JSON.stringify(groupIdFilter)) : null;
 
         try {
-            const res = await $api.get(`/college/students?filter=${filter}`);
+            let urlString;
+            if (filter) {
+                urlString = `/college/students?filter=${filter}`;
+            } else {
+                urlString = '/college/students';
+            }
+            const res = await $api.get(`${urlString}`);
             setStudentsData((res.data.data as StudentsType[]).map((student) => (
                 {
                     ...student,

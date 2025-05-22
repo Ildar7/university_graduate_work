@@ -121,7 +121,7 @@ export const WorkingCurriculumExtractTableSubjects = memo((props: WorkingCurricu
     const tableReadOnly = useSelector(getWorkingCurriculumExtractReadOnly);
     const showAllDisciplines = useSelector(getWorkingCurriculumExtractShowAllDisciplines);
 
-    const creditsPerHour = Number(useSelector(getSettingsMainCollegeData)!.hectum_curriculum.options
+    const creditsPerHour = Number(useSelector(getSettingsMainCollegeData)!.knrtu_kai.options
         .filter((option) => option.name === 'credit_in_hours')[0].value);
     const onDeleteSubject = (
         qualId: number | undefined,

@@ -4,14 +4,24 @@ export interface SettingsMainTabs {
     active: boolean;
 }
 
+export interface SettingsMainCollegeFetchedData {
+    option_id: number;
+    option_name: string;
+    option_type: string;
+    option_value: string;
+    option_group: string;
+    option_key: string;
+}
+
 export interface SettingsMainCollegeInnerData {
     id: number;
     name: string;
-    title: string;
     type: string;
     value: string | number;
-    sort: number;
+    group: string;
+    key: string;
 }
+
 export interface SettingsMainCollegeData {
     [name: string]: {
         title: string;

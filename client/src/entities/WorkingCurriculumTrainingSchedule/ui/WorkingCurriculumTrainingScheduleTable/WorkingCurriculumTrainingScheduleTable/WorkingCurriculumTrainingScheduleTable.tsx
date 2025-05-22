@@ -165,7 +165,7 @@ export const WorkingCurriculumTrainingScheduleTable = memo((props: WorkingCurric
 
     useEffect(() => {
         if (collegeCoreOptions) {
-            const credits = collegeCoreOptions.hectum_curriculum.options
+            const credits = collegeCoreOptions.knrtu_kai.options
                 .filter((option) => option.name === 'credit_in_hours')[0].value;
 
             setCreditsPerHour(Number(credits));

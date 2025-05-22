@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 import { settingsMainCollegeActions } from 'entities/Settings/SettingsMainCollege';
-import { SettingsMainCollegeData } from '../../types/settingsMainCollege';
+import { SettingsMainCollegeData, SettingsMainCollegeFetchedData } from '../../types/settingsMainCollege';
 
 export const fetchCollegeCoreOptions = createAsyncThunk<SettingsMainCollegeData, void, ThunkConfig<string>>(
     'settings/fetchCollegeCoreOptions',
@@ -9,11 +9,24 @@ export const fetchCollegeCoreOptions = createAsyncThunk<SettingsMainCollegeData,
         const { rejectWithValue, extra, dispatch } = thunkAPI;
 
         try {
-            const response = await extra.api.get<SettingsMainCollegeData>('/core/options/');
+            const response = await extra.api.get<SettingsMainCollegeFetchedData[]>('/core/options/') as any;
 
-            dispatch(settingsMainCollegeActions.setDataToChange(response.data));
+            const resultData: SettingsMainCollegeData = {
+                knrtu_kai: {
+                    title: 'Общие',
+                    options: (response.data as SettingsMainCollegeFetchedData[]).map((item) => ({
+                        name: item.option_name,
+                        group: item.option_group,
+                        key: item.option_key,
+                        value: item.option_value,
+                        type: item.option_type,
+                        id: item.option_id,
+                    })),
+                },
+            };
 
-            return response.data;
+            dispatch(settingsMainCollegeActions.setDataToChange(resultData));
+            return resultData;
         } catch (err: any) {
             return rejectWithValue('ERROR');
         }

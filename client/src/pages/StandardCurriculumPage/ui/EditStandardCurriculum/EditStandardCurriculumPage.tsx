@@ -70,7 +70,7 @@ const EditStandardCurriculumPage = (props: EditStandardCurriculumProps) => {
                 weight={TextWeight.SEMIBOLD}
                 className={cls.error}
             >
-                Произошла ошибка при загрузке данных, попробуйте перезагрузить страницу
+                Произошла ошибка при загрузке данных о типовом учебном плане, попробуйте перезагрузить страницу
             </Text>
         );
     } else {

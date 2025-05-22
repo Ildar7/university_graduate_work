@@ -266,7 +266,7 @@ export const Students = (props: StudentsProps) => {
                                                             : TextTheme.BG_BLUE_ORANGE
                                                 }
                                             >
-                                                {student.typeoftraining && (capitalizeFirstLetter(student.typeoftraining.typeoftraining))}
+                                                {student.typeoftraining && student.typeoftraining.typeoftraining && (capitalizeFirstLetter(student.typeoftraining.typeoftraining))}
                                             </Text>
                                         </div>
                                     )}

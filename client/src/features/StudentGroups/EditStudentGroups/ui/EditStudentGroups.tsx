@@ -13,12 +13,6 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import { SearchSelect } from 'shared/ui/SearchSelect/SearchSelect';
-import {
-    fetchEducationBases,
-    getEducationBasesData,
-    getEducationBasesError,
-    getEducationBasesIsLoading,
-} from 'entities/EducationBases';
 import { Icon } from 'shared/ui/Icon/Icon';
 import CloseBorderedIcon from 'shared/assets/icons/close-bordered.svg';
 import { Toast } from 'shared/ui/Toast/Toast';
@@ -36,9 +30,6 @@ import {
     getQualificationsError,
     getQualificationsIsLoading,
 } from 'entities/Qualifications';
-import {
-    fetchLanguages, getLanguagesData, getLanguagesError, getLanguagesIsLoading,
-} from 'entities/Languages';
 import { checkObjectProperties } from 'shared/lib/helpers/checkObjectProperties/checkObjectProperties';
 import {
     fetchStudentGroupDetail,
@@ -78,10 +69,8 @@ export const EditStudentGroups = memo((props: EditStudentGroupProps) => {
     const toaster = useRef<HTMLDivElement | null>(null);
     const [validated, setValidated] = useState<boolean>(false);
     const [yearsList, setYearsList] = useState<string[]>([]);
-    const [selectedEduBases, setSelectedEduBases] = useState('null');
     const [selectedEduForm, setSelectedEduForm] = useState('null');
     const [selectedSpecialty, setSelectedSpecialty] = useState('null');
-    const [selectedLanguage, setSelectedLanguage] = useState('null');
     const [selectedQualifications, setSelectedQualifications] = useState<string[]>([]);
     const [groupCode, setGroupCode] = useState('');
 
@@ -104,14 +93,6 @@ export const EditStudentGroups = memo((props: EditStudentGroupProps) => {
     const qualificationsIsLoading = useSelector(getQualificationsIsLoading);
     const qualificationsError = useSelector(getQualificationsError);
 
-    const eduBaseData = useSelector(getEducationBasesData);
-    const eduBaseIsLoading = useSelector(getEducationBasesIsLoading);
-    const eduBaseError = useSelector(getEducationBasesError);
-
-    const languagesData = useSelector(getLanguagesData);
-    const languagesIsLoading = useSelector(getLanguagesIsLoading);
-    const languagesError = useSelector(getLanguagesError);
-
     const specialtiesTitles = useMemo(() => (
         specialtiesData?.data.map((specialty) => (
             `${specialty.shifr_spec} - ${specialty.speciality}`
@@ -123,14 +104,6 @@ export const EditStudentGroups = memo((props: EditStudentGroupProps) => {
             qualification.specialty_id === editStudentGroupNewFields?.id_specialty
         ))
     ), [editStudentGroupNewFields?.id_specialty, qualificationsData?.data]);
-
-    const educationBasesTitles = useMemo(() => (
-        eduBaseData?.map((eduBase) => `${eduBase.short_name}`)
-    ), [eduBaseData]);
-
-    const languagesTitles = useMemo(() => (
-        languagesData?.map((language) => `${language.language}`)
-    ), [languagesData]);
 
     const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>, filterName: string) => {
         dispatch(editStudentGroupsActions.setInputData([filterName, event.target.value]));
@@ -193,29 +166,15 @@ export const EditStudentGroups = memo((props: EditStudentGroupProps) => {
         dispatch(editStudentGroupsActions.changeQualifications(selectedQualsIds));
     }, [dispatch, qualificationsData?.data, selectedQualifications]);
 
-    const onChangeEduBases = useCallback((value: string, columnName: string) => {
-        setSelectedEduBases(value);
-        const filteredEduBase = eduBaseData?.filter((eduBase) => eduBase.short_name === value)[0];
-        dispatch(editStudentGroupsActions.changeEducationBaseId(filteredEduBase?.id_education_bases || null));
-    }, [dispatch, eduBaseData]);
-
     const onChangeEduForm = useCallback((value: string, columnName: string) => {
         setSelectedEduForm(value);
         dispatch(editStudentGroupsActions.changeFullTimeEducation(value.toLowerCase() === 'очная'));
     }, [dispatch]);
 
-    const onChangeLanguages = useCallback((value: string, columnName: string) => {
-        setSelectedLanguage(value);
-        const filteredLanguage = languagesData?.filter((language) => language.language === value)[0];
-        dispatch(editStudentGroupsActions.changeLanguage(filteredLanguage?.id_languages || null));
-    }, [dispatch, languagesData]);
-
     const onCancelHandler = useCallback(() => {
         onClose();
         setSelectedEduForm('null');
-        setSelectedEduBases('null');
         setSelectedSpecialty('null');
-        setSelectedLanguage('null');
         setSelectedQualifications([]);
         dispatch(editStudentGroupsActions.clearNewFields());
     }, [dispatch, onClose]);
@@ -253,8 +212,6 @@ export const EditStudentGroups = memo((props: EditStudentGroupProps) => {
             dispatch(fetchSpecialties());
             dispatch(tableSortActions.setSort('id_qual'));
             dispatch(fetchQualifications());
-            dispatch(fetchEducationBases());
-            dispatch(fetchLanguages());
         }
     }, [dispatch, isOpen, studentGroupId]);
 
@@ -277,30 +234,12 @@ export const EditStudentGroups = memo((props: EditStudentGroupProps) => {
 
     useEffect(() => {
         if (editStudentGroupData && isOpen) {
-            const filteredEduBase = eduBaseData?.filter((eduBase) => (
-                eduBase.id_education_bases === editStudentGroupData?.id_education_base
-            ))[0];
-            setSelectedEduBases(filteredEduBase!.short_name);
-        }
-    }, [editStudentGroupData, editStudentGroupData?.id_education_base, eduBaseData, isOpen]);
-
-    useEffect(() => {
-        if (editStudentGroupData && isOpen) {
             const filteredSpecialty = specialtiesData?.data.filter((specialty) => (
                 specialty.id_spec === editStudentGroupData?.id_specialty
             ))[0];
             setSelectedSpecialty(filteredSpecialty!.speciality);
         }
     }, [editStudentGroupData, isOpen, specialtiesData?.data]);
-
-    useEffect(() => {
-        if (editStudentGroupData && isOpen) {
-            const filteredLanguage = languagesData?.filter((language) => (
-                language.id_languages === editStudentGroupData?.id_language
-            ))[0];
-            setSelectedLanguage(filteredLanguage!.language);
-        }
-    }, [editStudentGroupData, isOpen, languagesData]);
 
     useEffect(() => {
         if (editStudentGroupData && isOpen) {
@@ -315,7 +254,7 @@ export const EditStudentGroups = memo((props: EditStudentGroupProps) => {
 
             setSelectedQualifications(selectedQuals);
         }
-    }, [editStudentGroupData, isOpen, languagesData, qualificationsData?.data]);
+    }, [editStudentGroupData, isOpen, qualificationsData?.data]);
 
     useEffect(() => {
         if (editStudentGroupErrors) {
@@ -339,21 +278,23 @@ export const EditStudentGroups = memo((props: EditStudentGroupProps) => {
                 .course}${editStudentGroupNewFields
                 .serial_number}`;
             setGroupCode(code);
+            dispatch(editStudentGroupsActions.changeCode(code));
         } else {
             setGroupCode('Заполните все данные');
+            dispatch(editStudentGroupsActions.changeCode(null));
         }
     }, [editStudentGroupNewFields?.course,
         editStudentGroupNewFields?.enrollment_year,
         editStudentGroupNewFields?.serial_number,
-        editStudentGroupNewFields?.short_name]);
+        editStudentGroupNewFields?.short_name, dispatch]);
 
     let content;
 
-    if (specialtiesIsLoading || qualificationsIsLoading || eduBaseIsLoading || languagesIsLoading || studentGroupDetailIsLoading) {
+    if (specialtiesIsLoading || qualificationsIsLoading || studentGroupDetailIsLoading) {
         content = (
             <Skeleton width="100%" height={300} />
         );
-    } else if (specialtiesError || qualificationsError || eduBaseError || languagesError || studentGroupDetailError) {
+    } else if (specialtiesError || qualificationsError || studentGroupDetailError) {
         content = (
             <Text
                 theme={TextTheme.ERROR}
@@ -441,20 +382,6 @@ export const EditStudentGroups = memo((props: EditStudentGroupProps) => {
                     value={groupCode}
                     label="Код группы"
                     disabled
-                />
-                <SearchSelect
-                    label="Язык обучения"
-                    options={languagesTitles!}
-                    columnName="id_language"
-                    optionValue={selectedLanguage}
-                    onClickOption={onChangeLanguages}
-                />
-                <SearchSelect
-                    label="База образования"
-                    options={educationBasesTitles!}
-                    columnName="id_education_base"
-                    optionValue={selectedEduBases}
-                    onClickOption={onChangeEduBases}
                 />
                 <SearchSelect
                     label="Форма обучения"

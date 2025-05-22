@@ -16,7 +16,7 @@ import { LimitShow, Pagintaion } from 'widgets/Pagination';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useSelector } from 'react-redux';
 import { studentSearchFilter } from 'shared/lib/helpers/searchFilter/searchFilter';
-import { tableFiltersReducer } from 'features/TableFilters';
+import { fetchTableFilters, tableFiltersReducer } from 'features/TableFilters';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddStudent, addStudentReducer } from 'features/Students/AddStudent';
 import { studentDetailReducer } from 'entities/StudentDetail';
@@ -120,7 +120,6 @@ const StudentsPage = () => {
                             setVisibleAddNewField={setVisibleAddNewStudent}
                             addingModalText="Добавить студента"
                             error={errorStudentsData}
-                            filtersVisible={false}
                             isLoading={isLoadingStudentsData}
                             references={studentsPageBreadcrumbs}
                             referencesTitle="Справочники"

@@ -70,7 +70,7 @@ export const StandardCurriculumStructure = (props: StandardCurriculumStructurePr
     const qualifications = useSelector(getQualificationsData);
     const coreOptions = useSelector(getSettingsMainCollegeData);
 
-    const creditInHours = coreOptions?.hectum_curriculum.options.filter((option) => option.name === 'credit_in_hours')[0];
+    const creditInHours = coreOptions?.knrtu_kai.options.filter((option) => option.name === 'credit_in_hours')[0];
 
     const filteredQualifications = qualifications?.data
         .filter((qualification) => qualification.specialty_id === data?.general_info.speciality_id);

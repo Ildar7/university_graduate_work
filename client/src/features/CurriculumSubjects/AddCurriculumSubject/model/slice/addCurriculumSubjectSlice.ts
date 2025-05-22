@@ -6,7 +6,6 @@ const initialState: AddCurriculumSubjectSchema = {
     data: {
         name: null,
         module_id: null,
-        sort: null,
         unit_id: null,
     },
     isLoading: false,
@@ -19,9 +18,6 @@ const addCurriculumSubjectSlice = createSlice({
     reducers: {
         setName: (state, action: PayloadAction<string | null>) => {
             state.data!.name = action.payload;
-        },
-        setSort: (state, action: PayloadAction<string>) => {
-            state.data!.sort = +action.payload;
         },
         setModuleId: (state, action: PayloadAction<string>) => {
             state.data!.module_id = +action.payload;

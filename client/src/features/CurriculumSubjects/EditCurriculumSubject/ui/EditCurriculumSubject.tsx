@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/helpers/classNames/classNames';
 import {
-    CButton, CForm, CFormSelect, CModal, CModalBody, CModalFooter, CModalHeader, CModalTitle, CToaster,
+    CForm, CModal, CModalBody, CModalFooter, CModalHeader, CModalTitle, CToaster,
 } from '@coreui/react';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import CIcon from '@coreui/icons-react';
@@ -11,13 +11,14 @@ import {
 import React, {
     ReactElement, useEffect, useRef, useState,
 } from 'react';
-import { EnrollmentTypesType } from 'entities/EnrollmentTypes';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Toast } from 'shared/ui/Toast/Toast';
 import { CFormInputWithMask } from 'shared/ui/InputMask/InputMask';
 import {
-    CurriculumSubjectsType, getCurriculumSubjectsData, getCurriculumSubjectsError, getCurriculumSubjectsIsLoading,
+    CurriculumSubjectsType,
+    getCurriculumSubjectsError,
+    getCurriculumSubjectsIsLoading,
 } from 'entities/CurriculumSubjects';
 import {
     fetchCurriculumSubjectsDetail,
@@ -26,16 +27,15 @@ import {
     getCurriculumSubjectsDetailIsLoading,
 } from 'entities/CurriculumSubjectsDetail';
 import { editCurriculumSubject, editCurriculumSubjectActions } from 'features/CurriculumSubjects/EditCurriculumSubject';
-import { addCurriculumSubjectActions } from 'features/CurriculumSubjects/AddCurriculumSubject';
-import { detectInvalidInput } from 'shared/lib/errors/detectInvalidInput/detectInvalidInput';
-import { setInvalidInputMessage } from 'shared/lib/errors/setInvalidInputMessage/setInvalidInputMessage';
 import { clearObject } from 'shared/lib/helpers/clearObject/clearObject';
 import { isEmptyObject } from 'shared/lib/helpers/isEmptyObject/isEmptyObject';
 import {
     getEduModulesData,
     getEduModulesError,
     getEduModulesIsLoading,
-    getEduUnitsData, getEduUnitsError, getEduUnitsIsLoading,
+    getEduUnitsData,
+    getEduUnitsError,
+    getEduUnitsIsLoading,
 } from 'entities/EducationalModules';
 import { SearchSelect } from 'shared/ui/SearchSelect/SearchSelect';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
@@ -114,10 +114,6 @@ export const EditCurriculumSubject = (props: EditCurriculumSubjectsProps) => {
 
     const onChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
         dispatch(editCurriculumSubjectActions.setName(event.target.value));
-    };
-
-    const onChangeSort = (event: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(editCurriculumSubjectActions.setSort(event.target.value));
     };
 
     const onChangeSelectModuleId = (value: string, columnName: string) => {
@@ -209,23 +205,6 @@ export const EditCurriculumSubject = (props: EditCurriculumSubjectsProps) => {
                                 feedbackInvalid="Введите корректные данные"
                                 value={editCurriculumSubjectNewFieldsData?.name || ''}
                                 onChange={onChangeName}
-                            />
-                        </div>
-                    </div>
-                    <div className={classNames(cls.settings, {}, [cls.settingsSort])}>
-                        <div className={cls.newAddField}>
-                            <h6 className={cls.newAddFieldTitle}>Сортировка</h6>
-                            <CFormInputWithMask
-                                type="number"
-                                placeholder="100"
-                                min={100}
-                                step={100}
-                                // @ts-ignore
-                                feedbackValid={errorsEditCurriculumSubject ? '' : 'Здорово!'}
-                                invalid={!!errorsEditCurriculumSubject}
-                                feedbackInvalid="Введите корректные данные"
-                                value={String(editCurriculumSubjectNewFieldsData?.sort) || ''}
-                                onChange={onChangeSort}
                             />
                         </div>
                     </div>

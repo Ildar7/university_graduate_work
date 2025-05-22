@@ -91,8 +91,6 @@ const ReferencesPage = (props: ReferencesPageProps) => {
                     <EducationalModules
                         data={searchedData || []}
                         className={cls.modules}
-                        addingModalText="Добавить модуль"
-                        setVisibleAddEduModule={setVisibleAddEduModule}
                     />
 
                     <AddEduModule

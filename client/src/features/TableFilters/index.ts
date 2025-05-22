@@ -1,3 +1,5 @@
+export { fetchTableFilters } from './model/services/fetchTableFilters/fetchTableFilters';
+
 export {
     tableFiltersSelectedActions,
     tableFiltersSelectedReducer,

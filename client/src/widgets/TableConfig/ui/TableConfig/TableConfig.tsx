@@ -118,17 +118,6 @@ export const TableConfig = (props: TableConfigProps) => {
                 )}
                 {!onlyAdding && (
                     <>
-                        {filtersVisible && (
-                            <Button
-                                className={cls.btn}
-                                disabled={!!error || isLoading}
-                                onClick={onShowFiltersModal}
-                                size={ButtonSize.M}
-                            >
-                                <Text size={TextSize.XS} weight={TextWeight.SEMIBOLD}>Фильтры</Text>
-                                <Icon Svg={FiltersIcon} />
-                            </Button>
-                        )}
                         {TableFieldsContent && (
                             <Button
                                 className={cls.btn}

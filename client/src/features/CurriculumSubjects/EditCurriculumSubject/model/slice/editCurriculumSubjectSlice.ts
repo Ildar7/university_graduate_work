@@ -23,9 +23,6 @@ const editCurriculumSubjectSlice = createSlice({
         setName: (state, action: PayloadAction<string | null>) => {
             state.newFields!.name = action.payload;
         },
-        setSort: (state, action: PayloadAction<string>) => {
-            state.newFields!.sort = Number(action.payload);
-        },
         setModuleId: (state, action: PayloadAction<string>) => {
             state.newFields!.module_id = Number(action.payload);
         },

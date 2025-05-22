@@ -40,8 +40,8 @@
                         theme: h.bn.BACKGROUND, size: h.qE.XS, className: w, type: 'submit', form: o, children: [(0, r.jsx)(m.xv, { size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Да' }), (0, r.jsx)(f.J, { Svg: y.Z })],
                     }), (0, r.jsxs)(h.zx, {
                         theme: h.bn.BACKGROUND_DARK, size: h.qE.XS, className: w, onClick: c, children: [(0, r.jsx)(m.xv, { size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Нет' }), (0, r.jsx)(f.J, { Svg: v.Z })],
-                    })], 
-})],
+                    })],
+                })],
             });
         })); const D = i(7168); const H = (0, D.hg)('workingCurriculum/fetchWorkingCurriculumExtract', ((e, t) => {
             return i = void 0, r = void 0, u = function () {
@@ -110,55 +110,162 @@
                     className: 'indexCell',
                     rotate: ue.ROTATED,
                     children: (0, r.jsx)(m.xv, {
-                        align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'Индекс', 
-})
+                        align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'Индекс',
+                    }),
                 }), (0, r.jsx)(oe, {
                     className: 'idCell',
                     children: (0, r.jsx)(m.xv, {
-                        align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'ID', 
-})
+                        align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'ID',
+                    }),
                 }), (0, r.jsx)(oe, {
                     className: 'disciplinesNameCell',
                     children: (0, r.jsx)(m.xv, {
-                        align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'Наименование модулей и видов учебной деятельности', 
-})
+                        align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'Наименование модулей и видов учебной деятельности',
+                    }),
                 }), (0, r.jsx)(oe, {
                     className: 'sortCell',
                     rotate: ue.ROTATED,
                     children: (0, r.jsx)(m.xv, {
-                        align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'Сортировка', 
-})
+                        align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'Сортировка',
+                    }),
                 }), (0, r.jsxs)(oe, {
- className: 'formControlCell',
-children: [(0, r.jsx)(oe, {
- className: (0, u.A)(me.formControlNames, {}, [me.cellMainTitle]),
-children: (0, r.jsx)(m.xv, {
-                    align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'Форма контроля' 
-}) 
-}), (0, r.jsxs)('div', { className: me.formControlNames, children: [(0, r.jsx)(oe, { rotate: ue.ROTATED, className: 'formControlExamCell', children: (0, r.jsx)(m.xv, {
- align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Экзамен' }) }), (0, r.jsx)(oe, { rotate: ue.ROTATED, className: 'formControlEasyExamCell', children: (0, r.jsx)(m.xv, {
- align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Зачет' }) }), (0, r.jsx)(oe, { rotate: ue.ROTATED, className: 'formControlControlWorksCell', children: (0, r.jsx)(m.xv, {
- align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Кол-во контрольных работ' }) }), (0, r.jsx)(oe, { rotate: ue.ROTATED, className: 'formControlCourseWorksCell', children: (0, r.jsx)(m.xv, {
- align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Кол-во курсовых работ' }) })] })] 
-}), (0, r.jsxs)(oe, {
- className: 'amountOfStudyTimeCell',
-children: [(0, r.jsx)(oe, {
- className: me.cellMainTitle,
-children: (0, r.jsx)(m.xv, {
-                    align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'Объем учебного времени' 
-}) 
-}), (0, r.jsxs)('div', { className: me.amountOfStudyTimeNames, children: [(0, r.jsxs)('div', { className: me.amountOfStudyTimeNamesLeft, children: [(0, r.jsx)(oe, { rotate: ue.ROTATED, className: 'amountOfStudyTimeCredits', children: (0, r.jsx)(m.xv, { align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Кредиты'}) }), (0, r.jsx)(oe, { rotate: ue.ROTATED, className: 'amountOfStudyTimeHours', children: (0, r.jsx)(m.xv, { align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Всего часов'}) })] }), (0, r.jsxs)('div', { className: me.amountOfStudyTimeNamesRight, children: [(0, r.jsx)(oe, { children: (0, r.jsx)(m.xv, {
- align: m.PH.CENTER, weight: m.fs.SEMIBOLD, className: me.amountOfStudyTimeNamesRightTitle, children: 'в том числе' }) }), (0, r.jsxs)('div', { className: me.amountOfStudyTimeNamesRightNames, children: [(0, r.jsx)(oe, { rotate: ue.ROTATED, className: 'amountOfStudyTimeTheory', children: (0, r.jsx)(m.xv, {align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: "Теоретические"}) }), (0, r.jsx)(oe, { rotate: ue.ROTATED, className: 'amountOfStudyTimeLabs', children: (0, r.jsx)(m.xv, {align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: "Лабораторно-практические"}) }), (0, r.jsx)(oe, { rotate: ue.ROTATED, className: 'amountOfStudyTimeCourseProject', children: (0, r.jsx)(m.xv, {align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: "Курсовой проект"}) }), (0, r.jsx)(oe, { rotate: ue.ROTATED, className: 'amountOfStudyTimePractice', children: (0, r.jsx)(m.xv, {align: m.PH.CENTER, size: m.yH.XXS, weight: m.fs.SEMIBOLD, children: "Произв. обучение и/или профессиональная практика"}) })] })] })] })] 
-}), (0, r.jsxs)(oe, {
- className: 'distributionCell',
-children: [(0, r.jsx)(oe, {
- className: me.cellMainTitle,
-children: (0, r.jsx)(m.xv, {
-                    align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'Распределение по курсам и семестрам' 
-}) 
-}), (0, r.jsx)('div', { className: me.distributionCourses, children: fe([], new Array(i == null ? void 0 : i.meta.coursesCount), !0).map(((e, t) => (0, r.jsxs)('div', { className: me.distributionCourse, children: [(0, r.jsx)(oe, { className: me.distributionCourseName, children: (0, r.jsx)(m.xv, {weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: me.courseTitle, children: t + 1}) }), (0, r.jsxs)('div', { className: me.distributionSemesters, children: [(0, r.jsx)(oe, { children: (0, r.jsxs)(m.xv, {weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: me.semesterTitle, children: [2 * (t + 1) - 1, " ", "сем."]}) }), (0, r.jsx)(oe, { children: (0, r.jsxs)(m.xv, {weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: me.semesterTitle, children: [2 * (t + 1), " ", "сем."]}) })] })] }, t))) }), (0, r.jsxs)('div', { className: me.distributionWeeksWrapper, children: [(0, r.jsx)(oe, { className: me.distributionWeeksName, children: (0, r.jsx)(m.xv, { weight: m.fs.SEMIBOLD, align: m.PH.CENTER, children: 'Недель' }) }), (0, r.jsx)('div', { className: me.distributionWeeks, children: fe([], new Array(i == null ? void 0 : i.meta.semestersCount), !0).map(((e, t) => (0, r.jsx)(oe, { className: 'distributionWeek', children: (0, r.jsx)(m.xv, {weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: me.weekTitle, children: "18"}) }, t))) })] })] 
-})], 
-});
+                    className: 'formControlCell',
+                    children: [(0, r.jsx)(oe, {
+                        className: (0, u.A)(me.formControlNames, {}, [me.cellMainTitle]),
+                        children: (0, r.jsx)(m.xv, {
+                            align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'Форма контроля',
+                        }),
+                    }), (0, r.jsxs)('div', {
+                        className: me.formControlNames,
+                        children: [(0, r.jsx)(oe, {
+                            rotate: ue.ROTATED,
+                            className: 'formControlExamCell',
+                            children: (0, r.jsx)(m.xv, {
+                                align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Экзамен',
+                            }),
+                        }), (0, r.jsx)(oe, {
+                            rotate: ue.ROTATED,
+                            className: 'formControlEasyExamCell',
+                            children: (0, r.jsx)(m.xv, {
+                                align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Зачет',
+                            }),
+                        }), (0, r.jsx)(oe, {
+                            rotate: ue.ROTATED,
+                            className: 'formControlControlWorksCell',
+                            children: (0, r.jsx)(m.xv, {
+                                align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Кол-во контрольных работ',
+                            }),
+                        }), (0, r.jsx)(oe, {
+                            rotate: ue.ROTATED,
+                            className: 'formControlCourseWorksCell',
+                            children: (0, r.jsx)(m.xv, {
+                                align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Кол-во курсовых работ',
+                            }),
+                        })],
+                    })],
+                }), (0, r.jsxs)(oe, {
+                    className: 'amountOfStudyTimeCell',
+                    children: [(0, r.jsx)(oe, {
+                        className: me.cellMainTitle,
+                        children: (0, r.jsx)(m.xv, {
+                            align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'Объем учебного времени',
+                        }),
+                    }), (0, r.jsxs)('div', {
+                        className: me.amountOfStudyTimeNames,
+                        children: [(0, r.jsxs)('div', {
+                            className: me.amountOfStudyTimeNamesLeft,
+                            children: [(0, r.jsx)(oe, {
+                                rotate: ue.ROTATED,
+                                className: 'amountOfStudyTimeCredits',
+                                children: (0, r.jsx)(m.xv, {
+                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Кредиты',
+                                }),
+                            }), (0, r.jsx)(oe, {
+                                rotate: ue.ROTATED,
+                                className: 'amountOfStudyTimeHours',
+                                children: (0, r.jsx)(m.xv, {
+                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Всего часов',
+                                }),
+                            })],
+                        }), (0, r.jsxs)('div', {
+                            className: me.amountOfStudyTimeNamesRight,
+                            children: [(0, r.jsx)(oe, {
+                                children: (0, r.jsx)(m.xv, {
+                                    align: m.PH.CENTER, weight: m.fs.SEMIBOLD, className: me.amountOfStudyTimeNamesRightTitle, children: 'в том числе',
+                                }),
+                            }), (0, r.jsxs)('div', {
+                                className: me.amountOfStudyTimeNamesRightNames,
+                                children: [(0, r.jsx)(oe, {
+                                    rotate: ue.ROTATED,
+                                    className: 'amountOfStudyTimeTheory',
+                                    children: (0, r.jsx)(m.xv, {
+                                        align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Теоретические',
+                                    }),
+                                }), (0, r.jsx)(oe, {
+                                    rotate: ue.ROTATED,
+                                    className: 'amountOfStudyTimeLabs',
+                                    children: (0, r.jsx)(m.xv, {
+                                        align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Лабораторно-практические',
+                                    }),
+                                }), (0, r.jsx)(oe, {
+                                    rotate: ue.ROTATED,
+                                    className: 'amountOfStudyTimeCourseProject',
+                                    children: (0, r.jsx)(m.xv, {
+                                        align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Курсовой проект',
+                                    }),
+                                }), (0, r.jsx)(oe, {
+                                    rotate: ue.ROTATED,
+                                    className: 'amountOfStudyTimePractice',
+                                    children: (0, r.jsx)(m.xv, {
+                                        align: m.PH.CENTER, size: m.yH.XXS, weight: m.fs.SEMIBOLD, children: 'Произв. обучение и/или профессиональная практика',
+                                    }),
+                                })],
+                            })],
+                        })],
+                    })],
+                }), (0, r.jsxs)(oe, {
+                    className: 'distributionCell',
+                    children: [(0, r.jsx)(oe, {
+                        className: me.cellMainTitle,
+                        children: (0, r.jsx)(m.xv, {
+                            align: m.PH.CENTER, size: m.yH.S, weight: m.fs.SEMIBOLD, children: 'Распределение по курсам и семестрам',
+                        }),
+                    }), (0, r.jsx)('div', {
+                        className: me.distributionCourses,
+                        children: fe([], new Array(i == null ? void 0 : i.meta.coursesCount), !0).map(((e, t) => (0, r.jsxs)('div', {
+                            className: me.distributionCourse,
+                            children: [(0, r.jsx)(oe, {
+                                className: me.distributionCourseName,
+                                children: (0, r.jsx)(m.xv, {
+                                    weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: me.courseTitle, children: t + 1,
+                                }),
+                            }), (0, r.jsxs)('div', {
+                                className: me.distributionSemesters,
+                                children: [(0, r.jsx)(oe, {
+                                    children: (0, r.jsxs)(m.xv, {
+                                        weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: me.semesterTitle, children: [2 * (t + 1) - 1, ' ', 'сем.'],
+                                    }),
+                                }), (0, r.jsx)(oe, {
+                                    children: (0, r.jsxs)(m.xv, {
+                                        weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: me.semesterTitle, children: [2 * (t + 1), ' ', 'сем.'],
+                                    }),
+                                })],
+                            })],
+                        }, t))),
+                    }), (0, r.jsxs)('div', {
+                        className: me.distributionWeeksWrapper,
+                        children: [(0, r.jsx)(oe, { className: me.distributionWeeksName, children: (0, r.jsx)(m.xv, { weight: m.fs.SEMIBOLD, align: m.PH.CENTER, children: 'Недель' }) }), (0, r.jsx)('div', {
+                            className: me.distributionWeeks,
+                            children: fe([], new Array(i == null ? void 0 : i.meta.semestersCount), !0).map(((e, t) => (0, r.jsx)(oe, {
+                                className: 'distributionWeek',
+                                children: (0, r.jsx)(m.xv, {
+                                    weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: me.weekTitle, children: '18',
+                                }),
+                            }, t))),
+                        })],
+                    })],
+                })],
+            });
         }; const ve = function (e) { return Number.isInteger(e) ? e.toString() : e.toFixed(2); }; const ye = /,(?![0-9])/g; const pe = i(4164); const xe = { subjectName: 'CWNvIq2g', editingBtns: 'zmS1HANZ', editBtn: 'QxKyIp24' }; let be = function () { return be = Object.assign || function (e) { for (var t, i = 1, r = arguments.length; i < r; i++) for (const n in t = arguments[i])Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]); return e; }, be.apply(this, arguments); }; const ge = function (e, t, i) { if (i || arguments.length === 2) for (var r, n = 0, u = t.length; n < u; n++)!r && n in t || (r || (r = Array.prototype.slice.call(t, 0, n)), r[n] = t[n]); return e.concat(r || Array.prototype.slice.call(t)); }; const je = {
             data: void 0,
             dataParsed: void 0,
@@ -205,25 +312,25 @@ children: (0, r.jsx)(m.xv, {
                         })), e.validationErrors.notFilledSummaryHours.push({ notFilled: !0, educational_activity_type_id: o.educational_activity_type_id, standard_curriculum_qualification_id: o.standard_curriculum_qualification_id });
                     }
                 },
-                changeFieldValue(e, t) { let i; let r; let n; let u; let s; let o; let a; let l; let c; let d; let m; let h; let f; let _; if (e.dataToWork) { const v = t.payload; const y = v[0]; const p = v[1]; const x = v[2]; const b = v[3]; const g = v[4]; const j = v[5]; const S = v[6]; const E = g === 'exams_semestrs' || g === 'tests_semesters' ? Array.from(new Set(j.split(','))).map(((e) => Number(e))).filter(((e) => e !== 0)) : j; if (S) { if (y ? (e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== y ? e : ({ ...e, modules: e.modules.map(((e) => (e.module_id !== p ? e : ({...e, units: e.units.map(((e) =>{ return e.educational_modules_unit_id !== x ? e : be({...e}, { subjects: e.subjects.map(((e) =>{ var t; return e.subject_id !== b.subject_id ? e : be({...e}, ((t = {})[g] = j, t)) })) }) }))})))) })))), b.working_curriculum_extract_id || (e.actions.create = (n = e.actions.create) === null || void 0 === n ? void 0 : n.map(((e) => { let t; return e.standard_curriculum_qualification_id !== y || e.subject_id !== b.subject_id ? e : ({ ...e, ...((t = {})[g] = j ? E : null, t) }); })))) : (e.dataToWork.data.general[0].subjects = e.dataToWork.data.general[0].subjects.map(((e) => { let t; return e.subject_id !== b.subject_id ? e : ({ ...e, ...((t = {})[g] = j, t) }); })), b.working_curriculum_extract_id || (e.actions.create = (u = e.actions.create) === null || void 0 === u ? void 0 : u.map(((e) => { let t; return e.standard_curriculum_qualification_id !== null || e.subject_id !== b.subject_id ? e : ({ ...e, ...((t = {})[g] = j ? E : null, t) }); })))), b.working_curriculum_extract_id) { var C = (s = e.actions.update) === null || void 0 === s ? void 0 : s.filter(((e) => e.working_curriculum_extract_id === b.working_curriculum_extract_id))[0]; e.actions.delete = (o = e.actions.delete) === null || void 0 === o ? void 0 : o.filter(((e) => e !== b.working_curriculum_extract_id)), C ? e.actions.update = (a = e.actions.update) === null || void 0 === a ? void 0 : a.map(((e) => { let t; return e.working_curriculum_extract_id !== b.working_curriculum_extract_id ? e : ({ ...e, fields: { ...e.fields, ...(t = {}, t[g] = j ? E : null, t) } }); })) : (l = e.actions.update) === null || void 0 === l || l.push({ working_curriculum_extract_id: b.working_curriculum_extract_id, fields: { ...(0, U.Q)(b, ['working_curriculum_extract_id', 'name', 'code', 'subject', 'semestersDistribution']), ...(i = { exams_semestrs: b.exams_semestrs ? b.exams_semestrs.split(',').map(((e) => +e)) : null, tests_semesters: b.tests_semesters ? b.tests_semesters.split(',').map(((e) => +e)) : null }, i[g] = j ? E : null, i) } }); } } else y ? (e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== y ? e : ({ ...e, educationalActivities: e.educationalActivities.map(((e) => { let t; return e.educational_activity_type_id !== b.educational_activity_type_id ? e : ({ ...e, ...((t = {})[g] = j, t) }); })) })))), b.working_curriculum_extract_id || (e.actions.create = (c = e.actions.create) === null || void 0 === c ? void 0 : c.map(((e) => { let t; return e.standard_curriculum_qualification_id !== y || e.educational_activity_type_id !== b.educational_activity_type_id ? e : ({ ...e, ...((t = {})[g] = j ? E : null, t) }); })))) : (e.dataToWork.data.general[0].educationalActivities = e.dataToWork.data.general[0].educationalActivities.map(((e) => { let t; return e.educational_activity_type_id !== b.educational_activity_type_id ? e : ({ ...e, ...((t = {})[g] = j, t) }); })), b.working_curriculum_extract_id || (e.actions.create = (d = e.actions.create) === null || void 0 === d ? void 0 : d.map(((e) => { let t; return e.standard_curriculum_qualification_id !== null || e.educational_activity_type_id !== b.educational_activity_type_id ? e : ({ ...e, ...((t = {})[g] = j ? E : null, t) }); })))), b.working_curriculum_extract_id && (C = (m = e.actions.update) === null || void 0 === m ? void 0 : m.filter(((e) => e.working_curriculum_extract_id === b.working_curriculum_extract_id))[0], e.actions.delete = (h = e.actions.delete) === null || void 0 === h ? void 0 : h.filter(((e) => e !== b.working_curriculum_extract_id)), C ? e.actions.update = (f = e.actions.update) === null || void 0 === f ? void 0 : f.map(((e) => { let t; return e.working_curriculum_extract_id !== b.working_curriculum_extract_id ? e : ({ ...e, fields: { ...e.fields, ...(t = {}, t[g] = j ? E : null, t) } }); })) : (_ = e.actions.update) === null || void 0 === _ || _.push({ working_curriculum_extract_id: b.working_curriculum_extract_id, fields: { ...(0, U.Q)(b, ['working_curriculum_extract_id', 'short_name', 'name', 'code', 'is_in_compulsory_education', 'semestersDistribution']), ...(r = { exams_semestrs: b.exams_semestrs ? b.exams_semestrs.split(',').map(((e) => +e)) : null, tests_semesters: b.tests_semesters ? b.tests_semesters.split(',').map(((e) => +e)) : null }, r[g] = j ? E : null, r) } })); } },
+                changeFieldValue(e, t) { let i; let r; let n; let u; let s; let o; let a; let l; let c; let d; let m; let h; let f; let _; if (e.dataToWork) { const v = t.payload; const y = v[0]; const p = v[1]; const x = v[2]; const b = v[3]; const g = v[4]; const j = v[5]; const S = v[6]; const E = g === 'exams_semestrs' || g === 'tests_semesters' ? Array.from(new Set(j.split(','))).map(((e) => Number(e))).filter(((e) => e !== 0)) : j; if (S) { if (y ? (e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== y ? e : ({ ...e, modules: e.modules.map(((e) => (e.module_id !== p ? e : ({ ...e, units: e.units.map(((e) => (e.educational_modules_unit_id !== x ? e : ({ ...e, subjects: e.subjects.map(((e) => { let t; return e.subject_id !== b.subject_id ? e : ({ ...e, ...((t = {})[g] = j, t) }); })) })))) })))) })))), b.working_curriculum_extract_id || (e.actions.create = (n = e.actions.create) === null || void 0 === n ? void 0 : n.map(((e) => { let t; return e.standard_curriculum_qualification_id !== y || e.subject_id !== b.subject_id ? e : ({ ...e, ...((t = {})[g] = j ? E : null, t) }); })))) : (e.dataToWork.data.general[0].subjects = e.dataToWork.data.general[0].subjects.map(((e) => { let t; return e.subject_id !== b.subject_id ? e : ({ ...e, ...((t = {})[g] = j, t) }); })), b.working_curriculum_extract_id || (e.actions.create = (u = e.actions.create) === null || void 0 === u ? void 0 : u.map(((e) => { let t; return e.standard_curriculum_qualification_id !== null || e.subject_id !== b.subject_id ? e : ({ ...e, ...((t = {})[g] = j ? E : null, t) }); })))), b.working_curriculum_extract_id) { var C = (s = e.actions.update) === null || void 0 === s ? void 0 : s.filter(((e) => e.working_curriculum_extract_id === b.working_curriculum_extract_id))[0]; e.actions.delete = (o = e.actions.delete) === null || void 0 === o ? void 0 : o.filter(((e) => e !== b.working_curriculum_extract_id)), C ? e.actions.update = (a = e.actions.update) === null || void 0 === a ? void 0 : a.map(((e) => { let t; return e.working_curriculum_extract_id !== b.working_curriculum_extract_id ? e : ({ ...e, fields: { ...e.fields, ...(t = {}, t[g] = j ? E : null, t) } }); })) : (l = e.actions.update) === null || void 0 === l || l.push({ working_curriculum_extract_id: b.working_curriculum_extract_id, fields: { ...(0, U.Q)(b, ['working_curriculum_extract_id', 'name', 'code', 'subject', 'semestersDistribution']), ...(i = { exams_semestrs: b.exams_semestrs ? b.exams_semestrs.split(',').map(((e) => +e)) : null, tests_semesters: b.tests_semesters ? b.tests_semesters.split(',').map(((e) => +e)) : null }, i[g] = j ? E : null, i) } }); } } else y ? (e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== y ? e : ({ ...e, educationalActivities: e.educationalActivities.map(((e) => { let t; return e.educational_activity_type_id !== b.educational_activity_type_id ? e : ({ ...e, ...((t = {})[g] = j, t) }); })) })))), b.working_curriculum_extract_id || (e.actions.create = (c = e.actions.create) === null || void 0 === c ? void 0 : c.map(((e) => { let t; return e.standard_curriculum_qualification_id !== y || e.educational_activity_type_id !== b.educational_activity_type_id ? e : ({ ...e, ...((t = {})[g] = j ? E : null, t) }); })))) : (e.dataToWork.data.general[0].educationalActivities = e.dataToWork.data.general[0].educationalActivities.map(((e) => { let t; return e.educational_activity_type_id !== b.educational_activity_type_id ? e : ({ ...e, ...((t = {})[g] = j, t) }); })), b.working_curriculum_extract_id || (e.actions.create = (d = e.actions.create) === null || void 0 === d ? void 0 : d.map(((e) => { let t; return e.standard_curriculum_qualification_id !== null || e.educational_activity_type_id !== b.educational_activity_type_id ? e : ({ ...e, ...((t = {})[g] = j ? E : null, t) }); })))), b.working_curriculum_extract_id && (C = (m = e.actions.update) === null || void 0 === m ? void 0 : m.filter(((e) => e.working_curriculum_extract_id === b.working_curriculum_extract_id))[0], e.actions.delete = (h = e.actions.delete) === null || void 0 === h ? void 0 : h.filter(((e) => e !== b.working_curriculum_extract_id)), C ? e.actions.update = (f = e.actions.update) === null || void 0 === f ? void 0 : f.map(((e) => { let t; return e.working_curriculum_extract_id !== b.working_curriculum_extract_id ? e : ({ ...e, fields: { ...e.fields, ...(t = {}, t[g] = j ? E : null, t) } }); })) : (_ = e.actions.update) === null || void 0 === _ || _.push({ working_curriculum_extract_id: b.working_curriculum_extract_id, fields: { ...(0, U.Q)(b, ['working_curriculum_extract_id', 'short_name', 'name', 'code', 'is_in_compulsory_education', 'semestersDistribution']), ...(r = { exams_semestrs: b.exams_semestrs ? b.exams_semestrs.split(',').map(((e) => +e)) : null, tests_semesters: b.tests_semesters ? b.tests_semesters.split(',').map(((e) => +e)) : null }, r[g] = j ? E : null, r) } })); } },
                 changeDistributionValues(e, t) {
                     let i; let r; let n; let u; let s; let o; let a; let l; let c; let d; let m; let h; let f; let _; let v; let y; let p; let x; let b; if (e.dataToWork) {
                         const g = t.payload; const j = g[0]; const S = g[1]; const E = g[2]; const C = g[3]; const O = g[4]; const N = g[5]; const T = g[6]; const w = C.semestersDistribution.filter(((e) => e.semester_number === O))[0]; if (T) {
                             if (j) {
-                                if (e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== j ? e : ({ ...e, modules: e.modules.map(((e) => e.module_id !== S ? e : ({...e, units: e.units.map(((e) =>{ return e.educational_modules_unit_id !== E ? e : be({...e}, { subjects: e.subjects.map(((e) =>{ return e.subject_id !== C.subject_id ? e : be({...e}, { semestersDistribution: e.semestersDistribution.map(((e) =>{ return e.semester_number !== O ? e : be({...e}, { hours: N }) })) }) })) }) }))}))) })))), !w.working_curriculum_extract_distribution_id) {
+                                if (e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== j ? e : ({ ...e, modules: e.modules.map(((e) => (e.module_id !== S ? e : ({ ...e, units: e.units.map(((e) => (e.educational_modules_unit_id !== E ? e : ({ ...e, subjects: e.subjects.map(((e) => (e.subject_id !== C.subject_id ? e : ({ ...e, semestersDistribution: e.semestersDistribution.map(((e) => (e.semester_number !== O ? e : ({...e, hours: N})))) })))) })))) })))) })))), !w.working_curriculum_extract_distribution_id) {
                                     var k = (i = e.distributionActions.create) === null || void 0 === i ? void 0 : i.filter(((e) => e.standard_curriculum_qualification_id === j && e.subject_id === C.subject_id && e.semester_number === O))[0]; k ? e.distributionActions.create = (r = e.distributionActions.create) === null || void 0 === r ? void 0 : r.map(((e) => (e.standard_curriculum_qualification_id === j && e.subject_id === C.subject_id && e.semester_number === O ? ({ ...e, hours: N }) : e))) : (n = e.distributionActions.create) === null || void 0 === n || n.push({
                                         standard_curriculum_qualification_id: C.standard_curriculum_qualification_id, educational_activity_type_id: C.educational_activity_type_id, subject_id: C.subject_id, semester_number: O, hours: N,
                                     });
                                 }
                             } else {
-                                e.dataToWork.data.general[0].subjects = e.dataToWork.data.general[0].subjects.map(((e) => (e.subject_id !== C.subject_id ? e : ({ ...e, semestersDistribution: e.semestersDistribution.map(((e) => { return e.semester_number !== O ? e : ({...e, hours: N}) })) })))), w.working_curriculum_extract_distribution_id || (k = (u = e.distributionActions.create) === null || void 0 === u ? void 0 : u.filter(((e) => e.standard_curriculum_qualification_id === null && e.subject_id === C.subject_id && e.semester_number === O))[0], k ? e.distributionActions.create = (s = e.distributionActions.create) === null || void 0 === s ? void 0 : s.map(((e) => (e.standard_curriculum_qualification_id === null && e.subject_id === C.subject_id && e.semester_number === O ? ({ ...e, hours: N }) : e))) : (o = e.distributionActions.create) === null || void 0 === o || o.push({
+                                e.dataToWork.data.general[0].subjects = e.dataToWork.data.general[0].subjects.map(((e) => (e.subject_id !== C.subject_id ? e : ({ ...e, semestersDistribution: e.semestersDistribution.map(((e) => (e.semester_number !== O ? e : ({ ...e, hours: N })))) })))), w.working_curriculum_extract_distribution_id || (k = (u = e.distributionActions.create) === null || void 0 === u ? void 0 : u.filter(((e) => e.standard_curriculum_qualification_id === null && e.subject_id === C.subject_id && e.semester_number === O))[0], k ? e.distributionActions.create = (s = e.distributionActions.create) === null || void 0 === s ? void 0 : s.map(((e) => (e.standard_curriculum_qualification_id === null && e.subject_id === C.subject_id && e.semester_number === O ? ({ ...e, hours: N }) : e))) : (o = e.distributionActions.create) === null || void 0 === o || o.push({
                                     standard_curriculum_qualification_id: C.standard_curriculum_qualification_id, educational_activity_type_id: C.educational_activity_type_id, subject_id: C.subject_id, semester_number: O, hours: N,
                                 }));
                             }
                         } else {
-                            j ? (e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== j ? e : ({ ...e, educationalActivities: e.educationalActivities.map(((e) => e.educational_activity_type_id !== C.educational_activity_type_id ? e : ({...e, semestersDistribution: e.semestersDistribution.map(((e) =>{ return e.semester_number !== O ? e : be({...e}, { hours: N }) }))}))) })))), w.working_curriculum_extract_distribution_id || (k = (a = e.distributionActions.create) === null || void 0 === a ? void 0 : a.filter(((e) => e.standard_curriculum_qualification_id === j && e.educational_activity_type_id === C.educational_activity_type_id && e.semester_number === O))[0], k ? e.distributionActions.create = (l = e.distributionActions.create) === null || void 0 === l ? void 0 : l.map(((e) => (e.standard_curriculum_qualification_id === j && e.educational_activity_type_id === C.educational_activity_type_id && e.semester_number === O ? ({ ...e, hours: N }) : e))) : (c = e.distributionActions.create) === null || void 0 === c || c.push({
+                            j ? (e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== j ? e : ({ ...e, educationalActivities: e.educationalActivities.map(((e) => (e.educational_activity_type_id !== C.educational_activity_type_id ? e : ({ ...e, semestersDistribution: e.semestersDistribution.map(((e) => (e.semester_number !== O ? e : ({ ...e, hours: N })))) })))) })))), w.working_curriculum_extract_distribution_id || (k = (a = e.distributionActions.create) === null || void 0 === a ? void 0 : a.filter(((e) => e.standard_curriculum_qualification_id === j && e.educational_activity_type_id === C.educational_activity_type_id && e.semester_number === O))[0], k ? e.distributionActions.create = (l = e.distributionActions.create) === null || void 0 === l ? void 0 : l.map(((e) => (e.standard_curriculum_qualification_id === j && e.educational_activity_type_id === C.educational_activity_type_id && e.semester_number === O ? ({ ...e, hours: N }) : e))) : (c = e.distributionActions.create) === null || void 0 === c || c.push({
                                 standard_curriculum_qualification_id: C.standard_curriculum_qualification_id, educational_activity_type_id: C.educational_activity_type_id, subject_id: C.subject_id, semester_number: O, hours: N,
-                            }))) : (e.dataToWork.data.general[0].educationalActivities = e.dataToWork.data.general[0].educationalActivities.map(((e) => (e.educational_activity_type_id !== C.educational_activity_type_id ? e : ({ ...e, semestersDistribution: e.semestersDistribution.map(((e) => e.semester_number !== O ? e : ({...e, hours: N}))) })))), w.working_curriculum_extract_distribution_id || (k = (d = e.distributionActions.create) === null || void 0 === d ? void 0 : d.filter(((e) => e.standard_curriculum_qualification_id === null && e.educational_activity_type_id === C.educational_activity_type_id && e.semester_number === O))[0], k ? e.distributionActions.create = (m = e.distributionActions.create) === null || void 0 === m ? void 0 : m.map(((e) => (e.standard_curriculum_qualification_id === null && e.educational_activity_type_id === C.educational_activity_type_id && e.semester_number === O ? ({ ...e, hours: N }) : e))) : (h = e.distributionActions.create) === null || void 0 === h || h.push({
+                            }))) : (e.dataToWork.data.general[0].educationalActivities = e.dataToWork.data.general[0].educationalActivities.map(((e) => (e.educational_activity_type_id !== C.educational_activity_type_id ? e : ({ ...e, semestersDistribution: e.semestersDistribution.map(((e) => (e.semester_number !== O ? e : ({ ...e, hours: N })))) })))), w.working_curriculum_extract_distribution_id || (k = (d = e.distributionActions.create) === null || void 0 === d ? void 0 : d.filter(((e) => e.standard_curriculum_qualification_id === null && e.educational_activity_type_id === C.educational_activity_type_id && e.semester_number === O))[0], k ? e.distributionActions.create = (m = e.distributionActions.create) === null || void 0 === m ? void 0 : m.map(((e) => (e.standard_curriculum_qualification_id === null && e.educational_activity_type_id === C.educational_activity_type_id && e.semester_number === O ? ({ ...e, hours: N }) : e))) : (h = e.distributionActions.create) === null || void 0 === h || h.push({
                                 standard_curriculum_qualification_id: C.standard_curriculum_qualification_id, educational_activity_type_id: C.educational_activity_type_id, subject_id: C.subject_id, semester_number: O, hours: N,
                             })));
                         } if (w.working_curriculum_extract_distribution_id) { const L = (f = e.distributionActions.update) === null || void 0 === f ? void 0 : f.filter(((e) => e.working_curriculum_extract_distribution_id === w.working_curriculum_extract_distribution_id))[0]; e.distributionActions.delete = (_ = e.distributionActions.delete) === null || void 0 === _ ? void 0 : _.filter(((e) => e !== w.working_curriculum_extract_distribution_id)), N ? e.distributionActions.delete = (p = e.distributionActions.delete) === null || void 0 === p ? void 0 : p.filter(((e) => e !== w.working_curriculum_extract_distribution_id)) : ((v = e.distributionActions.delete) === null || void 0 === v || v.push(w.working_curriculum_extract_distribution_id), e.distributionActions.delete = Array.from(new Set(e.distributionActions.delete)), e.distributionActions.update = (y = e.distributionActions.update) === null || void 0 === y ? void 0 : y.filter(((e) => e.working_curriculum_extract_distribution_id !== w.working_curriculum_extract_distribution_id))), L ? e.distributionActions.update = (x = e.distributionActions.update) === null || void 0 === x ? void 0 : x.map(((e) => (e.working_curriculum_extract_distribution_id !== L.working_curriculum_extract_distribution_id ? e : ({ ...e, fields: { ...e.fields, hours: N } })))) : (b = e.distributionActions.update) === null || void 0 === b || b.push({ working_curriculum_extract_distribution_id: w.working_curriculum_extract_distribution_id, fields: { working_curriculum_extract_id: C.working_curriculum_extract_id, semester_number: O, hours: N } }); }
@@ -231,9 +338,32 @@ children: (0, r.jsx)(m.xv, {
                 },
                 calculateSummaryTime(e, t) {
                     if (e.dataToWork) {
-                        const i = t.payload; const r = i[0]; const n = i[1]; const u = i[2]; i[3] ? r ? (e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((t) => (t.standard_curriculum_qualification_id !== r ? t : ({ ...t, modules: t.modules.map(((t) => (t.module_id !== n ? t : ({...t, units: t.units.map(((t) =>{ if (t.educational_modules_unit_id !== u) return t; var i = t.subjects.reduce(((e,t) =>{ return t.semestersDistribution.forEach(((t) =>{ var i = t.semester_number; var r = t.hours; e[i] = (e[i] || 0) + (r || 0) })), e }), {}); var r = be({...t.summary}, { amountOfStudyTime: { hours: t.subjects.reduce(((e,t) =>{ return e + (t.hours || 0) }), 0) || null, hours_theory: t.subjects.reduce(((e,t) =>{ return e + (t.hours_theory || 0) }), 0) || null, hours_practice: t.subjects.reduce(((e,t) =>{ return e + (t.hours_practice || 0) }), 0) || null, hours_coursework: t.subjects.reduce(((e,t) =>{ return e + (t.hours_coursework || 0) }), 0) || null, hours_internship: t.subjects.reduce(((e,t) =>{ return e + (t.hours_internship || 0) }), 0) || null }, semestersDistribution: t.subjects.length ? Object.entries(i).map(((e) =>{ var t = e[0]; var i = e[1]; return { semester_number: Number(t), hours: i || null } })) : Array(e.data.meta.semestersCount).fill(null).map(((e,t) =>{ return { semester_number: t + 1, hours: null } })) }); return be({...t}, { summary: r }) }))})))) })))), e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== r ? e : ({ ...e, modules: e.modules.map(((e) => { if (e.module_id !== n) return e; const t = e.units.reduce(((e, t) => (t.summary.semestersDistribution.forEach(((t) => { let i = t.semester_number; let r = t.hours; e[i] = (e[i] || 0) + (r || 0); })), e)), {}); const i = { ...e.summary, amountOfStudyTime: {
- hours: e.units.reduce(((e, t) => { return e + (t.summary.amountOfStudyTime.hours || 0); }), 0) || null, hours_theory: e.units.reduce(((e, t) => { return e + (t.summary.amountOfStudyTime.hours_theory || 0); }), 0) || null, hours_practice: e.units.reduce(((e, t) => { return e + (t.summary.amountOfStudyTime.hours_practice || 0); }), 0) || null, hours_coursework: e.units.reduce(((e, t) => { return e + (t.summary.amountOfStudyTime.hours_coursework || 0); }), 0) || null, hours_internship: e.units.reduce(((e, t) => { return e + (t.summary.amountOfStudyTime.hours_internship || 0); }), 0) || null 
-}, semestersDistribution: Object.entries(t).map(((e) => { let t = e[0]; let i = e[1]; return { semester_number: Number(t), hours: i || null }; })) }; return { ...e, summary: i }; })) })))), e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((t) => {
+                        const i = t.payload; const r = i[0]; const n = i[1]; const u = i[2]; i[3] ? r ? (e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((t) => (t.standard_curriculum_qualification_id !== r ? t : ({
+                            ...t,
+                            modules: t.modules.map(((t) => (t.module_id !== n ? t : ({
+                                ...t,
+                                units: t.units.map(((t) => {
+                                    if (t.educational_modules_unit_id !== u) return t; const i = t.subjects.reduce(((e, t) => (t.semestersDistribution.forEach(((t) => { const i = t.semester_number; const r = t.hours; e[i] = (e[i] || 0) + (r || 0); })), e)), {}); const r = {
+                                        ...t.summary,
+                                        amountOfStudyTime: {
+                                            hours: t.subjects.reduce(((e, t) => e + (t.hours || 0)), 0) || null, hours_theory: t.subjects.reduce(((e, t) => e + (t.hours_theory || 0)), 0) || null, hours_practice: t.subjects.reduce(((e, t) => e + (t.hours_practice || 0)), 0) || null, hours_coursework: t.subjects.reduce(((e, t) => e + (t.hours_coursework || 0)), 0) || null, hours_internship: t.subjects.reduce(((e, t) => e + (t.hours_internship || 0)), 0) || null,
+                                        },
+                                        semestersDistribution: t.subjects.length ? Object.entries(i).map(((e) => { const t = e[0]; const i = e[1]; return { semester_number: Number(t), hours: i || null }; })) : Array(e.data.meta.semestersCount).fill(null).map(((e, t) => ({ semester_number: t + 1, hours: null }))),
+                                    }; return { ...t, summary: r };
+                                })),
+                            })))),
+                        })))), e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== r ? e : ({
+                            ...e,
+                            modules: e.modules.map(((e) => {
+                                if (e.module_id !== n) return e; const t = e.units.reduce(((e, t) => (t.summary.semestersDistribution.forEach(((t) => { const i = t.semester_number; const r = t.hours; e[i] = (e[i] || 0) + (r || 0); })), e)), {}); const i = {
+                                    ...e.summary,
+                                    amountOfStudyTime: {
+                                        hours: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours || 0)), 0) || null, hours_theory: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours_theory || 0)), 0) || null, hours_practice: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours_practice || 0)), 0) || null, hours_coursework: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours_coursework || 0)), 0) || null, hours_internship: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours_internship || 0)), 0) || null,
+                                    },
+                                    semestersDistribution: Object.entries(t).map(((e) => { const t = e[0]; const i = e[1]; return { semester_number: Number(t), hours: i || null }; })),
+                                }; return { ...e, summary: i };
+                            })),
+                        })))), e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((t) => {
                             if (t.standard_curriculum_qualification_id !== r) return t; for (var i = [], n = [], u = 0; u < e.data.meta.semestersCount; u++)i.push({ semester_number: u + 1, hours: null }), n.push({ semester_number: u + 1, hours: null }); t.modules.forEach(((e) => { e.summary.semestersDistribution.forEach(((e, t) => { i[t].hours = (i[t].hours || 0) + (e.hours || 0) || null, n[t].hours = (n[t].hours || 0) + (e.hours || 0) || null; })); })), t.educationalActivities.forEach(((e) => { e.semestersDistribution.forEach(((e, t) => { i[t].hours = (i[t].hours || 0) + (e.hours || 0) || null; })); })), t.educationalActivities.filter(((e) => e.is_in_compulsory_education)).forEach(((e) => { e.semestersDistribution.forEach(((e, t) => { n[t].hours = (n[t].hours || 0) + (e.hours || 0) || null; })); })); const s = {
                                 ...t.summary,
                                 amountOfStudyTime: {
@@ -292,14 +422,25 @@ children: (0, r.jsx)(m.xv, {
                         }));
                     }
                 },
-                changeSubjectName(e, t) { if (e.dataToWork) { const i = t.payload; const r = i[0]; const n = i[1]; const u = i[2]; const s = i[3]; const o = i[4]; r ? e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== r ? e : ({ ...e, modules: e.modules.map(((e) => (e.module_id !== n ? e : ({...e, units: e.units.map(((e) =>{ return e.educational_modules_unit_id !== u ? e : be({...e}, { subjects: e.subjects.map(((e) =>{ return e.subject_id !== s ? e : be({...e}, { name: o }) })) }) }))})))) })))) : e.dataToWork.data.general[0].subjects = e.dataToWork.data.general[0].subjects.map(((e) => (e.subject_id !== s ? e : ({ ...e, name: o })))); } },
+                changeSubjectName(e, t) { if (e.dataToWork) { const i = t.payload; const r = i[0]; const n = i[1]; const u = i[2]; const s = i[3]; const o = i[4]; r ? e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== r ? e : ({ ...e, modules: e.modules.map(((e) => (e.module_id !== n ? e : ({ ...e, units: e.units.map(((e) => (e.educational_modules_unit_id !== u ? e : ({ ...e, subjects: e.subjects.map(((e) => (e.subject_id !== s ? e : ({ ...e, name: o })))) })))) })))) })))) : e.dataToWork.data.general[0].subjects = e.dataToWork.data.general[0].subjects.map(((e) => (e.subject_id !== s ? e : ({ ...e, name: o })))); } },
                 deleteSubject(e, t) {
- let i; let r; if (e.dataToWork) {
- const n = t.payload; const u = n[0]; const s = n[1]; const o = n[2]; const a = n[3]; u ? e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== u ? e : ({ ...e, modules: e.modules.map(((e) => (e.module_id !== s ? e : ({...e, units: e.units.map(((e) =>{ return e.educational_modules_unit_id !== o ? e : be({...e}, { subjects: e.subjects.map(((e) =>{ return e.subject_id === a.subject_id ? be({...e}, { hours: null, hours_coursework: null, hours_internship: null, hours_practice: null, hours_theory: null, tests_semesters: null, courseworks_count: null, exams_semestrs: null, controlworks_count: null, semestersDistribution: e.semestersDistribution.map(((e) =>{ return be({...e}, { hours: null }) })) }) : e })) }) }))})))) })))) : e.dataToWork.data.general[0].subjects = e.dataToWork.data.general[0].subjects.map(((e) => (e.subject_id === a.subject_id ? ({
-                    ...e, hours: null, hours_coursework: null, hours_internship: null, hours_practice: null, hours_theory: null, tests_semesters: null, courseworks_count: null, exams_semestrs: null, controlworks_count: null, semestersDistribution: e.semestersDistribution.map(((e) => ({ ...e, hours: null }))), 
-}) : e))), a.working_curriculum_extract_id ? (e.actions.delete = ge(ge([], e.actions.delete || [], !0), [a.working_curriculum_extract_id], !1), e.distributionActions.delete = ge(ge([], e.distributionActions.delete || [], !0), a.semestersDistribution.map(((e) => e.working_curriculum_extract_distribution_id)), !0)) : (e.actions.create = (i = e.actions.create) === null || void 0 === i ? void 0 : i.filter(((e) => !(e.subject_id === a.subject_id && e.standard_curriculum_qualification_id === a.standard_curriculum_qualification_id))), e.distributionActions.create = (r = e.distributionActions.create) === null || void 0 === r ? void 0 : r.filter(((e) => !(e.subject_id === a.subject_id && e.standard_curriculum_qualification_id === a.standard_curriculum_qualification_id))), Object.keys(e.validationErrors).forEach(((t) => { e.validationErrors[t] = e.validationErrors[t].filter(((e) => e.subject_id !== a.subject_id)); }))); 
-} 
-},
+                    let i; let r; if (e.dataToWork) {
+                        const n = t.payload; const u = n[0]; const s = n[1]; const o = n[2]; const a = n[3]; u ? e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== u ? e : ({
+                            ...e,
+                            modules: e.modules.map(((e) => (e.module_id !== s ? e : ({
+                                ...e,
+                                units: e.units.map(((e) => (e.educational_modules_unit_id !== o ? e : ({
+                                    ...e,
+                                    subjects: e.subjects.map(((e) => (e.subject_id === a.subject_id ? ({
+                                        ...e, hours: null, hours_coursework: null, hours_internship: null, hours_practice: null, hours_theory: null, tests_semesters: null, courseworks_count: null, exams_semestrs: null, controlworks_count: null, semestersDistribution: e.semestersDistribution.map(((e) => ({ ...e, hours: null }))),
+                                    }) : e))), 
+})))), 
+})))), 
+})))) : e.dataToWork.data.general[0].subjects = e.dataToWork.data.general[0].subjects.map(((e) => (e.subject_id === a.subject_id ? ({
+                            ...e, hours: null, hours_coursework: null, hours_internship: null, hours_practice: null, hours_theory: null, tests_semesters: null, courseworks_count: null, exams_semestrs: null, controlworks_count: null, semestersDistribution: e.semestersDistribution.map(((e) => ({ ...e, hours: null }))),
+                        }) : e))), a.working_curriculum_extract_id ? (e.actions.delete = ge(ge([], e.actions.delete || [], !0), [a.working_curriculum_extract_id], !1), e.distributionActions.delete = ge(ge([], e.distributionActions.delete || [], !0), a.semestersDistribution.map(((e) => e.working_curriculum_extract_distribution_id)), !0)) : (e.actions.create = (i = e.actions.create) === null || void 0 === i ? void 0 : i.filter(((e) => !(e.subject_id === a.subject_id && e.standard_curriculum_qualification_id === a.standard_curriculum_qualification_id))), e.distributionActions.create = (r = e.distributionActions.create) === null || void 0 === r ? void 0 : r.filter(((e) => !(e.subject_id === a.subject_id && e.standard_curriculum_qualification_id === a.standard_curriculum_qualification_id))), Object.keys(e.validationErrors).forEach(((t) => { e.validationErrors[t] = e.validationErrors[t].filter(((e) => e.subject_id !== a.subject_id)); })));
+                    }
+                },
                 deleteEduActivity(e, t) { let i; let r; if (e.dataToWork) { const n = t.payload; const u = n[0]; const s = n[1]; u ? e.dataToWork.data.qualifications = e.dataToWork.data.qualifications.map(((e) => (e.standard_curriculum_qualification_id !== u ? e : ({ ...e, educationalActivities: e.educationalActivities.filter(((e) => e.educational_activity_type_id !== s.educational_activity_type_id)) })))) : e.dataToWork.data.general[0].educationalActivities = e.dataToWork.data.general[0].educationalActivities.filter(((e) => e.educational_activity_type_id !== s.educational_activity_type_id)), s.working_curriculum_extract_id ? (e.actions.delete = ge(ge([], e.actions.delete || [], !0), [s.working_curriculum_extract_id], !1), e.distributionActions.delete = ge(ge([], e.distributionActions.delete || [], !0), s.semestersDistribution.map(((e) => e.working_curriculum_extract_distribution_id)), !0)) : (e.actions.create = (i = e.actions.create) === null || void 0 === i ? void 0 : i.filter(((e) => !(e.educational_activity_type_id === s.educational_activity_type_id && e.standard_curriculum_qualification_id === s.standard_curriculum_qualification_id))), e.distributionActions.create = (r = e.distributionActions.create) === null || void 0 === r ? void 0 : r.filter(((e) => !(e.educational_activity_type_id === s.educational_activity_type_id && e.standard_curriculum_qualification_id === s.standard_curriculum_qualification_id))), Object.keys(e.validationErrors).forEach(((t) => { e.validationErrors[t] = e.validationErrors[t].filter(((e) => e.educational_activity_type_id !== s.educational_activity_type_id)); }))); } },
                 addValidationErrors(e, t) { const i = t.payload; const r = i[0]; const n = i[1]; const u = i[2]; const s = i[3]; const o = i[4]; i[5] ? ge([], e.validationErrors[u], !0).filter(((e) => e.standard_curriculum_qualification_id === r && e.subject_id === n))[0] ? u !== 'notFilledSummaryHours' ? e.validationErrors[u] = e.validationErrors[u].map(((e) => (e.standard_curriculum_qualification_id === r && e.subject_id === n ? ({ ...e, validated: s }) : e))) : e.validationErrors.notFilledSummaryHours = e.validationErrors.notFilledSummaryHours.map(((e) => (e.standard_curriculum_qualification_id === r && e.subject_id === n ? ({ ...e, notFilled: o }) : e))) : u !== 'notFilledSummaryHours' ? e.validationErrors[u].push({ standard_curriculum_qualification_id: r, subject_id: n, validated: s }) : e.validationErrors.notFilledSummaryHours.push({ standard_curriculum_qualification_id: r, subject_id: n, notFilled: o }) : ge([], e.validationErrors[u], !0).filter(((e) => e.standard_curriculum_qualification_id === r && e.educational_activity_type_id === n))[0] ? u !== 'notFilledSummaryHours' ? e.validationErrors[u] = e.validationErrors[u].map(((e) => (e.standard_curriculum_qualification_id === r && e.educational_activity_type_id === n ? ({ ...e, validated: s }) : e))) : e.validationErrors.notFilledSummaryHours = e.validationErrors.notFilledSummaryHours.map(((e) => (e.standard_curriculum_qualification_id === r && e.educational_activity_type_id === n ? ({ ...e, notFilled: o }) : e))) : u !== 'notFilledSummaryHours' ? e.validationErrors[u].push({ standard_curriculum_qualification_id: r, educational_activity_type_id: n, validated: s }) : e.validationErrors.notFilledSummaryHours.push({ standard_curriculum_qualification_id: r, educational_activity_type_id: n, notFilled: o }); },
                 prepareSemestersDistributionToSend(e, t) { let i; if ((i = e.distributionActions.create) === null || void 0 === i ? void 0 : i.length) { const r = []; t.payload.forEach(((t) => { let i; (i = e.distributionActions.create) === null || void 0 === i || i.forEach(((e) => { t.subject_id ? t.subject_id === e.subject_id && t.standard_curriculum_qualification_id === e.standard_curriculum_qualification_id && e.hours && r.push({ working_curriculum_extract_id: t.working_curriculum_extract_id, semester_number: e.semester_number, hours: e.hours }) : t.educational_activity_type_id === e.educational_activity_type_id && t.standard_curriculum_qualification_id === e.standard_curriculum_qualification_id && e.hours && r.push({ working_curriculum_extract_id: t.working_curriculum_extract_id, semester_number: e.semester_number, hours: e.hours }); })); })), e.distributionActions.create = r; } },
@@ -319,33 +460,73 @@ children: (0, r.jsx)(m.xv, {
                             },
                             semestersDistribution: [],
                         }, r = 0; r < t.payload.meta.semestersCount; r++)i.semestersDistribution.push({ hours: null, semester_number: r + 1 }); const n = {
- meta: t.payload.meta,
-data: {
- general: t.payload.data.general ? t.payload.data.general.map(((e) => ({
-                        ...e, summary: i, summaryCompulsory: i, subjects: e.subjects.map(((e) => { let t; let r; const n = ge([], i.semestersDistribution, !0); return e.semestersDistribution.forEach(((e) => { n.forEach(((t, i) => { e.semester_number === t.semester_number && e.hours && (n[i] = e); })); })), ({
- ...e, exams_semestrs: (t = e.exams_semestrs) === null || void 0 === t ? void 0 : t.join(','), tests_semesters: (r = e.tests_semesters) === null || void 0 === r ? void 0 : r.join(','), sortValue: e.sort, semestersDistribution: n 
-}); })), educationalActivities: e.educationalActivities.map(((e) => { let t; let r; const n = ge([], i.semestersDistribution, !0); return e.semestersDistribution.forEach(((e) => { n.forEach(((t, i) => { e.semester_number === t.semester_number && e.hours && (n[i] = e); })); })), ({
- ...e, exams_semestrs: (t = e.exams_semestrs) === null || void 0 === t ? void 0 : t.join(','), tests_semesters: (r = e.tests_semesters) === null || void 0 === r ? void 0 : r.join(','), sortValue: e.sort, semestersDistribution: n 
-}); })), 
-}))) : t.payload.data.general,
-qualifications: t.payload.data.qualifications ? t.payload.data.qualifications.map(((e) => ({
-                        ...e, summary: i, summaryCompulsory: i, modules: e.modules.map(((e) => ({ ...e, summary: i, units: e.units.map(((e) => { return {...e, subjects: e.subjects.map(((e) =>{ var t; var r; var n = ge([], i.semestersDistribution, !0); return e.semestersDistribution.forEach(((e) =>{ n.forEach(((t,i) =>{ e.semester_number === t.semester_number && e.hours && (n[i] = e) })) })), be({...e}, { exams_semestrs: null === (t = e.exams_semestrs) || void 0 === t ? void 0 : t.join(','), tests_semesters: null === (r = e.tests_semesters) || void 0 === r ? void 0 : r.join(','), sortValue: e.sort, semestersDistribution: n }) })), summary: i} })) }))), educationalActivities: e.educationalActivities.map(((e) => { let t; let r; const n = ge([], i.semestersDistribution, !0); return e.semestersDistribution.forEach(((e) => { n.forEach(((t, i) => { e.semester_number === t.semester_number && e.hours && (n[i] = e); })); })), ({
- ...e, exams_semestrs: (t = e.exams_semestrs) === null || void 0 === t ? void 0 : t.join(','), tests_semesters: (r = e.tests_semesters) === null || void 0 === r ? void 0 : r.join(','), sortValue: e.sort, semestersDistribution: n 
-}); })), 
-}))) : t.payload.data.qualifications 
-} 
-}; e.dataParsed = n, e.dataParsed.data.qualifications && e.dataParsed.data.qualifications.length && (e.dataParsed.data.qualifications = e.dataParsed.data.qualifications.map(((t) => ({ ...t, modules: t.modules.map(((t) => ({ ...t, units: t.units.map(((t) => { const i = t.subjects.reduce(((e, t) => { return t.semestersDistribution.forEach(((t) => { let i = t.semester_number; let r = t.hours; e[i] = (e[i] || 0) + (r || 0); })), e; }), {}); const r = {...t.summary, amountOfStudyTime: { hours: t.subjects.reduce(((e,t) =>{ return e + (t.hours || 0) }), 0) || null, hours_theory: t.subjects.reduce(((e,t) =>{ return e + (t.hours_theory || 0) }), 0) || null, hours_practice: t.subjects.reduce(((e,t) =>{ return e + (t.hours_practice || 0) }), 0) || null, hours_coursework: t.subjects.reduce(((e,t) =>{ return e + (t.hours_coursework || 0) }), 0) || null, hours_internship: t.subjects.reduce(((e,t) =>{ return e + (t.hours_internship || 0) }), 0) || null }, semestersDistribution: t.subjects.length ? Object.entries(i).map(((e) =>{ var t = e[0]; var i = e[1]; return { semester_number: Number(t), hours: i || null } })) : Array(e.data.meta.semestersCount).fill(null).map(((e,t) =>{ return { semester_number: t + 1, hours: null } }))}; return { ...t, summary: r }; })) }))) }))), e.dataParsed.data.qualifications = e.dataParsed.data.qualifications.map(((e) => ({
- ...e,
-modules: e.modules.map(((e) => {
- const t = e.units.reduce(((e, t) => (t.summary.semestersDistribution.forEach(((t) => { const i = t.semester_number; const r = t.hours; e[i] = (e[i] || 0) + (r || 0); })), e)), {}); const i = {
- ...e.summary,
-amountOfStudyTime: {
-                        hours: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours || 0)), 0) || null, hours_theory: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours_theory || 0)), 0) || null, hours_practice: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours_practice || 0)), 0) || null, hours_coursework: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours_coursework || 0)), 0) || null, hours_internship: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours_internship || 0)), 0) || null, 
-},
-semestersDistribution: Object.entries(t).map(((e) => { const t = e[0]; const i = e[1]; return { semester_number: Number(t), hours: i || null }; })) 
-}; return { ...e, summary: i }; 
-})) 
-}))), e.dataParsed.data.qualifications = e.dataParsed.data.qualifications.map(((t) => {
+                        meta: t.payload.meta,
+                        data: {
+                            general: t.payload.data.general ? t.payload.data.general.map(((e) => ({
+                                ...e,
+                                summary: i,
+                                summaryCompulsory: i,
+                                subjects: e.subjects.map(((e) => {
+                                    let t; let r; const n = ge([], i.semestersDistribution, !0); return e.semestersDistribution.forEach(((e) => { n.forEach(((t, i) => { e.semester_number === t.semester_number && e.hours && (n[i] = e); })); })), ({
+                                        ...e, exams_semestrs: (t = e.exams_semestrs) === null || void 0 === t ? void 0 : t.join(','), tests_semesters: (r = e.tests_semesters) === null || void 0 === r ? void 0 : r.join(','), sortValue: e.sort, semestersDistribution: n,
+                                    });
+                                })),
+                                educationalActivities: e.educationalActivities.map(((e) => {
+                                    let t; let r; const n = ge([], i.semestersDistribution, !0); return e.semestersDistribution.forEach(((e) => { n.forEach(((t, i) => { e.semester_number === t.semester_number && e.hours && (n[i] = e); })); })), ({
+                                        ...e, exams_semestrs: (t = e.exams_semestrs) === null || void 0 === t ? void 0 : t.join(','), tests_semesters: (r = e.tests_semesters) === null || void 0 === r ? void 0 : r.join(','), sortValue: e.sort, semestersDistribution: n,
+                                    });
+                                })),
+                            }))) : t.payload.data.general,
+                            qualifications: t.payload.data.qualifications ? t.payload.data.qualifications.map(((e) => ({
+                                ...e,
+                                summary: i,
+                                summaryCompulsory: i,
+                                modules: e.modules.map(((e) => ({
+                                    ...e,
+                                    summary: i,
+                                    units: e.units.map(((e) => ({
+                                        ...e,
+                                        subjects: e.subjects.map(((e) => {
+                                            let t; let r; const n = ge([], i.semestersDistribution, !0); return e.semestersDistribution.forEach(((e) => { n.forEach(((t, i) => { e.semester_number === t.semester_number && e.hours && (n[i] = e); })); })), ({
+                                                ...e, exams_semestrs: (t = e.exams_semestrs) === null || void 0 === t ? void 0 : t.join(','), tests_semesters: (r = e.tests_semesters) === null || void 0 === r ? void 0 : r.join(','), sortValue: e.sort, semestersDistribution: n,
+                                            });
+                                        })),
+                                        summary: i,
+                                    }))),
+                                }))),
+                                educationalActivities: e.educationalActivities.map(((e) => {
+                                    let t; let r; const n = ge([], i.semestersDistribution, !0); return e.semestersDistribution.forEach(((e) => { n.forEach(((t, i) => { e.semester_number === t.semester_number && e.hours && (n[i] = e); })); })), ({
+                                        ...e, exams_semestrs: (t = e.exams_semestrs) === null || void 0 === t ? void 0 : t.join(','), tests_semesters: (r = e.tests_semesters) === null || void 0 === r ? void 0 : r.join(','), sortValue: e.sort, semestersDistribution: n,
+                                    });
+                                })),
+                            }))) : t.payload.data.qualifications,
+                        },
+                    }; e.dataParsed = n, e.dataParsed.data.qualifications && e.dataParsed.data.qualifications.length && (e.dataParsed.data.qualifications = e.dataParsed.data.qualifications.map(((t) => ({
+                        ...t,
+                        modules: t.modules.map(((t) => ({
+                            ...t,
+                            units: t.units.map(((t) => {
+                                const i = t.subjects.reduce(((e, t) => (t.semestersDistribution.forEach(((t) => { const i = t.semester_number; const r = t.hours; e[i] = (e[i] || 0) + (r || 0); })), e)), {}); const r = {
+                                    ...t.summary,
+                                    amountOfStudyTime: {
+                                        hours: t.subjects.reduce(((e, t) => e + (t.hours || 0)), 0) || null, hours_theory: t.subjects.reduce(((e, t) => e + (t.hours_theory || 0)), 0) || null, hours_practice: t.subjects.reduce(((e, t) => e + (t.hours_practice || 0)), 0) || null, hours_coursework: t.subjects.reduce(((e, t) => e + (t.hours_coursework || 0)), 0) || null, hours_internship: t.subjects.reduce(((e, t) => e + (t.hours_internship || 0)), 0) || null,
+                                    },
+                                    semestersDistribution: t.subjects.length ? Object.entries(i).map(((e) => { const t = e[0]; const i = e[1]; return { semester_number: Number(t), hours: i || null }; })) : Array(e.data.meta.semestersCount).fill(null).map(((e, t) => ({ semester_number: t + 1, hours: null }))),
+                                }; return { ...t, summary: r };
+                            })),
+                        }))),
+                    }))), e.dataParsed.data.qualifications = e.dataParsed.data.qualifications.map(((e) => ({
+                        ...e,
+                        modules: e.modules.map(((e) => {
+                            const t = e.units.reduce(((e, t) => (t.summary.semestersDistribution.forEach(((t) => { const i = t.semester_number; const r = t.hours; e[i] = (e[i] || 0) + (r || 0); })), e)), {}); const i = {
+                                ...e.summary,
+                                amountOfStudyTime: {
+                                    hours: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours || 0)), 0) || null, hours_theory: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours_theory || 0)), 0) || null, hours_practice: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours_practice || 0)), 0) || null, hours_coursework: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours_coursework || 0)), 0) || null, hours_internship: e.units.reduce(((e, t) => e + (t.summary.amountOfStudyTime.hours_internship || 0)), 0) || null,
+                                },
+                                semestersDistribution: Object.entries(t).map(((e) => { const t = e[0]; const i = e[1]; return { semester_number: Number(t), hours: i || null }; })),
+                            }; return { ...e, summary: i };
+                        })),
+                    }))), e.dataParsed.data.qualifications = e.dataParsed.data.qualifications.map(((t) => {
                         for (var i = [], r = [], n = 0; n < e.data.meta.semestersCount; n++)i.push({ semester_number: n + 1, hours: null }), r.push({ semester_number: n + 1, hours: null }); t.modules.forEach(((e) => { e.summary.semestersDistribution.forEach(((e, t) => { i[t].hours = (i[t].hours || 0) + (e.hours || 0) || null, r[t].hours = (r[t].hours || 0) + (e.hours || 0) || null; })); })), t.educationalActivities.forEach(((e) => { e.semestersDistribution.forEach(((e, t) => { i[t].hours = (i[t].hours || 0) + (e.hours || 0) || null; })); })), t.educationalActivities.filter(((e) => e.is_in_compulsory_education)).forEach(((e) => { e.semestersDistribution.forEach(((e, t) => { r[t].hours = (r[t].hours || 0) + (e.hours || 0) || null; })); })); const u = {
                             ...t.summary,
                             amountOfStudyTime: {
@@ -407,7 +588,7 @@ semestersDistribution: Object.entries(t).map(((e) => { const t = e[0]; const i =
                     .addCase(K.rejected, ((e, t) => { e.updatingIsLoading = !1, e.updatingError = t.payload, e.updatedStatus = !1; }));
             },
         }); var Ee = Se.actions; const Ce = Se.reducer; let Oe = function () { return Oe = Object.assign || function (e) { for (var t, i = 1, r = arguments.length; i < r; i++) for (const n in t = arguments[i])Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]); return e; }, Oe.apply(this, arguments); }; const Ne = (0, n.memo)(((e) => {
-            let t; let i; let n; let s; const o = e.className; const a = e.qualification; const d = e.activity; const _ = e.onChangeDisciplineSort; const v = e.onBlurDisciplineSort; const y = e.onChangeWorksCount; const p = e.onChangeHoursCount; const x = e.onChangeDistributionSemesterValue; const g = e.onChangeArraySemesters; const j = e.onBlurArraySemesters; const S = (0, l.T)(); const E = (0, c.v9)(z); const C = (i = (t = (0, c.v9)(M)) === null || void 0 === t ? void 0 : t.notFilledSummaryHours.filter(((e) => e.notFilled)).filter(((e) => e.educational_activity_type_id === d.educational_activity_type_id && e.standard_curriculum_qualification_id === (a == null ? void 0 : a.standard_curriculum_qualification_id)))[0]) === null || void 0 === i ? void 0 : i.notFilled; const O = (s = (n = (0, c.v9)(M)) === null || void 0 === n ? void 0 : n.notFilledSummaryHours.filter(((e) => e.notFilled)).filter(((e) => e.educational_activity_type_id === d.educational_activity_type_id && e.standard_curriculum_qualification_id === null))[0]) === null || void 0 === s ? void 0 : s.notFilled; const N = (0, c.v9)(X); const T = Number((0, c.v9)(b.rb).hectum_curriculum.options.filter(((e) => e.name === 'credit_in_hours'))[0].value); return (0, r.jsxs)(de, {
+            let t; let i; let n; let s; const o = e.className; const a = e.qualification; const d = e.activity; const _ = e.onChangeDisciplineSort; const v = e.onBlurDisciplineSort; const y = e.onChangeWorksCount; const p = e.onChangeHoursCount; const x = e.onChangeDistributionSemesterValue; const g = e.onChangeArraySemesters; const j = e.onBlurArraySemesters; const S = (0, l.T)(); const E = (0, c.v9)(z); const C = (i = (t = (0, c.v9)(M)) === null || void 0 === t ? void 0 : t.notFilledSummaryHours.filter(((e) => e.notFilled)).filter(((e) => e.educational_activity_type_id === d.educational_activity_type_id && e.standard_curriculum_qualification_id === (a == null ? void 0 : a.standard_curriculum_qualification_id)))[0]) === null || void 0 === i ? void 0 : i.notFilled; const O = (s = (n = (0, c.v9)(M)) === null || void 0 === n ? void 0 : n.notFilledSummaryHours.filter(((e) => e.notFilled)).filter(((e) => e.educational_activity_type_id === d.educational_activity_type_id && e.standard_curriculum_qualification_id === null))[0]) === null || void 0 === s ? void 0 : s.notFilled; const N = (0, c.v9)(X); const T = Number((0, c.v9)(b.rb).knrtu_kai.options.filter(((e) => e.name === 'credit_in_hours'))[0].value); return (0, r.jsxs)(de, {
                 className: (0, u.A)(xe.WorkingCurriculumExtractTableEduActivities, {}, [o]),
                 children: [(0, r.jsx)(oe, {
                     className: 'indexCell',
@@ -425,9 +606,9 @@ semestersDistribution: Object.entries(t).map(((e) => { const t = e[0]; const i =
                         className: xe.editingBtns,
                         children: (0, r.jsx)(h.zx, {
                             theme: h.bn.CLEAR, title: 'Удалить', className: xe.editBtn, onClick() { !(function (e, t) { S(Ee.deleteEduActivity([e || null, t])), S(Ee.calculateSummaryTime([e || null, 0, 0, !1])); }(a == null ? void 0 : a.standard_curriculum_qualification_id, d)); }, children: (0, r.jsx)(f.J, { Svg: pe.Z }),
-                        }), 
-})], 
-}), (0, r.jsx)(le, {
+                        }),
+                    })],
+                }), (0, r.jsx)(le, {
                     className: 'sortCell', type: 'number', step: 100, inputValue: d.sortValue || '', title: 'Сортировка', disabled: N, onChangeHandler(e) { _(a == null ? void 0 : a.standard_curriculum_qualification_id, void 0, void 0, d, 'sortValue', e.target.value, !1); }, onBlur(e) { v(a == null ? void 0 : a.standard_curriculum_qualification_id, void 0, void 0, d, String(d.sortValue) || '', d.sort, !1); },
                 }), (0, r.jsxs)('div', {
                     className: 'formControlCell flex-row',
@@ -446,8 +627,8 @@ semestersDistribution: Object.entries(t).map(((e) => { const t = e[0]; const i =
                         className: 'amountOfStudyTimeCredits',
                         children: (0, r.jsx)(m.xv, {
                             align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: d.hours && ve(d.hours / T),
-                        }), 
-}), (0, r.jsx)(le, {
+                        }),
+                    }), (0, r.jsx)(le, {
                         className: 'amountOfStudyTimeHours', type: 'text', inputValue: String(d.hours || ''), title: 'Всего часов', disabled: N, onChangeHandler(e) { p(a == null ? void 0 : a.standard_curriculum_qualification_id, void 0, void 0, d, 'hours', e.target.value, !1); }, error: E && (C || O), required: !0,
                     }), (0, r.jsx)(le, {
                         className: 'amountOfStudyTimeTheory', type: 'text', inputValue: String(d.hours_theory || ''), title: 'Теоретические', onChangeHandler(e) { p(a == null ? void 0 : a.standard_curriculum_qualification_id, void 0, void 0, d, 'hours_theory', e.target.value, !1); }, disabled: !d.hours || N,
@@ -466,29 +647,29 @@ semestersDistribution: Object.entries(t).map(((e) => { const t = e[0]; const i =
                 })],
             });
         })); const Te = { disciplineAddBtn: 'zeF7ugtq', eduActivityTypeBtn: 'eeBy7Pbt' }; const we = { subjectName: 'nujdImtL', editingBtns: 'VFeFn7mn', editBtn: 'JQD3d5II' }; let ke = function () { return ke = Object.assign || function (e) { for (var t, i = 1, r = arguments.length; i < r; i++) for (const n in t = arguments[i])Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]); return e; }, ke.apply(this, arguments); }; const Le = (0, n.memo)(((e) => {
-            let t; let i; let n; let s; const o = e.className; const a = e.qualification; const d = e.module; const _ = e.unit; const v = e.subject; const y = e.openEditModal; const x = e.onChangeHoursCount; const g = e.onChangeDisciplineSort; const j = e.onBlurDisciplineSort; const S = e.onChangeArraySemesters; const E = e.onBlurArraySemesters; const C = e.onChangeWorksCount; const O = e.onChangeDistributionSemesterValue; const N = (0, l.T)(); const T = (0, c.v9)(z); const w = (i = (t = (0, c.v9)(M)) === null || void 0 === t ? void 0 : t.notFilledSummaryHours.filter(((e) => e.notFilled)).filter(((e) => e.subject_id === v.subject_id && e.standard_curriculum_qualification_id === (a == null ? void 0 : a.standard_curriculum_qualification_id)))[0]) === null || void 0 === i ? void 0 : i.notFilled; const k = (s = (n = (0, c.v9)(M)) === null || void 0 === n ? void 0 : n.notFilledSummaryHours.filter(((e) => e.notFilled)).filter(((e) => e.subject_id === v.subject_id && e.standard_curriculum_qualification_id === null))[0]) === null || void 0 === s ? void 0 : s.notFilled; const L = (0, c.v9)(X); const D = (0, c.v9)(V); const H = Number((0, c.v9)(b.rb).hectum_curriculum.options.filter(((e) => e.name === 'credit_in_hours'))[0].value); return !v.working_curriculum_extract_id && L ? (0, r.jsx)(r.Fragment, {}) : D || G(v) ? (0, r.jsxs)(de, {
+            let t; let i; let n; let s; const o = e.className; const a = e.qualification; const d = e.module; const _ = e.unit; const v = e.subject; const y = e.openEditModal; const x = e.onChangeHoursCount; const g = e.onChangeDisciplineSort; const j = e.onBlurDisciplineSort; const S = e.onChangeArraySemesters; const E = e.onBlurArraySemesters; const C = e.onChangeWorksCount; const O = e.onChangeDistributionSemesterValue; const N = (0, l.T)(); const T = (0, c.v9)(z); const w = (i = (t = (0, c.v9)(M)) === null || void 0 === t ? void 0 : t.notFilledSummaryHours.filter(((e) => e.notFilled)).filter(((e) => e.subject_id === v.subject_id && e.standard_curriculum_qualification_id === (a == null ? void 0 : a.standard_curriculum_qualification_id)))[0]) === null || void 0 === i ? void 0 : i.notFilled; const k = (s = (n = (0, c.v9)(M)) === null || void 0 === n ? void 0 : n.notFilledSummaryHours.filter(((e) => e.notFilled)).filter(((e) => e.subject_id === v.subject_id && e.standard_curriculum_qualification_id === null))[0]) === null || void 0 === s ? void 0 : s.notFilled; const L = (0, c.v9)(X); const D = (0, c.v9)(V); const H = Number((0, c.v9)(b.rb).knrtu_kai.options.filter(((e) => e.name === 'credit_in_hours'))[0].value); return !v.working_curriculum_extract_id && L ? (0, r.jsx)(r.Fragment, {}) : D || G(v) ? (0, r.jsxs)(de, {
                 className: (0, u.A)(we.WorkingCurriculumExtractTableSubjects, {}, [o]),
                 children: [(0, r.jsx)(oe, {
                     className: 'indexCell',
                     children: (0, r.jsx)(m.xv, {
                         align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: v.code,
-                    }), 
-}), (0, r.jsx)(oe, {
+                    }),
+                }), (0, r.jsx)(oe, {
                     className: 'idCell',
                     children: (0, r.jsx)(m.xv, {
                         align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: v.working_curriculum_extract_id && v.working_curriculum_extract_id,
-                    }), 
-}), (0, r.jsxs)(oe, {
- className: (0, u.A)(we.subjectName, {}, ['disciplinesNameCell']),
-children: [(0, r.jsx)(m.xv, { size: m.yH.XS, weight: m.fs.SEMIBOLD, children: v.name }), !L && (0, r.jsxs)('div', {
- className: we.editingBtns,
-children: [(0, r.jsx)(h.zx, {
-                    theme: h.bn.CLEAR, title: 'Редактировать', className: we.editBtn, onClick() { y(String(v.subject_id)); }, children: (0, r.jsx)(f.J, { Svg: p.Z }), 
-}), G(v) && (0, r.jsx)(h.zx, {
-                    theme: h.bn.CLEAR, title: 'Удалить', className: we.editBtn, onClick() { !(function (e, t, i, r) { N(Ee.deleteSubject([e || null, t, i, r])), N(Ee.calculateSummaryTime([e || null, t, i, !0])); }(a == null ? void 0 : a.standard_curriculum_qualification_id, d == null ? void 0 : d.module_id, _ == null ? void 0 : _.educational_modules_unit_id, v)); }, children: (0, r.jsx)(f.J, { Svg: pe.Z }), 
-})] 
-})] 
-}), (0, r.jsx)(le, {
+                    }),
+                }), (0, r.jsxs)(oe, {
+                    className: (0, u.A)(we.subjectName, {}, ['disciplinesNameCell']),
+                    children: [(0, r.jsx)(m.xv, { size: m.yH.XS, weight: m.fs.SEMIBOLD, children: v.name }), !L && (0, r.jsxs)('div', {
+                        className: we.editingBtns,
+                        children: [(0, r.jsx)(h.zx, {
+                            theme: h.bn.CLEAR, title: 'Редактировать', className: we.editBtn, onClick() { y(String(v.subject_id)); }, children: (0, r.jsx)(f.J, { Svg: p.Z }),
+                        }), G(v) && (0, r.jsx)(h.zx, {
+                            theme: h.bn.CLEAR, title: 'Удалить', className: we.editBtn, onClick() { !(function (e, t, i, r) { N(Ee.deleteSubject([e || null, t, i, r])), N(Ee.calculateSummaryTime([e || null, t, i, !0])); }(a == null ? void 0 : a.standard_curriculum_qualification_id, d == null ? void 0 : d.module_id, _ == null ? void 0 : _.educational_modules_unit_id, v)); }, children: (0, r.jsx)(f.J, { Svg: pe.Z }),
+                        })],
+                    })],
+                }), (0, r.jsx)(le, {
                     className: 'sortCell', type: 'number', step: 100, inputValue: v.sortValue || '', title: 'Сортировка', disabled: L, onChangeHandler(e) { g(a == null ? void 0 : a.standard_curriculum_qualification_id, d == null ? void 0 : d.module_id, _ == null ? void 0 : _.educational_modules_unit_id, v, 'sortValue', e.target.value, !0); }, onBlur() { j(a == null ? void 0 : a.standard_curriculum_qualification_id, d == null ? void 0 : d.module_id, _ == null ? void 0 : _.educational_modules_unit_id, v, String(v.sortValue) || '', v.sort, !0); },
                 }), (0, r.jsxs)('div', {
                     className: 'formControlCell flex-row',
@@ -504,11 +685,11 @@ children: [(0, r.jsx)(h.zx, {
                 }), (0, r.jsxs)('div', {
                     className: 'amountOfStudyTimeCell flex-row',
                     children: [(0, r.jsx)(oe, {
- className: 'amountOfStudyTimeCredits',
-children: (0, r.jsx)(m.xv, {
-                        align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: v.hours && ve(v.hours / H), 
-}) 
-}), (0, r.jsx)(le, {
+                        className: 'amountOfStudyTimeCredits',
+                        children: (0, r.jsx)(m.xv, {
+                            align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: v.hours && ve(v.hours / H),
+                        }),
+                    }), (0, r.jsx)(le, {
                         className: 'amountOfStudyTimeHours', type: 'text', inputValue: String(v.hours || ''), title: 'Всего часов', disabled: L, onChangeHandler(e) { x(a == null ? void 0 : a.standard_curriculum_qualification_id, d == null ? void 0 : d.module_id, _ == null ? void 0 : _.educational_modules_unit_id, v, 'hours', e.target.value, !0); }, error: T && (w || k),
                     }), (0, r.jsx)(le, {
                         className: 'amountOfStudyTimeTheory', type: 'text', inputValue: String(v.hours_theory || ''), title: 'Теоретические', onChangeHandler(e) { x(a == null ? void 0 : a.standard_curriculum_qualification_id, d == null ? void 0 : d.module_id, _ == null ? void 0 : _.educational_modules_unit_id, v, 'hours_theory', e.target.value, !0); }, disabled: !v.hours || L,
@@ -543,7 +724,7 @@ children: (0, r.jsx)(m.xv, {
                                     let i; let r; let n; let u; let s = {
                                         label: 0, sent() { if (1 & n[0]) throw n[1]; return n[1]; }, trys: [], ops: [],
                                     }; return u = { next: o(0), throw: o(1), return: o(2) }, typeof Symbol === 'function' && (u[Symbol.iterator] = function () { return this; }), u; function o(o) { return function (a) { return (function (o) { if (i) throw new TypeError('Generator is already executing.'); for (;u && (u = 0, o[0] && (s = 0)), s;) try { if (i = 1, r && (n = 2 & o[0] ? r.return : o[0] ? r.throw || ((n = r.return) && n.call(r), 0) : r.next) && !(n = n.call(r, o[1])).done) return n; switch (r = 0, n && (o = [2 & o[0], n.value]), o[0]) { case 0: case 1: n = o; break; case 4: return s.label++, { value: o[1], done: !1 }; case 5: s.label++, r = o[1], o = [0]; continue; case 7: o = s.ops.pop(), s.trys.pop(); continue; default: if (!((n = (n = s.trys).length > 0 && n[n.length - 1]) || o[0] !== 6 && o[0] !== 2)) { s = 0; continue; } if (o[0] === 3 && (!n || o[1] > n[0] && o[1] < n[3])) { s.label = o[1]; break; } if (o[0] === 6 && s.label < n[1]) { s.label = n[1], n = o; break; } if (n && s.label < n[2]) { s.label = n[2], s.ops.push(o); break; }n[2] && s.ops.pop(), s.trys.pop(); continue; }o = t.call(e, s); } catch (e) { o = [6, e], r = 0; } finally { i = n = 0; } if (5 & o[0]) throw o[1]; return { value: o[0] ? o[1] : void 0, done: !0 }; }([o, a])); }; }
-                                }(this, ((i) => { switch (i.label) { case 0: return (H == null ? void 0 : H.name) ? (e = x ? ({ ...H, module_id: 1, unit_id: null }) : H, [4, b((0, De.g7)(e))]) : (N(j.F.error('Заполните название')), [2]); case 1: return (t = i.sent()).meta.requestStatus === 'fulfilled' && (N(j.F.success('Дисциплина успешно добавлена')), localStorage.setItem(S.RR, JSON.stringify(W)), (function (e) { let t; let i; let r; if (x)r = ((t = I == null ? void 0 : I.data.general[0].subjects[I.data.general[0].subjects.length - 1]) === null || void 0 === t ? void 0 : t.sort) || 0; else { const n = I == null ? void 0 : I.data.qualifications.filter(((e) => { return e.standard_curriculum_qualification_id === (_ == null ? void 0 : _.standard_curriculum_qualification_id); }))[0].modules.filter(((e) => { return e.module_id === y.module_id; }))[0].units.filter(((e) => { return e.educational_modules_unit_id === p.educational_modules_unit_id; }))[0].subjects; r = ((i = n[n.length - 1]) === null || void 0 === i ? void 0 : i.sort) || 0; }b(Ee.addSubject([x ? null : _.standard_curriculum_qualification_id, x ? 1 : H.module_id, x ? void 0 : H.unit_id, e, Number(L), r + 100])); }(t.payload)), M()), [2]; } })));
+                                }(this, ((i) => { switch (i.label) { case 0: return (H == null ? void 0 : H.name) ? (e = x ? ({ ...H, module_id: 1, unit_id: null }) : H, [4, b((0, De.g7)(e))]) : (N(j.F.error('Заполните название')), [2]); case 1: return (t = i.sent()).meta.requestStatus === 'fulfilled' && (N(j.F.success('Дисциплина успешно добавлена')), localStorage.setItem(S.RR, JSON.stringify(W)), (function (e) { let t; let i; let r; if (x)r = ((t = I == null ? void 0 : I.data.general[0].subjects[I.data.general[0].subjects.length - 1]) === null || void 0 === t ? void 0 : t.sort) || 0; else { const n = I == null ? void 0 : I.data.qualifications.filter(((e) => e.standard_curriculum_qualification_id === (_ == null ? void 0 : _.standard_curriculum_qualification_id)))[0].modules.filter(((e) => e.module_id === y.module_id))[0].units.filter(((e) => e.educational_modules_unit_id === p.educational_modules_unit_id))[0].subjects; r = ((i = n[n.length - 1]) === null || void 0 === i ? void 0 : i.sort) || 0; }b(Ee.addSubject([x ? null : _.standard_curriculum_qualification_id, x ? 1 : H.module_id, x ? void 0 : H.unit_id, e, Number(L), r + 100])); }(t.payload)), M()), [2]; } })));
                             }, new ((i = void 0) || (i = Promise))(((n, u) => { function s(e) { try { a(r.next(e)); } catch (e) { u(e); } } function o(e) { try { a(r.throw(e)); } catch (e) { u(e); } } function a(e) { let t; e.done ? n(e.value) : (t = e.value, t instanceof i ? t : new i(((e) => { e(t); }))).then(s, o); }a((r = r.apply(e, t || [])).next()); })); let e; let t; let i; let r;
                         },
                         theme: h.bn.BACKGROUND,
@@ -614,7 +795,7 @@ children: (0, r.jsx)(m.xv, {
                 }), (0, r.jsx)(g.KF, { ref: B, push: H, placement: 'top-end' })],
             });
         })); let tt = function () { return tt = Object.assign || function (e) { for (var t, i = 1, r = arguments.length; i < r; i++) for (const n in t = arguments[i])Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]); return e; }, tt.apply(this, arguments); }; const it = function (e, t, i) { if (i || arguments.length === 2) for (var r, n = 0, u = t.length; n < u; n++)!r && n in t || (r || (r = Array.prototype.slice.call(t, 0, n)), r[n] = t[n]); return e.concat(r || Array.prototype.slice.call(t)); }; const rt = (0, n.memo)(((e) => {
-            let t; let i; let s; let o; let d; let f; let _; let v; let y; let p; let x; let S; let E; let C; let O; let N; let T; let w; const k = e.className; const L = e.general; const D = (0, l.T)(); const H = (0, n.useState)(); const B = H[0]; const R = H[1]; const P = (0, n.useRef)(null); const q = (0, n.useState)(!1); const W = q[0]; const I = q[1]; const M = (0, n.useState)(!1); const z = M[0]; const F = M[1]; const V = (0, n.useState)(!1); const Y = V[0]; const Z = V[1]; const U = (0, n.useState)(); const G = U[0]; const J = U[1]; const K = (0, a.TH)().pathname; const Q = (0, c.v9)(A); const $ = Number((0, c.v9)(b.rb).hectum_curriculum.options.filter(((e) => e.name === 'credit_in_hours'))[0].value); const ee = (0, c.v9)(X); const te = (0, n.useCallback)((() => { I(!0); }), []); const ie = (0, n.useCallback)((() => { I(!1); }), []); const re = (0, n.useCallback)(((e) => { F(!0), J(e); }), []); const ue = (0, n.useCallback)((() => { F(!1); }), []); const se = (0, n.useCallback)((() => { Z(!0); }), []); const ae = (0, n.useCallback)((() => { Z(!1); }), []); const le = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = Number(u.replace(/[^\d1-9]/g, '')); if (n === 'hours' && o > 1440)R(j.F.error('Поле "Всего часов" не может быть больше 1440 часов')); else { if (n === 'hours') { const a = o ? 0.4 * o : null; const l = a ? o - a : null; D(Ee.changeFieldValue([null, void 0, void 0, r, 'hours_theory', a ? Number(ve(Math.round(a))) : null, s])), D(Ee.changeFieldValue([null, void 0, void 0, r, 'hours_practice', l ? Number(ve(Math.round(l))) : null, s])), D(Ee.changeFieldValue([null, void 0, void 0, r, 'hours_coursework', null, s])), D(Ee.changeFieldValue([null, void 0, void 0, r, 'hours_internship', null, s])), r.semestersDistribution.forEach(((n) => { D(Ee.changeDistributionValues([e || null, t, i, r, n.semester_number, null, s])); })); } const c = (r.hours || 0) - (n === 'hours_theory' ? o : r.hours_theory || 0) - (n === 'hours_practice' ? o : r.hours_practice || 0) - (n === 'hours_coursework' ? o : r.hours_coursework || 0) - (n === 'hours_internship' ? o : r.hours_internship || 0); n !== 'hours' && Number(u) > c && c < 0 ? R(j.F.error('Сумма всех часов не должна превышать '.concat(r.hours || 0, ' часа(-ов)'))) : (D(Ee.changeFieldValue([null, void 0, void 0, r, n, o || null, s])), D(Ee.addValidationErrors([e || null, s ? r.subject_id : r.educational_activity_type_id, 'amountOfStudyTime', c === 0, !1, s])), n === 'hours' && D(Ee.addValidationErrors([e || null, s ? r.subject_id : r.educational_activity_type_id, 'notFilledSummaryHours', !1, !o, s])), D(Ee.calculateSummaryTime([null, void 0, void 0, s]))); } }), [D]); const ce = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = Number(u.replace(/[^\d1-9]/g, '')); const a = r.semestersDistribution.reduce(((e, t) => e - (n === t.semester_number ? o : t.hours || 0)), r.hours); o > a && a < 0 ? R(j.F.error('Сумма всех часов не должна превышать '.concat(r.hours || 0, ' часа(-ов)'))) : (D(Ee.changeDistributionValues([null, void 0, void 0, r, n, o || null, s])), D(Ee.addValidationErrors([e || null, s ? r.subject_id : r.educational_activity_type_id, 'semestersDistribution', a === 0 || a === r.hours, !1, s])), D(Ee.calculateSummaryTime([null, void 0, void 0, s]))); }), [D]); const me = (0, n.useCallback)(((e, t, i, r, n, u, s) => { D(Ee.changeFieldValue([null, void 0, void 0, r, n, Number(u) ? Number(u.replace(/[^\d1-9]/g, '')) : null, s])); }), [D]); const he = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = u.replace(/[^\d,]|(?<=,)(,+)|^0|(?<![1-9]),/g, '').replace(/0/g, ''); const a = o.replace(ye, '').split(','); Number(a[a.length - 1]) > Q.meta.semestersCount ? R(j.F.error('Значение не может быть больше, чем кол-во семестров')) : D(Ee.changeFieldValue([null, void 0, void 0, r, n, Array.from(new Set(o.split(','))).join(','), s])); }), [D, Q]); const fe = (0, n.useCallback)(((e, t, i, r, n, u, s) => { D(Ee.changeFieldValue([null, void 0, void 0, r, n, u ? u.replace(ye, '') : '', s])); }), [D]); const _e = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = String(u).replace(ye, ''); D(Ee.changeFieldValue([null, void 0, void 0, r, n, o, s])); }), [D]); const pe = (0, n.useCallback)(((e, t, i, r, n, u, s) => { if (Number(n) < 100) return R(j.F.error('Значение поля сортировки не может быть меньше 100')), void D(Ee.changeFieldValue([null, void 0, void 0, r, 'sortValue', String(u), s])); Number(n) % 100 != 0 && (R(j.F.error('Шаг поля сортировки - 100')), D(Ee.changeFieldValue([null, void 0, void 0, r, 'sortValue', String(100 * +((+n / 100).toFixed(0) || 1)), s]))), D(Ee.changeFieldValue([null, void 0, void 0, r, 'sort', Number(n), s])); }), [D]); return (0, n.useEffect)((() => { L.unfilledSubjects.forEach(((e, t) => { !(function (e, t) { let i; const r = ((i = L.subjects[L.subjects.length - 1]) === null || void 0 === i ? void 0 : i.sort) || 0; D(Ee.addSubject([null, void 0, void 0, e, Number(K.split('/')[K.split('/').length - 1]), 100 * (t + 1) + r])); }(e, t)); })); }), []), (0, r.jsxs)(r.Fragment, {
+            let t; let i; let s; let o; let d; let f; let _; let v; let y; let p; let x; let S; let E; let C; let O; let N; let T; let w; const k = e.className; const L = e.general; const D = (0, l.T)(); const H = (0, n.useState)(); const B = H[0]; const R = H[1]; const P = (0, n.useRef)(null); const q = (0, n.useState)(!1); const W = q[0]; const I = q[1]; const M = (0, n.useState)(!1); const z = M[0]; const F = M[1]; const V = (0, n.useState)(!1); const Y = V[0]; const Z = V[1]; const U = (0, n.useState)(); const G = U[0]; const J = U[1]; const K = (0, a.TH)().pathname; const Q = (0, c.v9)(A); const $ = Number((0, c.v9)(b.rb).knrtu_kai.options.filter(((e) => e.name === 'credit_in_hours'))[0].value); const ee = (0, c.v9)(X); const te = (0, n.useCallback)((() => { I(!0); }), []); const ie = (0, n.useCallback)((() => { I(!1); }), []); const re = (0, n.useCallback)(((e) => { F(!0), J(e); }), []); const ue = (0, n.useCallback)((() => { F(!1); }), []); const se = (0, n.useCallback)((() => { Z(!0); }), []); const ae = (0, n.useCallback)((() => { Z(!1); }), []); const le = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = Number(u.replace(/[^\d1-9]/g, '')); if (n === 'hours' && o > 1440)R(j.F.error('Поле "Всего часов" не может быть больше 1440 часов')); else { if (n === 'hours') { const a = o ? 0.4 * o : null; const l = a ? o - a : null; D(Ee.changeFieldValue([null, void 0, void 0, r, 'hours_theory', a ? Number(ve(Math.round(a))) : null, s])), D(Ee.changeFieldValue([null, void 0, void 0, r, 'hours_practice', l ? Number(ve(Math.round(l))) : null, s])), D(Ee.changeFieldValue([null, void 0, void 0, r, 'hours_coursework', null, s])), D(Ee.changeFieldValue([null, void 0, void 0, r, 'hours_internship', null, s])), r.semestersDistribution.forEach(((n) => { D(Ee.changeDistributionValues([e || null, t, i, r, n.semester_number, null, s])); })); } const c = (r.hours || 0) - (n === 'hours_theory' ? o : r.hours_theory || 0) - (n === 'hours_practice' ? o : r.hours_practice || 0) - (n === 'hours_coursework' ? o : r.hours_coursework || 0) - (n === 'hours_internship' ? o : r.hours_internship || 0); n !== 'hours' && Number(u) > c && c < 0 ? R(j.F.error('Сумма всех часов не должна превышать '.concat(r.hours || 0, ' часа(-ов)'))) : (D(Ee.changeFieldValue([null, void 0, void 0, r, n, o || null, s])), D(Ee.addValidationErrors([e || null, s ? r.subject_id : r.educational_activity_type_id, 'amountOfStudyTime', c === 0, !1, s])), n === 'hours' && D(Ee.addValidationErrors([e || null, s ? r.subject_id : r.educational_activity_type_id, 'notFilledSummaryHours', !1, !o, s])), D(Ee.calculateSummaryTime([null, void 0, void 0, s]))); } }), [D]); const ce = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = Number(u.replace(/[^\d1-9]/g, '')); const a = r.semestersDistribution.reduce(((e, t) => e - (n === t.semester_number ? o : t.hours || 0)), r.hours); o > a && a < 0 ? R(j.F.error('Сумма всех часов не должна превышать '.concat(r.hours || 0, ' часа(-ов)'))) : (D(Ee.changeDistributionValues([null, void 0, void 0, r, n, o || null, s])), D(Ee.addValidationErrors([e || null, s ? r.subject_id : r.educational_activity_type_id, 'semestersDistribution', a === 0 || a === r.hours, !1, s])), D(Ee.calculateSummaryTime([null, void 0, void 0, s]))); }), [D]); const me = (0, n.useCallback)(((e, t, i, r, n, u, s) => { D(Ee.changeFieldValue([null, void 0, void 0, r, n, Number(u) ? Number(u.replace(/[^\d1-9]/g, '')) : null, s])); }), [D]); const he = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = u.replace(/[^\d,]|(?<=,)(,+)|^0|(?<![1-9]),/g, '').replace(/0/g, ''); const a = o.replace(ye, '').split(','); Number(a[a.length - 1]) > Q.meta.semestersCount ? R(j.F.error('Значение не может быть больше, чем кол-во семестров')) : D(Ee.changeFieldValue([null, void 0, void 0, r, n, Array.from(new Set(o.split(','))).join(','), s])); }), [D, Q]); const fe = (0, n.useCallback)(((e, t, i, r, n, u, s) => { D(Ee.changeFieldValue([null, void 0, void 0, r, n, u ? u.replace(ye, '') : '', s])); }), [D]); const _e = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = String(u).replace(ye, ''); D(Ee.changeFieldValue([null, void 0, void 0, r, n, o, s])); }), [D]); const pe = (0, n.useCallback)(((e, t, i, r, n, u, s) => { if (Number(n) < 100) return R(j.F.error('Значение поля сортировки не может быть меньше 100')), void D(Ee.changeFieldValue([null, void 0, void 0, r, 'sortValue', String(u), s])); Number(n) % 100 != 0 && (R(j.F.error('Шаг поля сортировки - 100')), D(Ee.changeFieldValue([null, void 0, void 0, r, 'sortValue', String(100 * +((+n / 100).toFixed(0) || 1)), s]))), D(Ee.changeFieldValue([null, void 0, void 0, r, 'sort', Number(n), s])); }), [D]); return (0, n.useEffect)((() => { L.unfilledSubjects.forEach(((e, t) => { !(function (e, t) { let i; const r = ((i = L.subjects[L.subjects.length - 1]) === null || void 0 === i ? void 0 : i.sort) || 0; D(Ee.addSubject([null, void 0, void 0, e, Number(K.split('/')[K.split('/').length - 1]), 100 * (t + 1) + r])); }(e, t)); })); }), []), (0, r.jsxs)(r.Fragment, {
                 children: [(0, r.jsxs)('div', {
                     className: (0, u.A)(Te.WorkingCurriculumExtractTableGeneral, {}, [k]),
                     children: [(0, r.jsxs)(de, {
@@ -631,14 +812,14 @@ children: (0, r.jsx)(m.xv, {
                                 align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: L.sort,
                             }),
                         }), (0, r.jsx)('div', { className: 'formControlCell flex-row', children: (t = L.summary) === null || void 0 === t ? void 0 : t.formControl.map(((e) => (0, r.jsx)(oe, { className: e, theme: ne.YELLOW, children: (0, r.jsx)(m.xv, {}) }, e))) }), (0, r.jsxs)('div', { className: 'amountOfStudyTimeCell flex-row', children: [(0, r.jsx)(oe, { className: 'amountOfStudyTimeCredits', theme: ne.YELLOW, children: (0, r.jsx)(m.xv, { align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD }) }), (0, r.jsx)(oe, { className: 'amountOfStudyTimeHours', theme: ne.YELLOW, children: (0, r.jsx)(m.xv, { align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD }) }), (0, r.jsx)(oe, { className: 'amountOfStudyTimeTheory', theme: ne.YELLOW, children: (0, r.jsx)(m.xv, { align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD }) }), (0, r.jsx)(oe, { className: 'amountOfStudyTimeLabs', theme: ne.YELLOW, children: (0, r.jsx)(m.xv, { align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD }) }), (0, r.jsx)(oe, { className: 'amountOfStudyTimeCourseProject', theme: ne.YELLOW, children: (0, r.jsx)(m.xv, { align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD }) }), (0, r.jsx)(oe, { className: 'amountOfStudyTimePractice', theme: ne.YELLOW, children: (0, r.jsx)(m.xv, { align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD }) })] }), (0, r.jsx)('div', {
- className: 'distributionCell flex-row',
-children: (i = L.summary) === null || void 0 === i ? void 0 : i.semestersDistribution.map(((e) => (0, r.jsx)(oe, {
- theme: ne.YELLOW,
-children: (0, r.jsx)(m.xv, {
-                            size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours, 
-}) 
-}, e.semester_number))) 
-})],
+                            className: 'distributionCell flex-row',
+                            children: (i = L.summary) === null || void 0 === i ? void 0 : i.semestersDistribution.map(((e) => (0, r.jsx)(oe, {
+                                theme: ne.YELLOW,
+                                children: (0, r.jsx)(m.xv, {
+                                    size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours,
+                                }),
+                            }, e.semester_number))),
+                        })],
                     }), it([], L.subjects, !0).sort(((e, t) => e.sort - t.sort)).map(((e) => (0, r.jsx)(Le, {
                         subject: e, openEditModal: re, onChangeHoursCount: le, onChangeDisciplineSort: _e, onBlurDisciplineSort: pe, onChangeArraySemesters: he, onBlurArraySemesters: fe, onChangeWorksCount: me, onChangeDistributionSemesterValue: ce,
                     }, String(e.sort) + e.subject_id + e.working_curriculum_id))), !ee && (0, r.jsxs)(de, {
@@ -679,47 +860,47 @@ children: (0, r.jsx)(m.xv, {
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((o = L.summaryCompulsory) === null || void 0 === o ? void 0 : o.amountOfStudyTime.hours) && ve(L.summaryCompulsory.amountOfStudyTime.hours / $),
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeHours',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((d = L.summaryCompulsory) === null || void 0 === d ? void 0 : d.amountOfStudyTime.hours) && L.summaryCompulsory.amountOfStudyTime.hours,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeTheory',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((f = L.summaryCompulsory) === null || void 0 === f ? void 0 : f.amountOfStudyTime.hours_theory) && L.summaryCompulsory.amountOfStudyTime.hours_theory,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeLabs',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((_ = L.summaryCompulsory) === null || void 0 === _ ? void 0 : _.amountOfStudyTime.hours_practice) && L.summaryCompulsory.amountOfStudyTime.hours_practice,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeCourseProject',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((v = L.summaryCompulsory) === null || void 0 === v ? void 0 : v.amountOfStudyTime.hours_coursework) && L.summaryCompulsory.amountOfStudyTime.hours_coursework,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimePractice',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((y = L.summaryCompulsory) === null || void 0 === y ? void 0 : y.amountOfStudyTime.hours_internship) && L.summaryCompulsory.amountOfStudyTime.hours_internship,
-                                }), 
-})], 
-}), (0, r.jsx)('div', {
- className: 'distributionCell flex-row',
-children: (p = L.summaryCompulsory) === null || void 0 === p ? void 0 : p.semestersDistribution.map(((e) => (0, r.jsx)(oe, {
- theme: ne.YELLOW,
-children: (0, r.jsx)(m.xv, {
-                            size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours, 
-}) 
-}, e.semester_number))) 
-})],
+                                }),
+                            })],
+                        }), (0, r.jsx)('div', {
+                            className: 'distributionCell flex-row',
+                            children: (p = L.summaryCompulsory) === null || void 0 === p ? void 0 : p.semestersDistribution.map(((e) => (0, r.jsx)(oe, {
+                                theme: ne.YELLOW,
+                                children: (0, r.jsx)(m.xv, {
+                                    size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours,
+                                }),
+                            }, e.semester_number))),
+                        })],
                     }), it([], L.educationalActivities, !0).filter(((e) => !e.is_in_compulsory_education)).sort(((e, t) => e.sort - t.sort)).map(((e) => (0, r.jsx)(Ne, {
                         activity: e, onChangeHoursCount: le, onChangeDisciplineSort: _e, onBlurDisciplineSort: pe, onChangeArraySemesters: he, onBlurArraySemesters: fe, onChangeWorksCount: me, onChangeDistributionSemesterValue: ce,
                     }, String(e.sort) + e.educational_activity_type_id + e.working_curriculum_id))), (0, r.jsxs)(de, {
@@ -736,54 +917,54 @@ children: (0, r.jsx)(m.xv, {
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((S = L.summary) === null || void 0 === S ? void 0 : S.amountOfStudyTime.hours) && ve(L.summary.amountOfStudyTime.hours / $),
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeHours',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((E = L.summary) === null || void 0 === E ? void 0 : E.amountOfStudyTime.hours) && L.summary.amountOfStudyTime.hours,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeTheory',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((C = L.summary) === null || void 0 === C ? void 0 : C.amountOfStudyTime.hours_theory) && L.summary.amountOfStudyTime.hours_theory,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeLabs',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((O = L.summary) === null || void 0 === O ? void 0 : O.amountOfStudyTime.hours_practice) && L.summary.amountOfStudyTime.hours_practice,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeCourseProject',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((N = L.summary) === null || void 0 === N ? void 0 : N.amountOfStudyTime.hours_coursework) && L.summary.amountOfStudyTime.hours_coursework,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimePractice',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((T = L.summary) === null || void 0 === T ? void 0 : T.amountOfStudyTime.hours_internship) && L.summary.amountOfStudyTime.hours_internship,
-                                }), 
-})], 
-}), (0, r.jsx)('div', {
- className: 'distributionCell flex-row',
-children: (w = L.summary) === null || void 0 === w ? void 0 : w.semestersDistribution.map(((e) => (0, r.jsx)(oe, {
- theme: ne.YELLOW,
-children: (0, r.jsx)(m.xv, {
-                            size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours, 
-}) 
-}, e.semester_number))) 
-})],
+                                }),
+                            })],
+                        }), (0, r.jsx)('div', {
+                            className: 'distributionCell flex-row',
+                            children: (w = L.summary) === null || void 0 === w ? void 0 : w.semestersDistribution.map(((e) => (0, r.jsx)(oe, {
+                                theme: ne.YELLOW,
+                                children: (0, r.jsx)(m.xv, {
+                                    size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours,
+                                }),
+                            }, e.semester_number))),
+                        })],
                     })],
                 }), (0, r.jsx)(Pe, { onClose: ie, isOpen: W, generalModule: !0 }), (0, r.jsx)(Fe, { onClose: ue, isOpen: z, curriculumSubjectsId: G }), (0, r.jsx)(et, { onClose: ae, isOpen: Y }), (0, r.jsx)(g.KF, { ref: P, push: B, placement: 'top-end' })],
             });
         })); const nt = {
             qualRow: 'WvTpSLL3', qualName: 'Ab8tW6Af', disciplineAddBtn: 'wErSnm7x', eduActivityTypeBtn: 'zPUrurOe',
         }; let ut = function () { return ut = Object.assign || function (e) { for (var t, i = 1, r = arguments.length; i < r; i++) for (const n in t = arguments[i])Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]); return e; }, ut.apply(this, arguments); }; const st = function (e, t, i) { if (i || arguments.length === 2) for (var r, n = 0, u = t.length; n < u; n++)!r && n in t || (r || (r = Array.prototype.slice.call(t, 0, n)), r[n] = t[n]); return e.concat(r || Array.prototype.slice.call(t)); }; const ot = (0, n.memo)(((e) => {
-            let t; let i; let s; let o; let d; let f; let _; let v; let y; let p; let x; let S; let E; let C; let O; let N; const T = e.className; const w = e.qualification; const k = (0, l.T)(); const L = (0, n.useState)(!1); const D = L[0]; const H = L[1]; const B = (0, n.useState)(!1); const R = B[0]; const P = B[1]; const q = (0, n.useState)(!1); const W = q[0]; const I = q[1]; const M = (0, n.useState)(); const z = M[0]; const F = M[1]; const V = (0, n.useState)(); const Y = V[0]; const Z = V[1]; const U = (0, n.useState)(); const G = U[0]; const J = U[1]; const K = (0, n.useState)(); const Q = K[0]; const $ = K[1]; const ee = (0, n.useRef)(null); const te = (0, a.TH)().pathname; const ie = (0, c.v9)(A); const re = Number((0, c.v9)(b.rb).hectum_curriculum.options.filter(((e) => e.name === 'credit_in_hours'))[0].value); const ue = (0, c.v9)(X); const se = (0, n.useCallback)(((e, t) => { H(!0), Z(e), J(t); }), []); const ae = (0, n.useCallback)((() => { H(!1); }), []); const le = (0, n.useCallback)(((e) => { P(!0), F(e); }), []); const ce = (0, n.useCallback)((() => { P(!1); }), []); const me = (0, n.useCallback)((() => { I(!0); }), []); const he = (0, n.useCallback)((() => { I(!1); }), []); const fe = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = Number(u.replace(/[^\d1-9]/g, '')); if (n === 'hours' && o > 1440)$(j.F.error('Поле "Всего часов" не может быть больше 1440 часов')); else { if (n === 'hours') { const a = o ? 0.4 * o : null; const l = a ? o - a : null; k(Ee.changeFieldValue([e || null, t, i, r, 'hours_theory', a ? Number(ve(Math.round(a))) : null, s])), k(Ee.changeFieldValue([e || null, t, i, r, 'hours_practice', l ? Number(ve(Math.round(l))) : null, s])), k(Ee.changeFieldValue([e || null, t, i, r, 'hours_coursework', null, s])), k(Ee.changeFieldValue([e || null, t, i, r, 'hours_internship', null, s])), r.semestersDistribution.forEach(((n) => { k(Ee.changeDistributionValues([e || null, t, i, r, n.semester_number, null, s])); })); } const c = (r.hours || 0) - (n === 'hours_theory' ? o : r.hours_theory || 0) - (n === 'hours_practice' ? o : r.hours_practice || 0) - (n === 'hours_coursework' ? o : r.hours_coursework || 0) - (n === 'hours_internship' ? o : r.hours_internship || 0); n !== 'hours' && Number(u) > c && c < 0 ? $(j.F.error('Сумма всех часов не должна превышать '.concat(r.hours || 0, ' часа(-ов)'))) : (k(Ee.changeFieldValue([e || null, t, i, r, n, o || null, s])), k(Ee.addValidationErrors([e || null, s ? r.subject_id : r.educational_activity_type_id, 'amountOfStudyTime', c === 0, !1, s])), n === 'hours' && k(Ee.addValidationErrors([e || null, s ? r.subject_id : r.educational_activity_type_id, 'notFilledSummaryHours', !1, !o, s])), k(Ee.calculateSummaryTime([e || null, t, i, s]))); } }), [k]); const _e = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = Number(u.replace(/[^\d1-9]/g, '')); const a = r.semestersDistribution.reduce(((e, t) => e - (n === t.semester_number ? o : t.hours || 0)), r.hours); o > a && a < 0 ? $(j.F.error('Сумма всех часов не должна превышать '.concat(r.hours || 0, ' часа(-ов)'))) : (k(Ee.changeDistributionValues([e || null, t, i, r, n, o || null, s])), k(Ee.addValidationErrors([e || null, s ? r.subject_id : r.educational_activity_type_id, 'semestersDistribution', a === 0 || a === r.hours, !1, s])), k(Ee.calculateSummaryTime([e || null, t, i, s]))); }), [k]); const pe = (0, n.useCallback)(((e, t, i, r, n, u, s) => { k(Ee.changeFieldValue([e || null, t, i, r, n, Number(u) ? Number(u.replace(/[^\d1-9]/g, '')) : null, s])); }), [k]); const xe = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = u.replace(/[^\d,]|(?<=,)(,+)|^0|(?<![1-9]),/g, '').replace(/0/g, ''); const a = o.replace(ye, '').split(','); Number(a[a.length - 1]) > ie.meta.semestersCount ? $(j.F.error('Значение не может быть больше, чем кол-во семестров')) : k(Ee.changeFieldValue([e || null, t, i, r, n, Array.from(new Set(o.split(','))).join(','), s])); }), [k, ie]); const be = (0, n.useCallback)(((e, t, i, r, n, u, s) => { k(Ee.changeFieldValue([e || null, t, i, r, n, u ? u.replace(ye, '') : '', s])); }), [k]); const ge = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = String(u).replace(ye, ''); k(Ee.changeFieldValue([e || null, t, i, r, n, o, s])); }), [k]); const je = (0, n.useCallback)(((e, t, i, r, n, u, s) => { if (Number(n) < 100) return $(j.F.error('Значение поля сортировки не может быть меньше 100')), void k(Ee.changeFieldValue([e || null, t, i, r, 'sortValue', String(u), s])); Number(n) % 100 != 0 && ($(j.F.error('Шаг поля сортировки - 100')), k(Ee.changeFieldValue([e || null, t, i, r, 'sortValue', String(100 * +((+n / 100).toFixed(0) || 1)), s]))), k(Ee.changeFieldValue([e || null, t, i, r, 'sort', Number(n), s])); }), [k]); return (0, n.useEffect)((() => { w.modules.forEach(((e) => { e.units.forEach(((t) => { t.unfilledSubjects.forEach(((i, r) => { !(function (e, t, i, r) { let n; const u = ((n = t.subjects[t.subjects.length - 1]) === null || void 0 === n ? void 0 : n.sort) || 0; k(Ee.addSubject([w.standard_curriculum_qualification_id, e.module_id, t.educational_modules_unit_id, i, Number(te.split('/')[te.split('/').length - 1]), 100 * (r + 1) + u])); }(e, t, i, r)); })); })); })); }), []), (0, r.jsxs)(r.Fragment, {
+            let t; let i; let s; let o; let d; let f; let _; let v; let y; let p; let x; let S; let E; let C; let O; let N; const T = e.className; const w = e.qualification; const k = (0, l.T)(); const L = (0, n.useState)(!1); const D = L[0]; const H = L[1]; const B = (0, n.useState)(!1); const R = B[0]; const P = B[1]; const q = (0, n.useState)(!1); const W = q[0]; const I = q[1]; const M = (0, n.useState)(); const z = M[0]; const F = M[1]; const V = (0, n.useState)(); const Y = V[0]; const Z = V[1]; const U = (0, n.useState)(); const G = U[0]; const J = U[1]; const K = (0, n.useState)(); const Q = K[0]; const $ = K[1]; const ee = (0, n.useRef)(null); const te = (0, a.TH)().pathname; const ie = (0, c.v9)(A); const re = Number((0, c.v9)(b.rb).knrtu_kai.options.filter(((e) => e.name === 'credit_in_hours'))[0].value); const ue = (0, c.v9)(X); const se = (0, n.useCallback)(((e, t) => { H(!0), Z(e), J(t); }), []); const ae = (0, n.useCallback)((() => { H(!1); }), []); const le = (0, n.useCallback)(((e) => { P(!0), F(e); }), []); const ce = (0, n.useCallback)((() => { P(!1); }), []); const me = (0, n.useCallback)((() => { I(!0); }), []); const he = (0, n.useCallback)((() => { I(!1); }), []); const fe = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = Number(u.replace(/[^\d1-9]/g, '')); if (n === 'hours' && o > 1440)$(j.F.error('Поле "Всего часов" не может быть больше 1440 часов')); else { if (n === 'hours') { const a = o ? 0.4 * o : null; const l = a ? o - a : null; k(Ee.changeFieldValue([e || null, t, i, r, 'hours_theory', a ? Number(ve(Math.round(a))) : null, s])), k(Ee.changeFieldValue([e || null, t, i, r, 'hours_practice', l ? Number(ve(Math.round(l))) : null, s])), k(Ee.changeFieldValue([e || null, t, i, r, 'hours_coursework', null, s])), k(Ee.changeFieldValue([e || null, t, i, r, 'hours_internship', null, s])), r.semestersDistribution.forEach(((n) => { k(Ee.changeDistributionValues([e || null, t, i, r, n.semester_number, null, s])); })); } const c = (r.hours || 0) - (n === 'hours_theory' ? o : r.hours_theory || 0) - (n === 'hours_practice' ? o : r.hours_practice || 0) - (n === 'hours_coursework' ? o : r.hours_coursework || 0) - (n === 'hours_internship' ? o : r.hours_internship || 0); n !== 'hours' && Number(u) > c && c < 0 ? $(j.F.error('Сумма всех часов не должна превышать '.concat(r.hours || 0, ' часа(-ов)'))) : (k(Ee.changeFieldValue([e || null, t, i, r, n, o || null, s])), k(Ee.addValidationErrors([e || null, s ? r.subject_id : r.educational_activity_type_id, 'amountOfStudyTime', c === 0, !1, s])), n === 'hours' && k(Ee.addValidationErrors([e || null, s ? r.subject_id : r.educational_activity_type_id, 'notFilledSummaryHours', !1, !o, s])), k(Ee.calculateSummaryTime([e || null, t, i, s]))); } }), [k]); const _e = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = Number(u.replace(/[^\d1-9]/g, '')); const a = r.semestersDistribution.reduce(((e, t) => e - (n === t.semester_number ? o : t.hours || 0)), r.hours); o > a && a < 0 ? $(j.F.error('Сумма всех часов не должна превышать '.concat(r.hours || 0, ' часа(-ов)'))) : (k(Ee.changeDistributionValues([e || null, t, i, r, n, o || null, s])), k(Ee.addValidationErrors([e || null, s ? r.subject_id : r.educational_activity_type_id, 'semestersDistribution', a === 0 || a === r.hours, !1, s])), k(Ee.calculateSummaryTime([e || null, t, i, s]))); }), [k]); const pe = (0, n.useCallback)(((e, t, i, r, n, u, s) => { k(Ee.changeFieldValue([e || null, t, i, r, n, Number(u) ? Number(u.replace(/[^\d1-9]/g, '')) : null, s])); }), [k]); const xe = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = u.replace(/[^\d,]|(?<=,)(,+)|^0|(?<![1-9]),/g, '').replace(/0/g, ''); const a = o.replace(ye, '').split(','); Number(a[a.length - 1]) > ie.meta.semestersCount ? $(j.F.error('Значение не может быть больше, чем кол-во семестров')) : k(Ee.changeFieldValue([e || null, t, i, r, n, Array.from(new Set(o.split(','))).join(','), s])); }), [k, ie]); const be = (0, n.useCallback)(((e, t, i, r, n, u, s) => { k(Ee.changeFieldValue([e || null, t, i, r, n, u ? u.replace(ye, '') : '', s])); }), [k]); const ge = (0, n.useCallback)(((e, t, i, r, n, u, s) => { const o = String(u).replace(ye, ''); k(Ee.changeFieldValue([e || null, t, i, r, n, o, s])); }), [k]); const je = (0, n.useCallback)(((e, t, i, r, n, u, s) => { if (Number(n) < 100) return $(j.F.error('Значение поля сортировки не может быть меньше 100')), void k(Ee.changeFieldValue([e || null, t, i, r, 'sortValue', String(u), s])); Number(n) % 100 != 0 && ($(j.F.error('Шаг поля сортировки - 100')), k(Ee.changeFieldValue([e || null, t, i, r, 'sortValue', String(100 * +((+n / 100).toFixed(0) || 1)), s]))), k(Ee.changeFieldValue([e || null, t, i, r, 'sort', Number(n), s])); }), [k]); return (0, n.useEffect)((() => { w.modules.forEach(((e) => { e.units.forEach(((t) => { t.unfilledSubjects.forEach(((i, r) => { !(function (e, t, i, r) { let n; const u = ((n = t.subjects[t.subjects.length - 1]) === null || void 0 === n ? void 0 : n.sort) || 0; k(Ee.addSubject([w.standard_curriculum_qualification_id, e.module_id, t.educational_modules_unit_id, i, Number(te.split('/')[te.split('/').length - 1]), 100 * (r + 1) + u])); }(e, t, i, r)); })); })); })); }), []), (0, r.jsxs)(r.Fragment, {
                 children: [(0, r.jsxs)('div', {
                     className: (0, u.A)(nt.WorkingCurriculumExtractTableQualification, {}, [T]),
                     children: [(0, r.jsx)(de, {
@@ -793,8 +974,8 @@ children: (0, r.jsx)(m.xv, {
                             theme: ne.YELLOW,
                             children: (0, r.jsx)(m.xv, {
                                 weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: nt.qualName, children: w.name,
-                            }), 
-})
+                            }),
+                        }),
                     }), st([], w.modules, !0).map(((e) => {
                         let t; let i; let n; let s; let o; let a; let l; let c; return (0, r.jsxs)('div', {
                             className: nt.moduleInfo,
@@ -804,92 +985,133 @@ children: (0, r.jsx)(m.xv, {
                                     theme: ne.YELLOW,
                                     children: (0, r.jsx)(m.xv, {
                                         align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: e.sort,
-                                    }), 
-}), (0, r.jsx)('div', { className: 'formControlCell flex-row', children: (t = e.summary) === null || void 0 === t ? void 0 : t.formControl.map(((e) => (0, r.jsx)(oe, { className: e, theme: ne.YELLOW, children: (0, r.jsx)(m.xv, {}) }, e))) }), (0, r.jsxs)('div', {
- className: 'amountOfStudyTimeCell flex-row',
-children: [(0, r.jsx)(oe, {
- className: 'amountOfStudyTimeCredits',
-theme: ne.YELLOW,
-children: (0, r.jsx)(m.xv, {
-                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((i = e.summary) === null || void 0 === i ? void 0 : i.amountOfStudyTime.hours) && ve(e.summary.amountOfStudyTime.hours / re), 
-}) 
-}), (0, r.jsx)(oe, {
- className: 'amountOfStudyTimeHours',
-theme: ne.YELLOW,
-children: (0, r.jsx)(m.xv, {
-                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((n = e.summary) === null || void 0 === n ? void 0 : n.amountOfStudyTime.hours) && e.summary.amountOfStudyTime.hours, 
-}) 
-}), (0, r.jsx)(oe, {
- className: 'amountOfStudyTimeTheory',
-theme: ne.YELLOW,
-children: (0, r.jsx)(m.xv, {
-                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((s = e.summary) === null || void 0 === s ? void 0 : s.amountOfStudyTime.hours_theory) && e.summary.amountOfStudyTime.hours_theory, 
-}) 
-}), (0, r.jsx)(oe, {
- className: 'amountOfStudyTimeLabs',
-theme: ne.YELLOW,
-children: (0, r.jsx)(m.xv, {
-                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((o = e.summary) === null || void 0 === o ? void 0 : o.amountOfStudyTime.hours_practice) && e.summary.amountOfStudyTime.hours_practice, 
-}) 
-}), (0, r.jsx)(oe, {
- className: 'amountOfStudyTimeCourseProject',
-theme: ne.YELLOW,
-children: (0, r.jsx)(m.xv, {
-                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((a = e.summary) === null || void 0 === a ? void 0 : a.amountOfStudyTime.hours_coursework) && e.summary.amountOfStudyTime.hours_coursework, 
-}) 
-}), (0, r.jsx)(oe, {
- className: 'amountOfStudyTimePractice',
-theme: ne.YELLOW,
-children: (0, r.jsx)(m.xv, {
-                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((l = e.summary) === null || void 0 === l ? void 0 : l.amountOfStudyTime.hours_internship) && e.summary.amountOfStudyTime.hours_internship, 
-}) 
-})] 
-}), (0, r.jsx)('div', { className: 'distributionCell flex-row', children: (c = e.summary) === null || void 0 === c ? void 0 : c.semestersDistribution.map(((e) => (0, r.jsx)(oe, { theme: ne.YELLOW, children: (0, r.jsx)(m.xv, {
- size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours 
-}) }, e.semester_number))) })], 
-}), st([], e.units, !0).map(((t) => {
+                                    }),
+                                }), (0, r.jsx)('div', { className: 'formControlCell flex-row', children: (t = e.summary) === null || void 0 === t ? void 0 : t.formControl.map(((e) => (0, r.jsx)(oe, { className: e, theme: ne.YELLOW, children: (0, r.jsx)(m.xv, {}) }, e))) }), (0, r.jsxs)('div', {
+                                    className: 'amountOfStudyTimeCell flex-row',
+                                    children: [(0, r.jsx)(oe, {
+                                        className: 'amountOfStudyTimeCredits',
+                                        theme: ne.YELLOW,
+                                        children: (0, r.jsx)(m.xv, {
+                                            align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((i = e.summary) === null || void 0 === i ? void 0 : i.amountOfStudyTime.hours) && ve(e.summary.amountOfStudyTime.hours / re),
+                                        }),
+                                    }), (0, r.jsx)(oe, {
+                                        className: 'amountOfStudyTimeHours',
+                                        theme: ne.YELLOW,
+                                        children: (0, r.jsx)(m.xv, {
+                                            align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((n = e.summary) === null || void 0 === n ? void 0 : n.amountOfStudyTime.hours) && e.summary.amountOfStudyTime.hours,
+                                        }),
+                                    }), (0, r.jsx)(oe, {
+                                        className: 'amountOfStudyTimeTheory',
+                                        theme: ne.YELLOW,
+                                        children: (0, r.jsx)(m.xv, {
+                                            align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((s = e.summary) === null || void 0 === s ? void 0 : s.amountOfStudyTime.hours_theory) && e.summary.amountOfStudyTime.hours_theory,
+                                        }),
+                                    }), (0, r.jsx)(oe, {
+                                        className: 'amountOfStudyTimeLabs',
+                                        theme: ne.YELLOW,
+                                        children: (0, r.jsx)(m.xv, {
+                                            align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((o = e.summary) === null || void 0 === o ? void 0 : o.amountOfStudyTime.hours_practice) && e.summary.amountOfStudyTime.hours_practice,
+                                        }),
+                                    }), (0, r.jsx)(oe, {
+                                        className: 'amountOfStudyTimeCourseProject',
+                                        theme: ne.YELLOW,
+                                        children: (0, r.jsx)(m.xv, {
+                                            align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((a = e.summary) === null || void 0 === a ? void 0 : a.amountOfStudyTime.hours_coursework) && e.summary.amountOfStudyTime.hours_coursework,
+                                        }),
+                                    }), (0, r.jsx)(oe, {
+                                        className: 'amountOfStudyTimePractice',
+                                        theme: ne.YELLOW,
+                                        children: (0, r.jsx)(m.xv, {
+                                            align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((l = e.summary) === null || void 0 === l ? void 0 : l.amountOfStudyTime.hours_internship) && e.summary.amountOfStudyTime.hours_internship,
+                                        }),
+                                    })],
+                                }), (0, r.jsx)('div', {
+                                    className: 'distributionCell flex-row',
+                                    children: (c = e.summary) === null || void 0 === c ? void 0 : c.semestersDistribution.map(((e) => (0, r.jsx)(oe, {
+                                        theme: ne.YELLOW,
+                                        children: (0, r.jsx)(m.xv, {
+                                            size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours,
+                                        }),
+                                    }, e.semester_number))),
+                                })],
+                            }), st([], e.units, !0).map(((t) => {
                                 let i; let n; let s; let o; let a; let l; let c; let d; return (0, r.jsxs)('div', {
                                     className: nt.unitInfo,
                                     children: [(0, r.jsxs)(de, {
- children: [(0, r.jsx)(oe, {
- className: 'indexCell',
-theme: ne.BLUE,
-children: (0, r.jsx)(m.xv, {
-                                        align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: t.code, 
-}) 
-}), (0, r.jsx)(oe, { className: 'idCell', theme: ne.BLUE, children: (0, r.jsx)(m.xv, { align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD }) }), (0, r.jsx)(oe, { className: 'disciplinesNameCell', theme: ne.BLUE, children: (0, r.jsx)(m.xv, { size: m.yH.XS, weight: m.fs.SEMIBOLD, children: t.name }) }), (0, r.jsx)(oe, {
- className: 'sortCell',
-theme: ne.BLUE,
-children: (0, r.jsx)(m.xv, {
-                                        align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: t.sort, 
-}) 
-}), (0, r.jsx)('div', { className: 'formControlCell flex-row', children: (i = t.summary) === null || void 0 === i ? void 0 : i.formControl.map(((e) => (0, r.jsx)(oe, { className: e, theme: ne.BLUE, children: (0, r.jsx)(m.xv, {}) }, e))) }), (0, r.jsxs)('div', { className: 'amountOfStudyTimeCell flex-row', children: [(0, r.jsx)(oe, { className: 'amountOfStudyTimeCredits', theme: ne.BLUE, children: (0, r.jsx)(m.xv, {
- align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((n = t.summary) === null || void 0 === n ? void 0 : n.amountOfStudyTime.hours) && ve(t.summary.amountOfStudyTime.hours / re) 
-}) }), (0, r.jsx)(oe, { className: 'amountOfStudyTimeHours', theme: ne.BLUE, children: (0, r.jsx)(m.xv, {
- align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((s = t.summary) === null || void 0 === s ? void 0 : s.amountOfStudyTime.hours) && t.summary.amountOfStudyTime.hours 
-}) }), (0, r.jsx)(oe, { className: 'amountOfStudyTimeTheory', theme: ne.BLUE, children: (0, r.jsx)(m.xv, {
- align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((o = t.summary) === null || void 0 === o ? void 0 : o.amountOfStudyTime.hours_theory) && t.summary.amountOfStudyTime.hours_theory 
-}) }), (0, r.jsx)(oe, { className: 'amountOfStudyTimeLabs', theme: ne.BLUE, children: (0, r.jsx)(m.xv, {
- align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((a = t.summary) === null || void 0 === a ? void 0 : a.amountOfStudyTime.hours_practice) && t.summary.amountOfStudyTime.hours_practice 
-}) }), (0, r.jsx)(oe, { className: 'amountOfStudyTimeCourseProject', theme: ne.BLUE, children: (0, r.jsx)(m.xv, {
- align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((l = t.summary) === null || void 0 === l ? void 0 : l.amountOfStudyTime.hours_coursework) && t.summary.amountOfStudyTime.hours_coursework 
-}) }), (0, r.jsx)(oe, { className: 'amountOfStudyTimePractice', theme: ne.BLUE, children: (0, r.jsx)(m.xv, {
- align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((c = t.summary) === null || void 0 === c ? void 0 : c.amountOfStudyTime.hours_internship) && t.summary.amountOfStudyTime.hours_internship 
-}) })] }), (0, r.jsx)('div', { className: 'distributionCell flex-row', children: (d = t.summary) === null || void 0 === d ? void 0 : d.semestersDistribution.map(((e) => (0, r.jsx)(oe, { theme: ne.BLUE, children: (0, r.jsx)(m.xv, { size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours }) }, e.semester_number))) })] 
-}), st([], t.subjects, !0).sort(((e, t) => e.sort - t.sort)).map(((i) => (0, r.jsx)(Le, {
+                                        children: [(0, r.jsx)(oe, {
+                                            className: 'indexCell',
+                                            theme: ne.BLUE,
+                                            children: (0, r.jsx)(m.xv, {
+                                                align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: t.code,
+                                            }),
+                                        }), (0, r.jsx)(oe, { className: 'idCell', theme: ne.BLUE, children: (0, r.jsx)(m.xv, { align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD }) }), (0, r.jsx)(oe, { className: 'disciplinesNameCell', theme: ne.BLUE, children: (0, r.jsx)(m.xv, { size: m.yH.XS, weight: m.fs.SEMIBOLD, children: t.name }) }), (0, r.jsx)(oe, {
+                                            className: 'sortCell',
+                                            theme: ne.BLUE,
+                                            children: (0, r.jsx)(m.xv, {
+                                                align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: t.sort,
+                                            }),
+                                        }), (0, r.jsx)('div', { className: 'formControlCell flex-row', children: (i = t.summary) === null || void 0 === i ? void 0 : i.formControl.map(((e) => (0, r.jsx)(oe, { className: e, theme: ne.BLUE, children: (0, r.jsx)(m.xv, {}) }, e))) }), (0, r.jsxs)('div', {
+                                            className: 'amountOfStudyTimeCell flex-row',
+                                            children: [(0, r.jsx)(oe, {
+                                                className: 'amountOfStudyTimeCredits',
+                                                theme: ne.BLUE,
+                                                children: (0, r.jsx)(m.xv, {
+                                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((n = t.summary) === null || void 0 === n ? void 0 : n.amountOfStudyTime.hours) && ve(t.summary.amountOfStudyTime.hours / re),
+                                                }),
+                                            }), (0, r.jsx)(oe, {
+                                                className: 'amountOfStudyTimeHours',
+                                                theme: ne.BLUE,
+                                                children: (0, r.jsx)(m.xv, {
+                                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((s = t.summary) === null || void 0 === s ? void 0 : s.amountOfStudyTime.hours) && t.summary.amountOfStudyTime.hours,
+                                                }),
+                                            }), (0, r.jsx)(oe, {
+                                                className: 'amountOfStudyTimeTheory',
+                                                theme: ne.BLUE,
+                                                children: (0, r.jsx)(m.xv, {
+                                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((o = t.summary) === null || void 0 === o ? void 0 : o.amountOfStudyTime.hours_theory) && t.summary.amountOfStudyTime.hours_theory,
+                                                }),
+                                            }), (0, r.jsx)(oe, {
+                                                className: 'amountOfStudyTimeLabs',
+                                                theme: ne.BLUE,
+                                                children: (0, r.jsx)(m.xv, {
+                                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((a = t.summary) === null || void 0 === a ? void 0 : a.amountOfStudyTime.hours_practice) && t.summary.amountOfStudyTime.hours_practice,
+                                                }),
+                                            }), (0, r.jsx)(oe, {
+                                                className: 'amountOfStudyTimeCourseProject',
+                                                theme: ne.BLUE,
+                                                children: (0, r.jsx)(m.xv, {
+                                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((l = t.summary) === null || void 0 === l ? void 0 : l.amountOfStudyTime.hours_coursework) && t.summary.amountOfStudyTime.hours_coursework,
+                                                }),
+                                            }), (0, r.jsx)(oe, {
+                                                className: 'amountOfStudyTimePractice',
+                                                theme: ne.BLUE,
+                                                children: (0, r.jsx)(m.xv, {
+                                                    align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((c = t.summary) === null || void 0 === c ? void 0 : c.amountOfStudyTime.hours_internship) && t.summary.amountOfStudyTime.hours_internship,
+                                                }),
+                                            })],
+                                        }), (0, r.jsx)('div', {
+                                            className: 'distributionCell flex-row',
+                                            children: (d = t.summary) === null || void 0 === d ? void 0 : d.semestersDistribution.map(((e) => (0, r.jsx)(oe, {
+                                                theme: ne.BLUE,
+                                                children: (0, r.jsx)(m.xv, {
+                                                    size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours,
+                                                }),
+                                            }, e.semester_number))),
+                                        })],
+                                    }), st([], t.subjects, !0).sort(((e, t) => e.sort - t.sort)).map(((i) => (0, r.jsx)(Le, {
                                         qualification: w, module: e, unit: t, subject: i, openEditModal: le, onChangeHoursCount: fe, onChangeDisciplineSort: ge, onBlurDisciplineSort: je, onChangeArraySemesters: xe, onBlurArraySemesters: be, onChangeWorksCount: pe, onChangeDistributionSemesterValue: _e,
                                     }, String(i.sort) + i.subject_id + i.working_curriculum_id))), !ue && (0, r.jsxs)(de, {
                                         children: [(0, r.jsx)('div', { className: 'indexCell' }), (0, r.jsx)('div', { className: 'idCell' }), (0, r.jsx)(h.zx, {
                                             buttonForm: h.N5.NOT_BORDERED,
-theme: h.bn.BACKGROUND,
-size: h.qE.XS,
-onClick() { se(e, t); },
-className: (0, u.A)(nt.disciplineAddBtn, {}, ['disciplinesNameCell']),
-children: (0, r.jsx)(m.xv, {
-                                                size: m.yH.XXS, weight: m.fs.SEMIBOLD, align: m.PH.LEFT, children: 'Создать дисциплину' 
-}),
-                                        })], 
-})],
+                                            theme: h.bn.BACKGROUND,
+                                            size: h.qE.XS,
+                                            onClick() { se(e, t); },
+                                            className: (0, u.A)(nt.disciplineAddBtn, {}, ['disciplinesNameCell']),
+                                            children: (0, r.jsx)(m.xv, {
+                                                size: m.yH.XXS, weight: m.fs.SEMIBOLD, align: m.PH.LEFT, children: 'Создать дисциплину',
+                                            }),
+                                        })],
+                                    })],
                                 }, String(t.sort) + t.educational_modules_unit_id + t.code);
                             }))],
                         }, String(e.sort) + e.module_id + e.standard_curriculum_id);
@@ -920,47 +1142,47 @@ children: (0, r.jsx)(m.xv, {
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((i = w.summaryCompulsory) === null || void 0 === i ? void 0 : i.amountOfStudyTime.hours) && ve(w.summaryCompulsory.amountOfStudyTime.hours / re),
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeHours',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((s = w.summaryCompulsory) === null || void 0 === s ? void 0 : s.amountOfStudyTime.hours) && w.summaryCompulsory.amountOfStudyTime.hours,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeTheory',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((o = w.summaryCompulsory) === null || void 0 === o ? void 0 : o.amountOfStudyTime.hours_theory) && w.summaryCompulsory.amountOfStudyTime.hours_theory,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeLabs',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((d = w.summaryCompulsory) === null || void 0 === d ? void 0 : d.amountOfStudyTime.hours_practice) && w.summaryCompulsory.amountOfStudyTime.hours_practice,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeCourseProject',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((f = w.summaryCompulsory) === null || void 0 === f ? void 0 : f.amountOfStudyTime.hours_coursework) && w.summaryCompulsory.amountOfStudyTime.hours_coursework,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimePractice',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((_ = w.summaryCompulsory) === null || void 0 === _ ? void 0 : _.amountOfStudyTime.hours_internship) && w.summaryCompulsory.amountOfStudyTime.hours_internship,
-                                }), 
-})], 
-}), (0, r.jsx)('div', {
- className: 'distributionCell flex-row',
-children: (v = w.summaryCompulsory) === null || void 0 === v ? void 0 : v.semestersDistribution.map(((e) => (0, r.jsx)(oe, {
- theme: ne.YELLOW,
-children: (0, r.jsx)(m.xv, {
-                            size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours, 
-}) 
-}, e.semester_number))) 
-})],
+                                }),
+                            })],
+                        }), (0, r.jsx)('div', {
+                            className: 'distributionCell flex-row',
+                            children: (v = w.summaryCompulsory) === null || void 0 === v ? void 0 : v.semestersDistribution.map(((e) => (0, r.jsx)(oe, {
+                                theme: ne.YELLOW,
+                                children: (0, r.jsx)(m.xv, {
+                                    size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours,
+                                }),
+                            }, e.semester_number))),
+                        })],
                     }), st([], w.educationalActivities, !0).filter(((e) => !e.is_in_compulsory_education)).sort(((e, t) => e.sort - t.sort)).map(((e) => (0, r.jsx)(Ne, {
                         qualification: w, activity: e, onChangeHoursCount: fe, onChangeDisciplineSort: ge, onBlurDisciplineSort: je, onChangeArraySemesters: xe, onBlurArraySemesters: be, onChangeWorksCount: pe, onChangeDistributionSemesterValue: _e,
                     }, String(e.sort) + e.educational_activity_type_id + e.working_curriculum_id))), (0, r.jsxs)(de, {
@@ -977,47 +1199,47 @@ children: (0, r.jsx)(m.xv, {
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((p = w.summary) === null || void 0 === p ? void 0 : p.amountOfStudyTime.hours) && ve(w.summary.amountOfStudyTime.hours / re),
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeHours',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((x = w.summary) === null || void 0 === x ? void 0 : x.amountOfStudyTime.hours) && w.summary.amountOfStudyTime.hours,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeTheory',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((S = w.summary) === null || void 0 === S ? void 0 : S.amountOfStudyTime.hours_theory) && w.summary.amountOfStudyTime.hours_theory,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeLabs',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((E = w.summary) === null || void 0 === E ? void 0 : E.amountOfStudyTime.hours_practice) && w.summary.amountOfStudyTime.hours_practice,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimeCourseProject',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((C = w.summary) === null || void 0 === C ? void 0 : C.amountOfStudyTime.hours_coursework) && w.summary.amountOfStudyTime.hours_coursework,
-                                }), 
-}), (0, r.jsx)(oe, {
+                                }),
+                            }), (0, r.jsx)(oe, {
                                 className: 'amountOfStudyTimePractice',
                                 theme: ne.YELLOW,
                                 children: (0, r.jsx)(m.xv, {
                                     align: m.PH.CENTER, size: m.yH.XS, weight: m.fs.SEMIBOLD, children: ((O = w.summary) === null || void 0 === O ? void 0 : O.amountOfStudyTime.hours_internship) && w.summary.amountOfStudyTime.hours_internship,
-                                }), 
-})], 
-}), (0, r.jsx)('div', {
- className: 'distributionCell flex-row',
-children: (N = w.summary) === null || void 0 === N ? void 0 : N.semestersDistribution.map(((e) => (0, r.jsx)(oe, {
- theme: ne.YELLOW,
-children: (0, r.jsx)(m.xv, {
-                            size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours, 
-}) 
-}, e.semester_number))) 
-})],
+                                }),
+                            })],
+                        }), (0, r.jsx)('div', {
+                            className: 'distributionCell flex-row',
+                            children: (N = w.summary) === null || void 0 === N ? void 0 : N.semestersDistribution.map(((e) => (0, r.jsx)(oe, {
+                                theme: ne.YELLOW,
+                                children: (0, r.jsx)(m.xv, {
+                                    size: m.yH.XS, weight: m.fs.SEMIBOLD, align: m.PH.CENTER, className: 'distributionCellHours', children: e.hours && e.hours,
+                                }),
+                            }, e.semester_number))),
+                        })],
                     })],
                 }), (0, r.jsx)(Pe, {
                     onClose: ae, isOpen: D, qualification: w, moduleDetail: Y, unitDetail: G,
@@ -1037,8 +1259,8 @@ children: (0, r.jsx)(m.xv, {
                     className: 'Q_bI7EnX',
                     children: (0, r.jsxs)(h.zx, {
                         theme: h.bn.BACKGROUND_DARK, size: h.qE.XS, className: 'LjL8m1zb', onClick: d, children: [(0, r.jsx)(m.xv, { size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Закрыть' }), (0, r.jsx)(f.J, { Svg: v.Z })],
-                    }), 
-})],
+                    }),
+                })],
             });
         })); let vt = function () { return vt = Object.assign || function (e) { for (var t, i = 1, r = arguments.length; i < r; i++) for (const n in t = arguments[i])Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]); return e; }, vt.apply(this, arguments); }; const yt = 'working-curriculum-extract-form'; const pt = function (e) {
             const t = e.className; const i = (0, l.T)(); const s = (0, a.s0)(); const o = (0, a.TH)().pathname; const C = (0, n.useState)(''); const O = C[0]; const T = C[1]; const w = (0, n.useState)(!1); const k = w[0]; const D = w[1]; const A = (0, n.useState)(); const z = A[0]; const Y = A[1]; const U = (0, n.useRef)(null); const G = (0, n.useState)(!1); const J = G[0]; const $ = G[1]; const ee = (0, n.useState)(!1); const te = ee[0]; const ie = ee[1]; const re = (0, c.v9)(P); const ne = (0, c.v9)(q); const ue = (0, c.v9)(M); const se = (0, c.v9)(B); const oe = (0, c.v9)(R); const ae = (0, c.v9)(b.yl); const le = (0, c.v9)(b.sE); const ce = (0, c.v9)(I); const de = (0, c.v9)(W); const me = (0, c.v9)(X); const he = (0, c.v9)(F); const fe = (0, c.v9)(V); (0, n.useEffect)((() => { T(o.split('/')[o.split('/').length - 1]); }), [o]), (0, n.useEffect)((() => { O && (i(H(O)), i((0, b.tb)())); }), [i, O]); let _e; const ve = (0, n.useCallback)((() => { i(Ee.changeRedirectToMainPage(!1)), ie(!1); }), [i]); const ye = (0, n.useCallback)((() => { if (JSON.stringify(se) !== JSON.stringify(oe)) return i(Ee.changeRedirectToMainPage(!0)), void ie(!0); s((0, x.MC)()); }), [i, se, oe, s]); const pe = (0, n.useCallback)((() => { i(Ee.cancelChanges()); }), [i]); const xe = (0, n.useCallback)((() => { $(!1); }), []); const be = re || !!ne || ce; const ge = (0, n.useCallback)((() => { i(Ee.changeReadOnly(!1)); }), [i]); const je = (0, n.useCallback)((() => { i(Ee.changeReadOnly(!0)), i(Ee.toggleShowAllDisciplines(!0)); }), [i]); const Se = (0, n.useCallback)((() => { i(Ee.toggleShowAllDisciplines(!fe)); }), [i, fe]); return (0, n.useEffect)((() => { de && $(!0); }), [de]), (0, n.useEffect)((() => { localStorage.removeItem(S.RR); }), []), _e = re || ae ? (0, r.jsx)(d.O, { height: 600, width: '100%' }) : ne || le ? (0, r.jsx)(m.xv, {
@@ -1064,8 +1286,8 @@ children: (0, r.jsx)(m.xv, {
                             className: Q.buttonsLeftWrapper,
                             children: (0, r.jsxs)(h.zx, {
                                 className: Q.btn, theme: h.bn.BACKGROUND_GRAY, size: h.qE.XS, onClick: ye, children: [(0, r.jsx)(m.xv, { size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Выйти' }), (0, r.jsx)(f.J, { className: Q.exitBtnIcon, Svg: _.Z })],
-                            }), 
-}), (0, r.jsxs)('div', {
+                            }),
+                        }), (0, r.jsxs)('div', {
                             className: Q.buttonsRightWrapper,
                             children: [me && (0, r.jsxs)(h.zx, {
                                 className: Q.btn, theme: h.bn.BACKGROUND, size: h.qE.XS, disabled: be, onClick: ge, children: [(0, r.jsx)(m.xv, { size: m.yH.XS, weight: m.fs.SEMIBOLD, children: 'Редактировать документ' }), (0, r.jsx)(f.J, { className: Q.editIcon, Svg: p.Z })],
@@ -1101,18 +1323,18 @@ children: (0, r.jsx)(m.xv, {
                             children: (0, r.jsxs)('div', {
                                 className: (0, o.A)('NxhSG1qz', {}, [u]),
                                 children: [x && (0, r.jsxs)('div', {
- className: 'PF33qU3E',
-children: [(0, r.jsx)(a.xv, { size: a.yH.XS, weight: a.fs.SEMIBOLD, children: x }), (0, r.jsx)(l.zx, {
-                                    className: h, theme: l.bn.CLEAR, onClick: N, children: (0, r.jsx)(c.J, { className: m, Svg: d.Z }), 
-})] 
-}), !x && (0, r.jsx)(l.zx, {
+                                    className: 'PF33qU3E',
+                                    children: [(0, r.jsx)(a.xv, { size: a.yH.XS, weight: a.fs.SEMIBOLD, children: x }), (0, r.jsx)(l.zx, {
+                                        className: h, theme: l.bn.CLEAR, onClick: N, children: (0, r.jsx)(c.J, { className: m, Svg: d.Z }),
+                                    })],
+                                }), !x && (0, r.jsx)(l.zx, {
                                     className: (0, o.A)(h, {}, ['Czz0TdB1']), theme: l.bn.CLEAR, onClick: N, children: (0, r.jsx)(c.J, { className: m, Svg: d.Z }),
-                                }), _], 
-})
-                        }), 
-})
-                }), 
-});
+                                }), _],
+                            }),
+                        }),
+                    }),
+                }),
+            });
         };
     },
     146: (e, t, i) => { i.d(t, { Q: () => n }); let r = function () { return r = Object.assign || function (e) { for (var t, i = 1, r = arguments.length; i < r; i++) for (const n in t = arguments[i])Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]); return e; }, r.apply(this, arguments); }; var n = function (e, t) { for (var i = { ...e }, n = 0, u = t; n < u.length; n++) { const s = u[n]; i.hasOwnProperty(s) && delete i[s]; } return i; }; },

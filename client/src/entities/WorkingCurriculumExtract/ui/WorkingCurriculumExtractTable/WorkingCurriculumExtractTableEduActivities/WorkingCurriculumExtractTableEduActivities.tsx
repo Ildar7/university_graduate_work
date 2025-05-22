@@ -105,7 +105,7 @@ export const WorkingCurriculumExtractTableEduActivities = memo((props: WorkingCu
 
     const tableReadOnly = useSelector(getWorkingCurriculumExtractReadOnly);
 
-    const creditsPerHour = Number(useSelector(getSettingsMainCollegeData)!.hectum_curriculum.options
+    const creditsPerHour = Number(useSelector(getSettingsMainCollegeData)!.knrtu_kai.options
         .filter((option) => option.name === 'credit_in_hours')[0].value);
 
     const onDeleteEduActivity = (

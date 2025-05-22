@@ -1,40 +1,15 @@
 import { classNames, Mods } from 'shared/lib/helpers/classNames/classNames';
-import React, {
-    ReactElement, useCallback, useRef, useState,
-} from 'react';
+import React, { useCallback, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import {
     Text, TextSize, TextTheme, TextWeight,
 } from 'shared/ui/Text/Text';
-import {
-    CButton, CFormInput, CTable, CTableBody, CTableDataCell, CTableHead, CTableHeaderCell, CTableRow, CToaster,
-} from '@coreui/react';
-import CIcon from '@coreui/icons-react';
-import { cilPencil, cilTrash } from '@coreui/icons';
 import { DeleteCurriculumSubject } from 'features/CurriculumSubjects/DeleteCurriculumSubject';
-import {
-    editCurriculumSubject,
-    EditCurriculumSubject,
-    editCurriculumSubjectActions, getEditCurriculumSubjectData, getEditCurriculumSubjectIsLoading,
-    getEditCurriculumSubjectNewFieldsData,
-} from 'features/CurriculumSubjects/EditCurriculumSubject';
-import {
-    getEduModulesData,
-    getEduModulesError,
-    getEduModulesIsLoading,
-    getEduUnitsData, getEduUnitsError, getEduUnitsIsLoading,
-} from 'entities/EducationalModules';
-import { CFormInputWithMask } from 'shared/ui/InputMask/InputMask';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { clearObject } from 'shared/lib/helpers/clearObject/clearObject';
-import { isEmptyObject } from 'shared/lib/helpers/isEmptyObject/isEmptyObject';
-import { Toast } from 'shared/ui/Toast/Toast';
+import { EditCurriculumSubject } from 'features/CurriculumSubjects/EditCurriculumSubject';
 import { Checkbox } from 'shared/ui/Checkbox/Checkbox';
-import { Input } from 'shared/ui/Input/Input';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Icon } from 'shared/ui/Icon/Icon';
-import UserIcon from 'shared/assets/icons/user.svg';
 import EditIcon from 'shared/assets/icons/edit.svg';
 import TrashIcon from 'shared/assets/icons/trash.svg';
 import { CurriculumSubjectsType } from '../model/types/curriculumSubjects';
@@ -55,23 +30,13 @@ export const CurriculumSubjects = (props: CurriculumSubjectsProps) => {
         data,
         exportDisabled,
     } = props;
-    const dispatch = useAppDispatch();
-    const [sortInputVisible, setSortInputVisible] = useState(false);
-
     const isLoading = useSelector(getCurriculumSubjectsIsLoading);
     const error = useSelector(getCurriculumSubjectsError);
-
-    const isLoadingEditCurriculumSubject = useSelector(getEditCurriculumSubjectIsLoading);
-    const editCurriculumSubjectNewFieldsData = useSelector(getEditCurriculumSubjectNewFieldsData);
-    const editCurriculumSubjectData = useSelector(getEditCurriculumSubjectData);
 
     const [deleteCurriculumSubjects, setDeleteCurriculumSubjects] = useState<CurriculumSubjectsType>();
     const [visibleEditCurriculumSubjects, setVisibleEditCurriculumSubjects] = useState(false);
     const [visibleDeleteCurriculumSubjects, setVisibleDeleteCurriculumSubjects] = useState(false);
     const [curriculumSubjectsDetailId, setCurriculumSubjectsDetailId] = useState<string>();
-
-    const [toast, addToast] = useState<ReactElement>();
-    const toaster = useRef<HTMLDivElement | null>(null);
 
     const onShowEditCurriculumSubjectsModal = (id: string) => {
         setVisibleEditCurriculumSubjects(true);
@@ -82,33 +47,6 @@ export const CurriculumSubjects = (props: CurriculumSubjectsProps) => {
         setVisibleDeleteCurriculumSubjects(true);
         setDeleteCurriculumSubjects(curriculumSubjects);
     }, []);
-
-    const onClickSortCell = (curriculumSubject: CurriculumSubjectsType) => {
-        if (!isLoadingEditCurriculumSubject) {
-            setSortInputVisible(true);
-            setCurriculumSubjectsDetailId(String(curriculumSubject.subject_id));
-            dispatch(editCurriculumSubjectActions.setCurriculumSubjectData(curriculumSubject));
-        } else {
-            addToast(Toast.info('Пожалуйста, подождите, пока данные обновятся'));
-        }
-    };
-
-    const onChangeSort = (event: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(editCurriculumSubjectActions.setSort(event.target.value));
-    };
-
-    const onBlurSortInput = useCallback(async (subjectId: number) => {
-        setSortInputVisible(false);
-        const data = clearObject(editCurriculumSubjectData, editCurriculumSubjectNewFieldsData);
-
-        if (!isEmptyObject(data)) {
-            const result = await dispatch(editCurriculumSubject(String(subjectId)));
-
-            if (result.meta.requestStatus === 'fulfilled') {
-                addToast(Toast.success('Информация о дисциплине успешно обновлена'));
-            }
-        }
-    }, [dispatch, editCurriculumSubjectData, editCurriculumSubjectNewFieldsData]);
 
     let curriculumSubjectsTable;
 
@@ -168,16 +106,6 @@ export const CurriculumSubjects = (props: CurriculumSubjectsProps) => {
                                     size={TextSize.XS}
                                     weight={TextWeight.SEMIBOLD}
                                 >
-                                    Сортировка
-                                </Text>
-                            </div>
-                            <div
-                                className={cls.tableCell}
-                            >
-                                <Text
-                                    size={TextSize.XS}
-                                    weight={TextWeight.SEMIBOLD}
-                                >
                                     Модуль
                                 </Text>
                             </div>
@@ -219,34 +147,6 @@ export const CurriculumSubjects = (props: CurriculumSubjectsProps) => {
                                         >
                                             {curriculumSubjects.name}
                                         </Text>
-                                    </div>
-                                    <div
-                                        className={classNames(cls.tableCell, {}, [cls.sortCell])}
-                                        onClick={() => { onClickSortCell(curriculumSubjects); }}
-                                    >
-                                        {
-                                            sortInputVisible && Number(curriculumSubjectsDetailId) === curriculumSubjects.subject_id
-                                                ? (
-                                                    <Input
-                                                        type="number"
-                                                        placeholder="100"
-                                                        min={100}
-                                                        step={100}
-                                                        value={String(editCurriculumSubjectNewFieldsData?.sort) || ''}
-                                                        onChange={onChangeSort}
-                                                        className={cls.sortInput}
-                                                        onBlur={() => { onBlurSortInput(curriculumSubjects.subject_id); }}
-                                                        autoFocus
-                                                    />
-                                                )
-                                                : (
-                                                    <Text
-                                                        size={TextSize.XS}
-                                                    >
-                                                        {curriculumSubjects.sort}
-                                                    </Text>
-                                                )
-                                        }
                                     </div>
                                     <div className={cls.tableCell}>
                                         <Text
@@ -317,12 +217,6 @@ export const CurriculumSubjects = (props: CurriculumSubjectsProps) => {
                 curriculumSubjects={deleteCurriculumSubjects}
                 visible={visibleDeleteCurriculumSubjects}
                 setVisible={setVisibleDeleteCurriculumSubjects}
-            />
-
-            <CToaster
-                ref={toaster}
-                push={toast}
-                placement="top-end"
             />
         </div>
     );

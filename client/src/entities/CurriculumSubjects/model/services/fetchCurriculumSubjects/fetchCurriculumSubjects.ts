@@ -1,8 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 import {
-    CurriculumSubjectsData,
-    CurriculumSubjectsError, CurriculumSubjectsType,
+    CurriculumSubjectsError,
+    CurriculumSubjectsType,
+    CurriculumSubjectsTypeData,
 } from 'entities/CurriculumSubjects/model/types/curriculumSubjects';
 
 export const fetchCurriculumSubjects = createAsyncThunk<CurriculumSubjectsType[], void, ThunkConfig<CurriculumSubjectsError>>(
@@ -11,9 +12,9 @@ export const fetchCurriculumSubjects = createAsyncThunk<CurriculumSubjectsType[]
         const { rejectWithValue, extra } = thunkAPI;
 
         try {
-            const response = await extra.api.get<CurriculumSubjectsType[]>('/curriculum/subjects/');
+            const response = await extra.api.get<CurriculumSubjectsTypeData>('/curriculum/subjects/') as any;
 
-            return response.data;
+            return response.data.data;
         } catch (err: any) {
             if (err.message === 'Failed to fetch') {
                 return rejectWithValue({

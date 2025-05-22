@@ -163,16 +163,6 @@ export const StudentGroups = (props: StudentGroupsProps) => {
                                 </Text>
                             </div>
                             <div
-                                className={classNames(cls.tableCell, {}, [cls.tableCellLang])}
-                            >
-                                <Text
-                                    size={TextSize.XS}
-                                    weight={TextWeight.SEMIBOLD}
-                                >
-                                    Язык обучения
-                                </Text>
-                            </div>
-                            <div
                                 className={classNames(cls.tableCell, {}, [cls.tableCellStudentsCount])}
                             >
                                 <Text
@@ -180,16 +170,6 @@ export const StudentGroups = (props: StudentGroupsProps) => {
                                     weight={TextWeight.SEMIBOLD}
                                 >
                                     Студентов
-                                </Text>
-                            </div>
-                            <div
-                                className={classNames(cls.tableCell, {}, [cls.tableCellEduBase])}
-                            >
-                                <Text
-                                    size={TextSize.XS}
-                                    weight={TextWeight.SEMIBOLD}
-                                >
-                                    База образования
                                 </Text>
                             </div>
                             <div
@@ -274,15 +254,6 @@ export const StudentGroups = (props: StudentGroupsProps) => {
                                         </Text>
                                     </div>
                                     <div
-                                        className={classNames(cls.tableCell, {}, [cls.tableCellLang])}
-                                    >
-                                        <Text
-                                            size={TextSize.XS}
-                                        >
-                                            {studentGroup.language.language}
-                                        </Text>
-                                    </div>
-                                    <div
                                         className={classNames(cls.tableCell, {}, [cls.tableCellStudentsCount])}
                                     >
                                         {studentGroup.studentsCount >= 1 && (
@@ -302,16 +273,6 @@ export const StudentGroups = (props: StudentGroupsProps) => {
                                                 Нет
                                             </Text>
                                         )}
-                                    </div>
-                                    <div
-                                        className={classNames(cls.tableCell, {}, [cls.tableCellEduBase])}
-                                    >
-                                        <Text
-                                            size={TextSize.XS}
-                                            theme={TextTheme.BG_LIGHT}
-                                        >
-                                            {studentGroup.education_basis.short_name}
-                                        </Text>
                                     </div>
                                     <div
                                         className={classNames(cls.tableCell, {}, [cls.tableCellEduForm])}

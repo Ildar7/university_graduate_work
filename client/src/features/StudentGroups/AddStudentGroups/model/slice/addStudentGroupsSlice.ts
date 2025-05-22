@@ -4,11 +4,10 @@ import { AddStudentGroupSchema } from '../types/addStudentGroups';
 
 const initialState: AddStudentGroupSchema = {
     data: {
+        code: null,
         short_name: null,
         course: null,
         enrollment_year: null,
-        id_education_base: null,
-        id_language: null,
         name: null,
         id_specialty: null,
         is_full_time: null,
@@ -37,9 +36,6 @@ const addStudentGroupsSlice = createSlice({
                 };
             }
         },
-        changeEducationBaseId: (state, action: PayloadAction<number | null>) => {
-            state.data.id_education_base = action.payload;
-        },
         changeFullTimeEducation: (state, action: PayloadAction<boolean>) => {
             state.data.is_full_time = action.payload;
         },
@@ -52,12 +48,12 @@ const addStudentGroupsSlice = createSlice({
         changeSerialNumber: (state, action: PayloadAction<number | null>) => {
             state.data.serial_number = action.payload;
         },
-        changeLanguage: (state, action: PayloadAction<number | null>) => {
-            state.data.id_language = action.payload;
-        },
         clearData: (state) => {
             state.data = initialState.data;
             state.errors = undefined;
+        },
+        changeCode: (state, action: PayloadAction<string | null>) => {
+            state.data.code = action.payload;
         },
     },
     extraReducers: (builder) => {

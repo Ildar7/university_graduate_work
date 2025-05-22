@@ -1,6 +1,5 @@
 export interface AddCurriculumSubjectType {
     name: string | null;
-    sort: number | null;
     module_id: number | null;
     unit_id: number | null;
 }

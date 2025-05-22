@@ -111,7 +111,7 @@ export const SettingsMainCollege = (props: SettingsMainCollegeProps) => {
                                 className={cls.inputWrapper}
                                 key={option.id}
                             >
-                                <h6 className={cls.fieldTitle}>{option.title}</h6>
+                                <h6 className={cls.fieldTitle}>{option.name}</h6>
                                 <CFormInput
                                     type={option.type === 'string' ? 'text' : 'number'}
                                     value={String(option.value)}

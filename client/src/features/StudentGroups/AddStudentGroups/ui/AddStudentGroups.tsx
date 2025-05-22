@@ -66,10 +66,8 @@ export const AddStudentGroups = (props: AddStudentGroupProps) => {
     const toaster = useRef<HTMLDivElement | null>(null);
     const [validated, setValidated] = useState<boolean>(false);
     const [yearsList, setYearsList] = useState<string[]>([]);
-    const [selectedEduBases, setSelectedEduBases] = useState('null');
     const [selectedEduForm, setSelectedEduForm] = useState('null');
     const [selectedSpecialty, setSelectedSpecialty] = useState('null');
-    const [selectedLanguage, setSelectedLanguage] = useState('null');
     const [selectedQualifications, setSelectedQualifications] = useState<string[]>([]);
     const [groupCode, setGroupCode] = useState('');
 
@@ -89,17 +87,9 @@ export const AddStudentGroups = (props: AddStudentGroupProps) => {
     const qualificationsIsLoading = useSelector(getQualificationsIsLoading);
     const qualificationsError = useSelector(getQualificationsError);
 
-    const eduBaseData = useSelector(getEducationBasesData);
-    const eduBaseIsLoading = useSelector(getEducationBasesIsLoading);
-    const eduBaseError = useSelector(getEducationBasesError);
-
-    const languagesData = useSelector(getLanguagesData);
-    const languagesIsLoading = useSelector(getLanguagesIsLoading);
-    const languagesError = useSelector(getLanguagesError);
-
     const btnDisabled = specialtiesIsLoading || qualificationsIsLoading
-        || eduBaseIsLoading || languagesIsLoading || !!specialtiesError
-        || !!qualificationsError || !!eduBaseError || !!languagesError;
+        || !!specialtiesError
+        || !!qualificationsError;
 
     const specialtiesTitles = useMemo(() => (
         specialtiesData?.data.map((specialty) => (
@@ -112,14 +102,6 @@ export const AddStudentGroups = (props: AddStudentGroupProps) => {
             qualification.specialty_id === addStudentGroupData?.id_specialty
         ))
     ), [addStudentGroupData?.id_specialty, qualificationsData?.data]);
-
-    const educationBasesTitles = useMemo(() => (
-        eduBaseData?.map((eduBase) => `${eduBase.short_name}`)
-    ), [eduBaseData]);
-
-    const languagesTitles = useMemo(() => (
-        languagesData?.map((language) => `${language.language}`)
-    ), [languagesData]);
 
     const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>, filterName: string) => {
         dispatch(addStudentGroupsActions.setInputData([filterName, event.target.value]));
@@ -182,22 +164,10 @@ export const AddStudentGroups = (props: AddStudentGroupProps) => {
         dispatch(addStudentGroupsActions.changeQualifications(selectedQualsIds));
     }, [dispatch, qualificationsData?.data, selectedQualifications]);
 
-    const onChangeEduBases = useCallback((value: string, columnName: string) => {
-        setSelectedEduBases(value);
-        const filteredEduBase = eduBaseData?.filter((eduBase) => eduBase.short_name === value)[0];
-        dispatch(addStudentGroupsActions.changeEducationBaseId(filteredEduBase?.id_education_bases || null));
-    }, [dispatch, eduBaseData]);
-
     const onChangeEduForm = useCallback((value: string, columnName: string) => {
         setSelectedEduForm(value);
         dispatch(addStudentGroupsActions.changeFullTimeEducation(value.toLowerCase() === 'очная'));
     }, [dispatch]);
-
-    const onChangeLanguages = useCallback((value: string, columnName: string) => {
-        setSelectedLanguage(value);
-        const filteredLanguage = languagesData?.filter((language) => language.language === value)[0];
-        dispatch(addStudentGroupsActions.changeLanguage(filteredLanguage?.id_languages || null));
-    }, [dispatch, languagesData]);
 
     const onClose = useCallback(() => {
         setVisible(false);
@@ -206,9 +176,7 @@ export const AddStudentGroups = (props: AddStudentGroupProps) => {
     const onCancelHandler = useCallback(() => {
         onClose();
         setSelectedEduForm('null');
-        setSelectedEduBases('null');
         setSelectedSpecialty('null');
-        setSelectedLanguage('null');
         setSelectedQualifications([]);
         dispatch(addStudentGroupsActions.clearData());
     }, [dispatch, onClose]);
@@ -251,8 +219,6 @@ export const AddStudentGroups = (props: AddStudentGroupProps) => {
         dispatch(fetchSpecialties());
         dispatch(tableSortActions.setSort('id_qual'));
         dispatch(fetchQualifications());
-        dispatch(fetchEducationBases());
-        dispatch(fetchLanguages());
     }, [dispatch]);
 
     useEffect(() => {
@@ -267,18 +233,20 @@ export const AddStudentGroups = (props: AddStudentGroupProps) => {
                 addStudentGroupData.serial_number,
             );
             setGroupCode(code);
+            dispatch(addStudentGroupsActions.changeCode(code));
         } else {
             setGroupCode('Заполните все данные');
+            dispatch(addStudentGroupsActions.changeCode(null));
         }
     }, [addStudentGroupData?.course,
         addStudentGroupData?.enrollment_year,
         addStudentGroupData?.serial_number,
-        addStudentGroupData?.short_name]);
+        addStudentGroupData?.short_name, dispatch]);
 
     useEffect(() => {
         if (addStudentGroupValidationErrors) {
             const validationErrors = addStudentGroupValidationErrors.errors as AddStudentGroupErrorApi[];
-            if (validationErrors.length) {
+            if (validationErrors && validationErrors.length) {
                 validationErrors.forEach((error) => {
                     addToast(Toast.error(error.msg));
                 });
@@ -288,11 +256,11 @@ export const AddStudentGroups = (props: AddStudentGroupProps) => {
 
     let tabsContent;
 
-    if (specialtiesIsLoading || qualificationsIsLoading || eduBaseIsLoading || languagesIsLoading) {
+    if (specialtiesIsLoading || qualificationsIsLoading) {
         tabsContent = (
             <Skeleton width="100%" height={500} />
         );
-    } else if (specialtiesError || qualificationsError || eduBaseError || languagesError) {
+    } else if (specialtiesError || qualificationsError) {
         tabsContent = (
             <Text
                 theme={TextTheme.ERROR}
@@ -380,20 +348,6 @@ export const AddStudentGroups = (props: AddStudentGroupProps) => {
                     value={groupCode}
                     label="Код группы"
                     disabled
-                />
-                <SearchSelect
-                    label="Язык обучения"
-                    options={languagesTitles!}
-                    columnName="id_language"
-                    optionValue={selectedLanguage}
-                    onClickOption={onChangeLanguages}
-                />
-                <SearchSelect
-                    label="База образования"
-                    options={educationBasesTitles!}
-                    columnName="id_education_base"
-                    optionValue={selectedEduBases}
-                    onClickOption={onChangeEduBases}
                 />
                 <SearchSelect
                     label="Форма обучения"

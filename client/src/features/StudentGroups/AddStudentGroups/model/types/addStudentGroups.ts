@@ -1,10 +1,9 @@
 export interface AddStudentGroupType {
+    code: string | null;
     name: string | null;
-    id_language: number | null;
     enrollment_year: number | null;
     id_specialty: number | null;
     qualifications: number[] | null;
-    id_education_base: number | null;
     course: number | null;
     study_duration: number | null;
     is_full_time: boolean | null;
