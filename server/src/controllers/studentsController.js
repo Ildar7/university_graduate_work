@@ -1,4 +1,10 @@
 import pool from '../config/db.js';
+import {
+    getStudentById as getStudentByIdModel,
+    createStudent as createStudentModel,
+    updateStudent as updateStudentModel,
+    deleteStudent as deleteStudentModel
+} from '../models/Student.js';
 
 export const getStudents = async (req, res) => {
     const { page = '1', limit = '50', sort = 'students_id', order = 'asc', filter } = req.query;
@@ -71,28 +77,29 @@ export const getStudents = async (req, res) => {
         kv.id_kvotum,
         kv.kvotum_name
       FROM students s
-      JOIN users u ON s.user_id = u.user_id
-      JOIN gender g ON s.student_gender = g.id_gender
-      JOIN nationality n ON s.student_nationality = n.id_nationality
-      JOIN typeenrollment te ON s.student_enrollment_type = te.id_typeenrollment
-      JOIN citizenship c ON s.student_citizenship = c.id_citizenship
-      JOIN comesfrom cf ON s.student_is_arrival_from = cf.id_comesfrom
-      JOIN fromacceptedfinished faf ON s.student_is_finished_edu_type = faf.id_fromacceptedfinished
-      JOIN typeofareaofresidence tar ON s.student_residence_type = tar.id_typeofareaofresidence
-      JOIN durationoftraining dt ON s.student_study_duration = dt.id_durationoftraining
-      JOIN courseoftraining ct ON s.student_study_course = ct.id_courseoftraining
-      JOIN languageofedu le ON s.student_edu_lang = le.id_languageofedu
-      JOIN typeoftraining tt ON s.student_edu_form = tt.id_typeoftraining
-      JOIN specialty sp ON s.student_edu_speciality = sp.id_spec
-      JOIN qualification q ON s.student_edu_classifier = q.id_qual
-      JOIN needhostel nh ON s.student_is_need_hostel_type = nh.id_needhostel
-      JOIN whopaying wp ON s.student_financing_source_type = wp.id_whopaying
+      LEFT JOIN users u ON s.user_id = u.user_id
+      LEFT JOIN gender g ON s.student_gender = g.id_gender
+      LEFT JOIN nationality n ON s.student_nationality = n.id_nationality
+      LEFT JOIN typeenrollment te ON s.student_enrollment_type = te.id_typeenrollment
+      LEFT JOIN citizenship c ON s.student_citizenship = c.id_citizenship
+      LEFT JOIN comesfrom cf ON s.student_is_arrival_from = cf.id_comesfrom
+      LEFT JOIN fromacceptedfinished faf ON s.student_is_finished_edu_type = faf.id_fromacceptedfinished
+      LEFT JOIN typeofareaofresidence tar ON s.student_residence_type = tar.id_typeofareaofresidence
+      LEFT JOIN durationoftraining dt ON s.student_study_duration = dt.id_durationoftraining
+      LEFT JOIN courseoftraining ct ON s.student_study_course = ct.id_courseoftraining
+      LEFT JOIN languageofedu le ON s.student_edu_lang = le.id_languageofedu
+      LEFT JOIN typeoftraining tt ON s.student_edu_form = tt.id_typeoftraining
+      LEFT JOIN specialty sp ON s.student_edu_speciality = sp.id_spec
+      LEFT JOIN qualification q ON s.student_edu_classifier = q.id_qual
+      LEFT JOIN needhostel nh ON s.student_is_need_hostel_type = nh.id_needhostel
+      LEFT JOIN whopaying wp ON s.student_financing_source_type = wp.id_whopaying
       LEFT JOIN finimatpomosh fp ON s.student_material_assistance_type = fp.id_finimatpomosh
       LEFT JOIN kvotum kv ON s.student_quota = kv.id_kvotum
-      JOIN groups gr ON s.id_group = gr.id_group
+      LEFT JOIN groups gr ON s.id_group = gr.id_group
     `;
 
         const queryParams = [];
+        let whereClauses = [];
         if (filter) {
             let filters;
             try {
@@ -126,7 +133,7 @@ export const getStudents = async (req, res) => {
                 'student_is_from_young_family',
                 'student_is_has_access_to_exams',
             ];
-            const whereClauses = [];
+            whereClauses = [];
             Object.entries(filters).forEach(([key, value], index) => {
                 if (!validFilterFields.includes(key.replace(/_from|_to/, ''))) {
                     return res.status(400).json({ message: `Недопустимое поле фильтрации: ${key}` });
@@ -137,6 +144,8 @@ export const getStudents = async (req, res) => {
                 } else if (key.includes('_to')) {
                     whereClauses.push(`s.${key.replace('_to', '')} <= $${index + 1}`);
                     queryParams.push(value);
+                } else if (value === null) {
+                    whereClauses.push(`s.${key} IS NULL`);
                 } else if (Array.isArray(value)) {
                     whereClauses.push(`s.${key} = ANY($${index + 1})`);
                     queryParams.push(value);
@@ -150,43 +159,44 @@ export const getStudents = async (req, res) => {
             }
         }
 
-        const validSortFields =
-            ['students_id',
-                'student_govid',
-                'student_gender',
-                'student_nationality',
-                'student_edu_speciality',
-                'student_edu_classifier',
-                'student_study_duration',
-                'student_study_course',
-                'student_edu_form',
-                'student_arrival_date',
-                'student_enrollment_type',
-                'student_is_arrival_from',
-                'student_is_finished_edu_type',
-                'student_edu_lang',
-                'student_is_has_access_to_exams',
-                'student_residence_type',
-                'student_residential_address',
-                'student_is_need_hostel_type',
-                'student_is_live_at_hostel',
-                'student_financing_source_type',
-                'student_quota',
-                'student_is_orphan',
-                'student_is_without_parental_care',
-                'student_is_disabled_person',
-                'student_material_assistance_type',
-                'student_is_from_young_family',
-                'student_is_study_in_dual_system',
-                'student_is_study_in_productive_employment',
-                'student_is_completed_training_at_competence_center',
-                'student_is_study_in_worldskills',
-                'student_is_involved_in_social_activities',
-                'student_birth_date',
-                'id_group',
-                'student_phone_number',
-                'student_citizenship',
-                'student_temporary_residence_add'];
+        const validSortFields = [
+            'students_id',
+            'student_govid',
+            'student_gender',
+            'student_nationality',
+            'student_edu_speciality',
+            'student_edu_classifier',
+            'student_study_duration',
+            'student_study_course',
+            'student_edu_form',
+            'student_arrival_date',
+            'student_enrollment_type',
+            'student_is_arrival_from',
+            'student_is_finished_edu_type',
+            'student_edu_lang',
+            'student_is_has_access_to_exams',
+            'student_residence_type',
+            'student_residential_address',
+            'student_is_need_hostel_type',
+            'student_is_live_at_hostel',
+            'student_financing_source_type',
+            'student_quota',
+            'student_is_orphan',
+            'student_is_without_parental_care',
+            'student_is_disabled_person',
+            'student_material_assistance_type',
+            'student_is_from_young_family',
+            'student_is_study_in_dual_system',
+            'student_is_study_in_productive_employment',
+            'student_is_completed_training_at_competence_center',
+            'student_is_study_in_worldskills',
+            'student_is_involved_in_social_activities',
+            'student_birth_date',
+            'id_group',
+            'student_phone_number',
+            'student_citizenship',
+            'student_temporary_residence_address'
+        ];
         if (!validSortFields.includes(sort)) {
             return res.status(400).json({ message: 'Недопустимое поле сортировки' });
         }
@@ -345,8 +355,14 @@ export const getStudents = async (req, res) => {
             },
         }));
 
-        const countQuery = `SELECT COUNT(*) FROM students ${filter && query.includes('WHERE') ? 'WHERE ' + query.split('WHERE')[1].split('ORDER BY')[0] : ''}`;
-        const countParams = queryParams.slice(0, queryParams.length - 2);
+        // Формируем countQuery отдельно, чтобы избежать ошибок с алиасом
+        let countQuery = `SELECT COUNT(*) FROM students s`;
+        let countParams = [];
+        if (whereClauses.length > 0) {
+            countQuery += ` WHERE ${whereClauses.join(' AND ')}`;
+            countParams = queryParams.slice(0, queryParams.length - 2); // Исключаем limit и offset
+        }
+
         const totalRecords = await pool.query(countQuery, countParams);
         const totalPages = Math.ceil(totalRecords.rows[0].count / Number(limit));
 
@@ -362,6 +378,114 @@ export const getStudents = async (req, res) => {
         });
     } catch (error) {
         console.error('Ошибка при получении студентов:', error);
+        res.status(500).json({ message: 'Ошибка сервера' });
+    }
+};
+
+export const getStudentById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const parsedId = parseInt(id, 10);
+        if (isNaN(parsedId) || parsedId < 1) {
+            return res.status(400).json({ message: 'ID студента должен быть положительным числом' });
+        }
+        const student = await getStudentByIdModel(parsedId);
+        if (!student) {
+            return res.status(404).json({ message: `Студент с ID ${parsedId} не найден` });
+        }
+        res.json(student);
+    } catch (error) {
+        console.log(error);
+        console.error('Ошибка при получении данных студента:', error);
+        res.status(500).json({ message: 'Ошибка сервера' });
+    }
+};
+
+export const createStudent = async (req, res) => {
+    try {
+        const data = req.body;
+        if (!data || Object.keys(data).length === 0) {
+            return res.status(400).json({ message: 'Тело запроса не может быть пустым' });
+        }
+        const studentId = await createStudentModel(data);
+        const student = await getStudentByIdModel(studentId);
+        res.status(201).json(student);
+    } catch (error) {
+        console.log(error);
+        console.error('Ошибка при создании студента:', error);
+        if (error.message.includes('Ошибки валидации')) {
+            return res.status(400).json({ message: error.message });
+        }
+        if (error.message.includes('Недопустимое значение')) {
+            return res.status(400).json({ message: error.message });
+        }
+        if (error.message.includes('login, email и password обязательны') || error.message.includes('Неверный формат email')) {
+            return res.status(400).json({ message: error.message });
+        }
+        if (error.code === '23505') {
+            return res.status(400).json({ message: 'Пользователь с таким login или email уже существует' });
+        }
+        res.status(500).json({ message: 'Ошибка сервера' });
+    }
+};
+
+export const updateStudent = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const parsedId = parseInt(id, 10);
+        if (isNaN(parsedId) || parsedId < 1) {
+            return res.status(400).json({ message: 'ID студента должен быть положительным числом' });
+        }
+        const data = req.body;
+        if (!data || Object.keys(data).length === 0) {
+            return res.status(400).json({ message: 'Тело запроса не может быть пустым' });
+        }
+        if (data.password) {
+            return res.status(400).json({ message: 'Пароль нельзя обновлять' });
+        }
+        await updateStudentModel(parsedId, data);
+        const student = await getStudentByIdModel(parsedId);
+        res.json(student);
+    } catch (error) {
+        console.log(error);
+        console.error('Ошибка при обновлении студента:', error);
+        if (error.message.includes('Студент не найден')) {
+            return res.status(404).json({ message: error.message });
+        }
+        if (error.message.includes('Ошибки валидации')) {
+            return res.status(400).json({ message: error.message });
+        }
+        if (error.message.includes('Недопустимое значение')) {
+            return res.status(400).json({ message: error.message });
+        }
+        if (error.message.includes('Неверный формат email')) {
+            return res.status(400).json({ message: error.message });
+        }
+        if (error.code === '23505') {
+            return res.status(400).json({ message: 'Пользователь с таким login или email уже существует' });
+        }
+        res.status(500).json({ message: 'Ошибка сервера' });
+    }
+};
+
+export const deleteStudent = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const parsedId = parseInt(id, 10);
+        if (isNaN(parsedId) || parsedId < 1) {
+            return res.status(400).json({ message: 'ID студента должен быть положительным числом' });
+        }
+        await deleteStudentModel(parsedId);
+        res.status(204).send();
+    } catch (error) {
+        console.log(error);
+        console.error('Ошибка при удалении студента:', error);
+        if (error.message.includes('Студент не найден')) {
+            return res.status(404).json({ message: error.message });
+        }
+        if (error.code === '23503') {
+            return res.status(400).json({ message: 'Нельзя удалить студента, так как он связан с другими записями' });
+        }
         res.status(500).json({ message: 'Ошибка сервера' });
     }
 };

@@ -176,16 +176,6 @@ export const StandardCurriculum = (props: StandardCurriculumProps) => {
                                     >
                                         <Button
                                             theme={ButtonTheme.CLEAR}
-                                            title="Редактировать"
-                                            className={cls.editBtn}
-                                            onClick={() => {
-                                                onEditHandler(standardCurriculum.standard_curriculum_id);
-                                            }}
-                                        >
-                                            <Icon Svg={EditIcon} />
-                                        </Button>
-                                        <Button
-                                            theme={ButtonTheme.CLEAR}
                                             title="Удалить"
                                             className={cls.editBtn}
                                             onClick={() => { onShowDeleteStandardCurriculumModal(standardCurriculum); }}

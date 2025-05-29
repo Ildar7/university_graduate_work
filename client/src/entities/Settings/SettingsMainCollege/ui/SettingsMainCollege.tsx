@@ -34,6 +34,21 @@ interface SettingsMainCollegeProps {
     activeTabName: string;
 }
 
+const optionsKeysValues = {
+    full_name: 'Полное имя',
+    short_name: 'Короткое имя',
+    teacher_rate_in_credits: 'Ставка преподавателя в кредитах',
+    credit_in_hours: 'Кредитов/час',
+    academ_hour_in_minutes: 'Академ. часы в минутах',
+    credits_per_group: 'Кредитов на группу',
+    max_academic_years: 'Максимальное кол-во академических лет',
+    credits_per_academic_year: 'Кредитов в академ. годах',
+    subject_schedule_max_shifts: 'Максимальное количество смен в тематическом расписании',
+    max_courses: 'Максимальное кол-во курсов',
+    training_days: 'Тренировочные дни',
+    default_language: 'Язык (по умолчанию)',
+};
+
 export const SettingsMainCollege = (props: SettingsMainCollegeProps) => {
     const {
         className,
@@ -111,7 +126,10 @@ export const SettingsMainCollege = (props: SettingsMainCollegeProps) => {
                                 className={cls.inputWrapper}
                                 key={option.id}
                             >
-                                <h6 className={cls.fieldTitle}>{option.name}</h6>
+                                <h6 className={cls.fieldTitle}>
+                                    {/* @ts-ignore */}
+                                    {optionsKeysValues[option.name]}
+                                </h6>
                                 <CFormInput
                                     type={option.type === 'string' ? 'text' : 'number'}
                                     value={String(option.value)}

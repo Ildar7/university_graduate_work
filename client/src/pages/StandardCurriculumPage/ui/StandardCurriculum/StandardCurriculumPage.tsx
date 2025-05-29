@@ -73,8 +73,7 @@ const StandardCurriculumPage = (props: StandardCurriculumPageProps) => {
                             isLoading={standardCurriculumIsLoading}
                         />
                         <TableConfig
-                            onlyAdding
-                            addingModalText="Добавить учебный план"
+                            addingVisible={false}
                             error={standardCurriculumError}
                             isLoading={standardCurriculumIsLoading}
                             pathname={getRouteAddStandardCurriculum()}

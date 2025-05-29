@@ -194,7 +194,7 @@ const WorkingCurriculumPage = (props: WorkingCurriculumPageProps) => {
                     </div>
                     <WorkingCurriculum
                         data={searchedData || []}
-                        exportDisabled={false}
+                        exportDisabled
                     />
                     <div className="page-table-settings">
                         {workingCurriculumLimit && (
