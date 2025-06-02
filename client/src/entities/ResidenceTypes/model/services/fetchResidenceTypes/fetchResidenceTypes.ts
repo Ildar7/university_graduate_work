@@ -2,7 +2,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { StateSchema, ThunkConfig } from 'app/providers/StoreProvider';
 import { ResidenceTypesData, ResidenceTypesError } from 'entities/ResidenceTypes';
 import { getTableSortField, getTableSortOrderField } from 'features/TableSort';
-import { getPerformanceTypesLimit, getPerformanceTypesPage } from 'entities/PerformanceTypes';
 import { buildRequestUrl } from 'shared/lib/helpers/buildRequestUrl/buildRequestUrl';
 import {
     getResidenceTypesPage,

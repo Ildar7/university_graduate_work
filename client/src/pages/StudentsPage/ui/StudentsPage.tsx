@@ -16,18 +16,18 @@ import { LimitShow, Pagintaion } from 'widgets/Pagination';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useSelector } from 'react-redux';
 import { studentSearchFilter } from 'shared/lib/helpers/searchFilter/searchFilter';
-import { fetchTableFilters, tableFiltersReducer } from 'features/TableFilters';
+import { tableFiltersReducer } from 'features/TableFilters';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { AddStudent, addStudentReducer } from 'features/Students/AddStudent';
 import { studentDetailReducer } from 'entities/StudentDetail';
 import { editStudentReducer } from 'features/Students/EditStudent';
 import { HelmetProvider } from 'app/providers/HelmetProvider';
 import { TimeoutErrorToast } from 'shared/ui/TimeoutErrorToast/TimeoutErrorToast';
-import { exportStudentsReducer } from 'features/Students/ExportStudents';
 import { TableSettings } from 'widgets/TableConfig/ui/TableSettings/TableSettings';
 import { studentsPageBreadcrumbs } from 'widgets/Breadcrumb/const/students';
 import {
-    getStudentsTableFieldsData, StudentsTableFields,
+    getStudentsTableFieldsData,
+    StudentsTableFields,
     studentsTableFieldsActions,
     studentsTableFieldsReducer,
     StudentsTableFieldsType,
@@ -39,7 +39,6 @@ const reducers: ReducersList = {
     studentDetail: studentDetailReducer,
     addNewStudent: addStudentReducer,
     editStudent: editStudentReducer,
-    exportStudents: exportStudentsReducer,
 };
 
 const onlyExport = true;

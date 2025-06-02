@@ -2,7 +2,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { StateSchema, ThunkConfig } from 'app/providers/StoreProvider';
 import { getTableSortField, getTableSortOrderField } from 'features/TableSort';
 import { FinishedEduTypesData, FinishedEduTypesError } from 'entities/FinishedEduTypes/model/types/finishedEduTypes';
-import { getStudentSectionsLimit, getStudentSectionsPage } from 'entities/StudentSections';
 import { buildRequestUrl } from 'shared/lib/helpers/buildRequestUrl/buildRequestUrl';
 import { getFinishedEduTypesPage } from '../../selectors/getFinishedEduTypesPage/getFinishedEduTypesPage';
 import { getFinishedEduTypesLimit } from '../../selectors/getFinishedEduTypesLimit/getFinishedEduTypesLimit';

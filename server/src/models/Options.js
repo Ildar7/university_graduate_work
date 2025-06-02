@@ -45,4 +45,31 @@ export const OptionsModel = {
         const result = await pool.query(query);
         return result.rows;
     },
+
+    async getOptionById(optionId) {
+        const query = `
+            SELECT 
+                option_id,
+                option_name,
+                option_type,
+                option_value,
+                option_group,
+                option_key
+            FROM options
+            WHERE option_id = $1
+        `;
+        const result = await pool.query(query, [optionId]);
+        return result.rows[0];
+    },
+
+    async updateOption(optionId, newValue) {
+        const query = `
+            UPDATE options
+            SET option_value = $1
+            WHERE option_id = $2
+            RETURNING *
+        `;
+        const result = await pool.query(query, [newValue, optionId]);
+        return result.rows[0];
+    },
 };

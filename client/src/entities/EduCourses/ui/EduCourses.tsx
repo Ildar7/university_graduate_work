@@ -1,5 +1,5 @@
 import { classNames, Mods } from 'shared/lib/helpers/classNames/classNames';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
@@ -14,9 +14,6 @@ import {
     cilPencil, cilSortAscending, cilSortDescending, cilTrash, cilUser,
 } from '@coreui/icons';
 import { getTableSortField, getTableSortOrderField, tableSortActions } from 'features/TableSort';
-import { EditEduCourse } from 'features/EduCourses/EditEduCourse';
-import { ViewEduCourse } from 'features/EduCourses/ViewEduCourse';
-import { DeleteEduCourse } from 'features/EduCourses/DeleteEduCourse/ui/DeleteEduCourse';
 import cls from './EduCourses.module.scss';
 import { EduCoursesType } from '../model/types/eduCourses';
 import { getEduCoursesIsLoading } from '../model/selectors/getEduCoursesIsLoading/getEduCoursesIsLoading';
@@ -38,27 +35,6 @@ export const EduCourses = (props: EduCoursesProps) => {
 
     const sortByField = useSelector(getTableSortField);
     const sortOrderField = useSelector(getTableSortOrderField);
-
-    const [deleteEduCourses, setDeleteEduCourses] = useState<EduCoursesType>();
-    const [visibleViewEduCourses, setVisibleViewEduCourses] = useState(false);
-    const [visibleEditEduCourses, setVisibleEditEduCourses] = useState(false);
-    const [visibleDeleteEduCourses, setVisibleDeleteEduCourses] = useState(false);
-    const [eduCoursesDetailId, setEduCoursesDetailId] = useState<string>();
-
-    const onShowEditEduCoursesModal = (id: string) => {
-        setVisibleEditEduCourses(true);
-        setEduCoursesDetailId(id);
-    };
-
-    const onShowDeleteEduCoursesModal = useCallback((eduCourses: EduCoursesType) => {
-        setVisibleDeleteEduCourses(true);
-        setDeleteEduCourses(eduCourses);
-    }, []);
-
-    const onShowViewEduCoursesModal = (id: string) => {
-        setVisibleViewEduCourses(true);
-        setEduCoursesDetailId(id);
-    };
 
     useEffect(() => {
         dispatch(tableSortActions.setSort('id_courseoftraining'));
@@ -135,7 +111,6 @@ export const EduCourses = (props: EduCoursesProps) => {
                                             variant="outline"
                                             title="Просмотр"
                                             className={cls.editBtn}
-                                            onClick={() => { onShowViewEduCoursesModal(eduCourses.id_courseoftraining.toString()); }}
                                         >
                                             <CIcon
                                                 icon={cilUser}
@@ -149,7 +124,6 @@ export const EduCourses = (props: EduCoursesProps) => {
                                             variant="outline"
                                             title="Редактировать"
                                             className={cls.editBtn}
-                                            onClick={() => { onShowEditEduCoursesModal(eduCourses.id_courseoftraining.toString()); }}
                                         >
                                             <CIcon
                                                 icon={cilPencil}
@@ -163,7 +137,6 @@ export const EduCourses = (props: EduCoursesProps) => {
                                             variant="outline"
                                             title="Удалить"
                                             className={cls.editBtn}
-                                            onClick={() => { onShowDeleteEduCoursesModal(eduCourses); }}
                                         >
                                             <CIcon
                                                 icon={cilTrash}
@@ -187,27 +160,6 @@ export const EduCourses = (props: EduCoursesProps) => {
     return (
         <div className={classNames(cls.TableBlock, mods, [className])}>
             {eduCoursesTable}
-
-            <ViewEduCourse
-                visible={visibleViewEduCourses}
-                setVisible={setVisibleViewEduCourses}
-                eduCourseId={eduCoursesDetailId!}
-                onDeleteEduCourse={onShowDeleteEduCoursesModal}
-                onEditEduCourse={onShowEditEduCoursesModal}
-            />
-
-            <EditEduCourse
-                visible={visibleEditEduCourses}
-                setVisible={setVisibleEditEduCourses}
-                eduCourseId={eduCoursesDetailId!}
-                onDeleteEduCourse={onShowDeleteEduCoursesModal}
-            />
-
-            <DeleteEduCourse
-                eduCourse={deleteEduCourses}
-                visible={visibleDeleteEduCourses}
-                setVisible={setVisibleDeleteEduCourses}
-            />
         </div>
     );
 };

@@ -2,7 +2,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { StateSchema, ThunkConfig } from 'app/providers/StoreProvider';
 import { ArrivalSourcesData, ArrivalSourcesError } from 'entities/ArrivalSources';
 import { getTableSortField, getTableSortOrderField } from 'features/TableSort';
-import { getStudentClubsLimit, getStudentClubsPage } from 'entities/StudentClubs';
 import { buildRequestUrl } from 'shared/lib/helpers/buildRequestUrl/buildRequestUrl';
 import {
     getArrivalSourcesPage,

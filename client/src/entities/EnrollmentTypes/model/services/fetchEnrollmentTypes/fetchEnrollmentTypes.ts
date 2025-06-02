@@ -2,7 +2,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { StateSchema, ThunkConfig } from 'app/providers/StoreProvider';
 import { EnrollmentTypesData, EnrollmentTypesError } from 'entities/EnrollmentTypes';
 import { getTableSortField, getTableSortOrderField } from 'features/TableSort';
-import { getCitizenshipLimit, getCitizenshipPage } from 'entities/Citizenship';
 import { buildRequestUrl } from 'shared/lib/helpers/buildRequestUrl/buildRequestUrl';
 import {
     getEnrollmentTypesPage,

@@ -1,6 +1,6 @@
 import express from 'express';
 import { authenticateJWT } from '../middleware/auth.js';
-import { getAll } from '../controllers/EducationBasesController.js';
+import { getAll } from '../controllers/educationBasesController.js';
 
 const router = express.Router();
 

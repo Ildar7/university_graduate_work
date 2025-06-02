@@ -2,12 +2,9 @@ import {
     getRouteArrivalSources,
     getRouteEduLanguages,
     getRouteEnrollmentTypes,
-    getRouteEventsTypes,
     getRouteFinishedEduTypes,
     getRouteFinSources,
     getRouteResidenceTypes,
-    getRouteStudentClubs,
-    getRouteStudentSections,
     getRouteStudyDirections,
 } from 'shared/const/router';
 import { BreadcrumbList } from 'widgets/Breadcrumb';

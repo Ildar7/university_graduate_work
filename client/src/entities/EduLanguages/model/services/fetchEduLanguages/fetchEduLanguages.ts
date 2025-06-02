@@ -2,7 +2,6 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { StateSchema, ThunkConfig } from 'app/providers/StoreProvider';
 import { getTableSortField, getTableSortOrderField } from 'features/TableSort';
 import { EduLanguagesData, EduLanguagesError } from 'entities/EduLanguages/model/types/eduLanguages';
-import { getEventsTypesLimit, getEventsTypesPage } from 'entities/EventsTypes';
 import { buildRequestUrl } from 'shared/lib/helpers/buildRequestUrl/buildRequestUrl';
 import { getEduLanguagesPage } from '../../selectors/getEduLanguagesPage/getEduLanguagesPage';
 import { getEduLanguagesLimit } from '../../selectors/getEduLanguagesLimit/getEduLanguagesLimit';

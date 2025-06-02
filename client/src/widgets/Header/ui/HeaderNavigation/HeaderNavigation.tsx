@@ -4,7 +4,7 @@ import React, {
 import { classNames } from 'shared/lib/helpers/classNames/classNames';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import {
-    getRouteEducation, getRouteEmployees, getRouteMain, getRouteReferences, getRouteStudents,
+    getRouteEducation, getRouteMain, getRouteReferences, getRouteStudents,
 } from 'shared/const/router';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { SubList } from 'shared/ui/SubList/SubList';
@@ -80,7 +80,7 @@ export const HeaderNavigation = memo((props: HeaderNavigationProps) => {
                     className={
                         classNames(
                             cls.navItem,
-                            { [cls.navItemActive]: pathname.includes(getRouteStudents()) || pathname.includes(getRouteEmployees()) },
+                            { [cls.navItemActive]: pathname.includes(getRouteStudents()) },
                             [],
                         )
                     }

@@ -1,6 +1,6 @@
 import { BreadcrumbList } from 'widgets/Breadcrumb';
 import {
-    getRouteEducation, getRouteEduForms, getRoutePerformanceTypes, getRoutePracticeTypes, getRouteQualifications,
+    getRouteEducation, getRouteEduForms, getRouteQualifications,
 } from 'shared/const/router';
 
 export const educationPageBreadcrumbs: BreadcrumbList[] = [
