@@ -162,7 +162,7 @@ export const HeaderNavigation = memo((props: HeaderNavigationProps) => {
                             [],
                         )
                     }
-                    onClick={onToggleVisibleSystemSublist}
+                    onClick={!pathname.includes('/settings') ? onToggleVisibleSystemSublist : undefined}
                 >
                     <Text
                         size={TextSize.XS}
@@ -173,11 +173,15 @@ export const HeaderNavigation = memo((props: HeaderNavigationProps) => {
                                 : 'Система'
                         }
                     </Text>
-                    <SubList
-                        links={subListLinks.system}
-                        visible={systemSublistVisible}
-                        ref={systemSublistRef}
-                    />
+                    {!pathname.includes('/settings')
+                        ? (
+                            <SubList
+                                links={subListLinks.system}
+                                visible={systemSublistVisible}
+                                ref={systemSublistRef}
+                            />
+                        )
+                        : ''}
                 </li>
             </ul>
         </nav>

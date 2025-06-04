@@ -13,7 +13,6 @@ import { getRouteLogin } from 'shared/const/router';
 import { USER_JWT_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import { CToaster } from '@coreui/react';
 import { Toast } from 'shared/ui/Toast/Toast';
-import { translateErrors } from 'shared/lib/errors/translateErrors/translateErrors';
 import { getTableSortField } from 'features/TableSort';
 
 function App() {

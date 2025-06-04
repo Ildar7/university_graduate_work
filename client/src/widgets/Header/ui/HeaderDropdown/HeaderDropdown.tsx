@@ -72,29 +72,9 @@ const AppHeaderDropdown = memo((props: HeaderDropdownProps) => {
                 </div>
             </CDropdownToggle>
             <CDropdownMenu
-                className="pt-0"
                 // @ts-ignore
                 placement="bottom-end"
             >
-                <CDropdownHeader className="bg-light fw-semibold py-2">Сервисы</CDropdownHeader>
-                <CDropdownItem>
-                    <CIcon icon={cilBell} className="me-2" />
-                    Уведомления
-                </CDropdownItem>
-                <CDropdownHeader className="bg-light fw-semibold py-2">Настройки</CDropdownHeader>
-                <CDropdownItem>
-                    <CIcon icon={cilUser} className="me-2" />
-                    Профиль
-                </CDropdownItem>
-                <CDropdownItem>
-                    <CIcon icon={cilSettings} className="me-2" />
-                    Настройки
-                </CDropdownItem>
-                <CDropdownDivider />
-                <CDropdownItem>
-                    <CIcon icon={cilLockLocked} className="me-2" />
-                    Заблокировать
-                </CDropdownItem>
                 <CDropdownItem onClick={logoutHandler}>
                     <CIcon icon={cilArrowThickToLeft} className="me-2" />
                     Выйти из системы

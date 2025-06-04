@@ -52,9 +52,5 @@ export const subListLinks = {
             name: 'Настройки',
             link: getRouteSettingsMain(),
         },
-        {
-            name: 'Для разработчиков',
-            link: getRouteSettingsForDevelopers(),
-        },
     ],
 };

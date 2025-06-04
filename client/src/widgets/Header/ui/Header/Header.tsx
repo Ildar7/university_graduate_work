@@ -41,13 +41,6 @@ export const Header = memo((props: HeaderProps) => {
                 </div>
                 <HeaderNavigation />
                 <div className={cls.settings}>
-                    <Button
-                        className={cls.notificationsBtn}
-                        square
-                        size={ButtonSize.XL}
-                    >
-                        <CIcon icon={cilBell} size="lg" />
-                    </Button>
                     <HeaderDropdown className={cls.dropdown} />
                 </div>
             </div>

@@ -202,11 +202,6 @@ export const Login = (props: LoginProps) => {
                                             </Text>
                                         </Button>
                                     </div>
-                                    <div className={classNames(cls.forgotBlock, {}, ['text-right'])}>
-                                        <CButton disabled color="link" className="px-0">
-                                            Забыли пароль?
-                                        </CButton>
-                                    </div>
                                 </CRow>
                             </CForm>
                         </CCardBody>
