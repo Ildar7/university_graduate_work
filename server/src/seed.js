@@ -1,11 +1,11 @@
 import bcrypt from 'bcrypt';
-import pool from './config/db';
+import pool from './config/db.js';
 
 const seedUser = async () => {
     const login = 'admin';
-    const password = 'somepa$$wd';
-    const first_name = 'Иван';
-    const last_name = 'Иванов';
+    const password = 'somepasswd';
+    const first_name = 'Ильдар';
+    const last_name = 'Валиев';
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
